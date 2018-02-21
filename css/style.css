@@ -1,10 +1,59 @@
-* {
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
   box-sizing: border-box; }
 
 a {
   text-decoration: none; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto; }
 
 .navbar {
   display: flex;
@@ -32,15 +81,15 @@ ul {
 
 .banner {
   height: 350px;
-  background-color: pink; }
+  background-color: rgba(7, 13, 28, 0.52); }
 
 .banner-content {
   min-width: 50%;
-  padding-left: 40px; }
+  padding: 50px 50px 30px 30px; }
   .banner-content h2 {
-    margin-bottom: 10px; }
+    padding-bottom: 10px; }
   .banner-content p {
-    margin-bottom: 10px; }
+    padding-bottom: 10px; }
 
 .store-button {
   display: inline-block;
@@ -48,33 +97,159 @@ ul {
   width: 120px;
   height: 55px;
   padding: 5px;
-  margin: 10px; }
+  margin: 10px;
+  border-radius: 4.6px; }
 
 .button-text {
   color: #FFFFFF; }
 
-.area {
+.section--mainHomepage {
   height: 350px;
-  background-color: grey; }
+  background-color: #FFFFFF;
+  padding: 30px; }
 
-.area-content {
-  width: 40%;
+.section__area__content {
+  width: 80%;
   float: left; }
-  .area-content h2, .area-content h3, .area-content hr {
+  .section__area__content h3, .section__area__content a {
+    color: #2196F3; }
+  .section__area__content h2, .section__area__content h3, .section__area__content hr {
     margin-bottom: 10px; }
-  .area-content p {
-    margin-bottom: 10px; }
+  .section__area__content p {
+    margin-bottom: 10px;
+    line-height: 1.3;
+    color: #A0AEC0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(107, 124, 147, 0.12); }
 
 .steps-list {
-  height: 350px;
   background-color: lightblue; }
 
 .steps-list-content {
-  width: 80%; }
+  width: 80%;
+  padding: 30px 40px 20px 50px; }
+  .steps-list-content h3 {
+    padding-bottom: 10px;
+    color: #2196F3; }
+  .steps-list-content li h4 {
+    padding-bottom: 10px;
+    padding-left: 20px; }
+  .steps-list-content li p {
+    color: #A0AEC0;
+    padding-bottom: 20px;
+    padding-left: 20px; }
+
+.list-icon {
+  width: 46px;
+  height: 56px;
+  border-radius: 25%;
+  background-color: black; }
+
+.benefits {
+  padding: 10px;
+  background-color: #17213A;
+  color: #FFFFFF; }
+  .benefits .benefits__content__item {
+    padding: 30px;
+    width: 80%; }
+  .benefits .benefits__content__item p {
+    color: #A0AEC0; }
+
+.promo {
+  background: #121A2E;
+  color: #FFFFFF;
+  padding: 20px;
+  font-weight: 300;
+  text-align: center; }
+  .promo p {
+    padding: 10px; }
+
+.order-button {
+  height: 45px;
+  width: 150px;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border-radius: 4px;
+  background: linear-gradient(270deg, #4DD0E1 0%, #2196F3 100%);
+  box-shadow: 0 17px 20px 0 rgba(35, 10, 74, 0.15); }
+
+.process-content {
+  background-color: #F6F9FC;
+  color: #A0AEC0;
+  padding: 10px; }
+  .process-content h3 {
+    color: #2196F3;
+    padding-bottom: 10px; }
+  .process-content h2 {
+    color: #121A2E;
+    padding-bottom: 10px; }
+
+.cards-container {
+  padding: 10px; }
+
+.card {
+  width: 90%;
+  margin: 0 auto;
+  height: 120px;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+  text-align: center;
+  border-image-source: linear-gradient(90deg, #9850DC 0%, #DB63A6 100%); }
+  .card h3 {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    color: rgba(18, 26, 46, 0.87); }
+
+.download-banner {
+  background: linear-gradient(133.62deg, #2B91FE 0%, #485FFF 100%);
+  color: #FFFFFF;
+  padding: 20px;
+  text-align: center; }
+  .download-banner h2, .download-banner p {
+    padding-bottom: 10px; }
+  .download-banner .store-button {
+    background-color: #17213A; }
+
+.footer-upper {
+  background-color: #17213A;
+  color: #A0AEC0;
+  display: flex;
+  flex-wrap: wrap; }
+  .footer-upper h2, .footer-upper h3 {
+    color: #FFFFFF;
+    padding-bottom: 10px; }
+  .footer-upper .flex-column {
+    padding-bottom: 20px;
+    padding: 20px; }
+
+.flex-column-list li a {
+  color: #A0AEC0; }
+
+.footer-bottom {
+  display: flex;
+  background-color: #121A2E;
+  color: #A0AEC0;
+  font-size: 12px;
+  height: 50px;
+  justify-content: space-around;
+  padding: 20px; }
+  .footer-bottom span {
+    padding-right: 5px; }
+  .footer-bottom .footer-navigation a {
+    color: #FFFFFF;
+    font-weight: 500; }
 
 @media all and (max-width: 800px) {
   .main-nav {
-    justify-content: space-around; } }
+    justify-content: space-around; }
+
+  .footer-upper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; } }
 @media all and (max-width: 600px) {
   .main-nav {
     -webkit-flex-flow: column wrap;
@@ -89,5 +264,31 @@ ul {
 
   .main-nav li:last-of-type a {
     border-bottom: none; } }
+@media all and (min-width: 750px) {
+  .banner-content {
+    width: 40%; }
+
+  .section__area__content {
+    width: 40%; }
+
+  .benefits-content .benefits__content__item {
+    width: 30%;
+    display: inline-block;
+    padding: 20px; }
+
+  .cards-container {
+    padding: 40px; }
+    .cards-container .card {
+      width: 30%;
+      display: inline-block;
+      padding: 20px; }
+
+  .footer-upper .flex-column {
+    width: 20%;
+    display: inline-block;
+    padding: 10px; }
+
+  .promo p, .order-button {
+    display: inline-block; } }
 
 /*# sourceMappingURL=style.css.map */
