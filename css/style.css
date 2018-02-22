@@ -49,49 +49,23 @@ table {
   box-sizing: border-box; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  display: inline-block; }
+
+ul {
+  list-style-type: none; }
+
+h2, h3 {
+  padding-bottom: 10px; }
+
+.navList__item {
+  display: inline; }
 
 .container {
   max-width: 1200px;
   margin: 0 auto; }
 
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; }
-
-.main-nav {
-  list-style: none;
-  margin: 0;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  justify-content: flex-end; }
-
-.main-nav a {
-  text-decoration: none;
-  display: block;
-  padding: 1em; }
-
-ul {
-  list-style-type: none; }
-
-.banner {
-  height: 350px;
-  background-color: rgba(7, 13, 28, 0.52); }
-
-.banner-content {
-  min-width: 50%;
-  padding: 50px 50px 30px 30px; }
-  .banner-content h2 {
-    padding-bottom: 10px; }
-  .banner-content p {
-    padding-bottom: 10px; }
-
-.store-button {
+.button--appStore {
   display: inline-block;
   background-color: #000000;
   width: 120px;
@@ -100,71 +74,10 @@ ul {
   margin: 10px;
   border-radius: 4.6px; }
 
-.button-text {
+.button__text {
   color: #FFFFFF; }
 
-.section--mainHomepage {
-  height: 350px;
-  background-color: #FFFFFF;
-  padding: 30px; }
-
-.section__area__content {
-  width: 80%;
-  float: left; }
-  .section__area__content h3, .section__area__content a {
-    color: #2196F3; }
-  .section__area__content h2, .section__area__content h3, .section__area__content hr {
-    margin-bottom: 10px; }
-  .section__area__content p {
-    margin-bottom: 10px;
-    line-height: 1.3;
-    color: #A0AEC0;
-    padding-bottom: 15px;
-    border-bottom: 1px solid rgba(107, 124, 147, 0.12); }
-
-.steps-list {
-  background-color: lightblue; }
-
-.steps-list-content {
-  width: 80%;
-  padding: 30px 40px 20px 50px; }
-  .steps-list-content h3 {
-    padding-bottom: 10px;
-    color: #2196F3; }
-  .steps-list-content li h4 {
-    padding-bottom: 10px;
-    padding-left: 20px; }
-  .steps-list-content li p {
-    color: #A0AEC0;
-    padding-bottom: 20px;
-    padding-left: 20px; }
-
-.list-icon {
-  width: 46px;
-  height: 56px;
-  border-radius: 25%;
-  background-color: black; }
-
-.benefits {
-  padding: 10px;
-  background-color: #17213A;
-  color: #FFFFFF; }
-  .benefits .benefits__content__item {
-    padding: 30px;
-    width: 80%; }
-  .benefits .benefits__content__item p {
-    color: #A0AEC0; }
-
-.promo {
-  background: #121A2E;
-  color: #FFFFFF;
-  padding: 20px;
-  font-weight: 300;
-  text-align: center; }
-  .promo p {
-    padding: 10px; }
-
-.order-button {
+.button__promo {
   height: 45px;
   width: 150px;
   padding: 10px;
@@ -175,21 +88,110 @@ ul {
   background: linear-gradient(270deg, #4DD0E1 0%, #2196F3 100%);
   box-shadow: 0 17px 20px 0 rgba(35, 10, 74, 0.15); }
 
-.process-content {
-  background-color: #F6F9FC;
+.mainNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.mainNav {
+  list-style: none;
+  margin: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: flex-end; }
+
+.mainNav a {
+  display: block;
+  padding: 1em; }
+
+.section--mainHomepage {
+  height: 350px;
+  background-color: rgba(7, 13, 28, 0.52);
+  padding: 30px; }
+  .section--mainHomepage h2 {
+    padding-bottom: 10px; }
+  .section--mainHomepage p {
+    padding-bottom: 10px; }
+
+.section--mapCoverageArea {
+  background-color: #FFFFFF;
+  height: 150px; }
+
+.section--mapCoverageArea .section__area__content {
+  width: 80%;
+  padding: 20px;
+  float: left; }
+  .section--mapCoverageArea .section__area__content h3, .section--mapCoverageArea .section__area__content a {
+    color: #2196F3; }
+  .section--mapCoverageArea .section__area__content h2, .section--mapCoverageArea .section__area__content h3, .section--mapCoverageArea .section__area__content hr {
+    margin-bottom: 10px; }
+  .section--mapCoverageArea .section__area__content p {
+    margin-bottom: 10px;
+    line-height: 1.3;
+    color: #A0AEC0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(107, 124, 147, 0.12); }
+
+.section--stepsList {
+  background-color: lightblue; }
+
+.stepsList__content {
+  width: 80%;
+  padding: 30px 40px 20px 50px; }
+  .stepsList__content h3 {
+    color: #2196F3; }
+  .stepsList__content li h4 {
+    padding-bottom: 10px;
+    padding-left: 20px; }
+  .stepsList__content li p {
+    color: #A0AEC0;
+    padding-bottom: 20px;
+    padding-left: 20px; }
+
+.section--benefits {
+  background-color: #17213A; }
+
+.benefits {
+  padding: 10px;
+  color: #FFFFFF; }
+  .benefits .benefits__content__item {
+    padding: 30px;
+    width: 80%; }
+  .benefits .benefits__content__item p {
+    color: #A0AEC0; }
+
+.section--promo {
+  background: #121A2E; }
+
+.promo {
+  color: #FFFFFF;
+  padding: 20px;
+  font-weight: 300;
+  text-align: center; }
+  .promo p {
+    padding: 10px; }
+
+.section--process {
+  background-color: #F6F9FC; }
+
+.process__content {
   color: #A0AEC0;
   padding: 10px; }
-  .process-content h3 {
+  .process__content h3 {
     color: #2196F3;
     padding-bottom: 10px; }
-  .process-content h2 {
+  .process__content h2 {
     color: #121A2E;
     padding-bottom: 10px; }
 
-.cards-container {
+.section--cards {
   padding: 10px; }
 
-.card {
+.cards__item {
   width: 90%;
   margin: 0 auto;
   height: 120px;
@@ -198,37 +200,37 @@ ul {
   margin-bottom: 20px;
   text-align: center;
   border-image-source: linear-gradient(90deg, #9850DC 0%, #DB63A6 100%); }
-  .card h3 {
+  .cards__item h3 {
     padding-top: 30px;
     padding-bottom: 20px;
     color: rgba(18, 26, 46, 0.87); }
 
-.download-banner {
+.section--downloadBanner {
   background: linear-gradient(133.62deg, #2B91FE 0%, #485FFF 100%);
   color: #FFFFFF;
   padding: 20px;
   text-align: center; }
-  .download-banner h2, .download-banner p {
+  .section--downloadBanner h2, .section--downloadBanner p {
     padding-bottom: 10px; }
-  .download-banner .store-button {
+  .section--downloadBanner .store-button {
     background-color: #17213A; }
 
-.footer-upper {
+.section--footerNav {
   background-color: #17213A;
   color: #A0AEC0;
   display: flex;
   flex-wrap: wrap; }
-  .footer-upper h2, .footer-upper h3 {
+  .section--footerNav h2, .section--footerNav h3 {
     color: #FFFFFF;
     padding-bottom: 10px; }
-  .footer-upper .flex-column {
+  .section--footerNav .footerNav__row {
     padding-bottom: 20px;
     padding: 20px; }
 
-.flex-column-list li a {
+.footerNav__row li a {
   color: #A0AEC0; }
 
-.footer-bottom {
+.main-footer .container {
   display: flex;
   background-color: #121A2E;
   color: #A0AEC0;
@@ -236,11 +238,12 @@ ul {
   height: 50px;
   justify-content: space-around;
   padding: 20px; }
-  .footer-bottom span {
+  .main-footer .container span {
     padding-right: 5px; }
-  .footer-bottom .footer-navigation a {
+  .main-footer .container .main-footer__navigation a {
     color: #FFFFFF;
-    font-weight: 500; }
+    font-weight: 500;
+    display: inline; }
 
 @media all and (max-width: 800px) {
   .main-nav {
@@ -251,44 +254,40 @@ ul {
     justify-content: space-between;
     flex-wrap: wrap; } }
 @media all and (max-width: 600px) {
-  .main-nav {
+  .main-header__nav {
     -webkit-flex-flow: column wrap;
     flex-flow: column wrap;
     padding: 0; }
 
-  .main-nav a {
+  .main-header__nav a {
     text-align: center;
     padding: 10px;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
 
-  .main-nav li:last-of-type a {
+  .main-header__nav li:last-of-type a {
     border-bottom: none; } }
 @media all and (min-width: 750px) {
   .banner-content {
     width: 40%; }
 
-  .section__area__content {
-    width: 40%; }
-
-  .benefits-content .benefits__content__item {
+  .benefits__content .benefits__content__item {
     width: 30%;
     display: inline-block;
     padding: 20px; }
 
-  .cards-container {
+  .cards__content {
     padding: 40px; }
-    .cards-container .card {
+    .cards__content .cards__item {
       width: 30%;
       display: inline-block;
       padding: 20px; }
 
-  .footer-upper .flex-column {
-    width: 20%;
+  .footerNav__content .footerNav__row {
     display: inline-block;
     padding: 10px; }
 
-  .promo p, .order-button {
+  .section--promo p, .button__promo {
     display: inline-block; } }
 
 /*# sourceMappingURL=style.css.map */
