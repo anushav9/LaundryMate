@@ -1,3 +1,27 @@
 $primary: #2196F3; //blue
 $white: #FFFFFF;   //white
-$text-color: #A0AEC0; //grey
+$color-text :#6B7C93;
+$color-dimmedText: #A0AEC0; //grey
+$color-footerText:rgba(255,255,255,0.7);
+
+$color-washing:#9850DC;
+$color-drycleaning:#13A0E2;
+$color-tailoring:#FF4B75;
+
+$color-deepSapphireBlue:#17213A;
+$color-footer: #121A2E;
+$color-aliceBlue:#F6F9FC;
+$color-mainHomePage: rgba(7,13,28,0.52); //background for all mainHomePage
+
+$color-gradient-washing:linear-gradient(90deg, #9850DC 0%, #DB63A6 100%);
+$color-gradient-drycleaning:linear-gradient(90deg, #13A0E2 0%, #01D7C9 100%);
+$color-gradient-tailoring:linear-gradient(90deg, #FF4B75 0%, #FFADA0 100%);
+$color-gradient-primary: linear-gradient(133.62deg, #2B91FE 0%, #485FFF 100%);
+
+
+
+$font-weight-lighter: 200;
+$font-weight-light: 300;
+$font-weight: normal;
+$font-weight-semibold: 600;
+$font-weight-bold: 900;

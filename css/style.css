@@ -75,26 +75,25 @@ h2, h3, h4, p {
   margin: 0 auto;
   overflow: hidden; }
 
-.appStoreButtons .navList__item {
-  display: inline-block;
-  background-color: #000000;
-  width: 120px;
-  height: 55px;
-  padding: 5px;
-  margin: 10px;
-  border-radius: 4.6px; }
+.button--appStore img {
+  width: 150px;
+  height: 45px;
+  display: inline-block; }
 
 .button__text {
   color: #FFFFFF; }
 
 .section--finalCTAWithCredit .button--cta {
   height: 45px;
-  width: 150px;
+  width: 170px;
   padding: 10px;
+  font-size: 12px;
+  color: #FFFFFF;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   border-radius: 4px;
+  text-transform: uppercase;
   background: linear-gradient(270deg, #4DD0E1 0%, #2196F3 100%);
   box-shadow: 0 17px 20px 0 rgba(35, 10, 74, 0.15); }
 
@@ -146,9 +145,9 @@ h2, h3, h4, p {
   height: 500px;
   background-color: #FFFFFF;
   background: url("../images/chicago-map.jpg") right no-repeat;
-  background-size: 50% 50%; }
+  background-size: 70% 50%; }
   .section--mapCoverageArea .section__content {
-    padding: 80px 140px 80px 40px;
+    padding: 80px 100px 40px 40px;
     float: left;
     width: 100%; }
     .section--mapCoverageArea .section__content h2 {
@@ -166,7 +165,6 @@ h2, h3, h4, p {
       font-weight: 300;
       line-height: 24px;
       color: #A0AEC0;
-      padding-bottom: 15px;
       border-bottom: 1px solid rgba(107, 124, 147, 0.12); }
   .section--mapCoverageArea .section__footer {
     padding-top: 20px; }
@@ -231,13 +229,13 @@ h2, h3, h4, p {
   color: #FFFFFF;
   padding: 20px;
   font-weight: 300;
+  line-height: 1.5;
   text-align: center; }
   .section--finalCTAWithCredit p {
     padding: 10px; }
 
 .section--aboutTheMobileApp {
-  background-color: #FFFFFF;
-  height: 450px; }
+  background-color: #FFFFFF; }
   .section--aboutTheMobileApp .section__content {
     padding: 10px; }
     .section--aboutTheMobileApp .section__content h2 {
@@ -257,84 +255,108 @@ h2, h3, h4, p {
       font-weight: 300;
       line-height: 24px; }
 
-.section--servicesOfferedCards {
-  height: 800px;
-  border: 2px solid black;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around; }
-  .section--servicesOfferedCards .card {
-    width: 90%;
-    margin: 0 auto;
-    height: 200px;
-    width: 300px;
-    background-color: #FFFFFF;
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
-    margin-bottom: 30px;
-    text-align: center;
-    position: relative;
-    border-image-source: linear-gradient(90deg, #9850DC 0%, #DB63A6 100%); }
-    .section--servicesOfferedCards .card h3 {
-      padding-top: 30px;
-      padding-bottom: 20px;
-      color: rgba(18, 26, 46, 0.87); }
-    .section--servicesOfferedCards .card .card__border {
-      width: 100%;
-      height: 5px;
-      position: absolute;
-      top: 0; }
-    .section--servicesOfferedCards .card img {
-      width: 50px;
-      height: 50px;
-      position: absolute;
-      top: -25px;
-      left: 125px;
-      right: 50%;
-      z-index: 20; }
-  .section--servicesOfferedCards .card--service--washing .card__border {
-    background: linear-gradient(90deg, #9850DC 0%, #DB63A6 100%); }
-  .section--servicesOfferedCards .card--service--drycleaning .card__border {
-    background: linear-gradient(90deg, #13A0E2 0%, #01D7C9 100%); }
-  .section--servicesOfferedCards .card--service--tailoring .card__border {
-    background: linear-gradient(90deg, #FF4B75 0%, #FFADA0 100%); }
+.section--servicesOfferedCards .cardList .card--service--washing {
+  margin-top: 40px; }
+.section--servicesOfferedCards .card {
+  width: 90%;
+  margin: 0 auto;
+  height: 130px;
+  width: 300px;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative; }
+  .section--servicesOfferedCards .card .card__border {
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    top: 0; }
+  .section--servicesOfferedCards .card img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -25px;
+    right: 40%;
+    z-index: 20; }
+  .section--servicesOfferedCards .card h3 {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    color: rgba(18, 26, 46, 0.87);
+    font-weight: 300;
+    line-height: 33px; }
+  .section--servicesOfferedCards .card .card__cta {
+    font-weight: 900;
+    font-size: 14px; }
+.section--servicesOfferedCards .card--service--washing .card__border {
+  background: linear-gradient(90deg, #9850DC 0%, #DB63A6 100%); }
+.section--servicesOfferedCards .card--service--washing .card__cta {
+  color: #9850DC; }
+.section--servicesOfferedCards .card--service--drycleaning .card__border {
+  background: linear-gradient(90deg, #13A0E2 0%, #01D7C9 100%); }
+.section--servicesOfferedCards .card--service--drycleaning .card__cta {
+  color: #13A0E2; }
+.section--servicesOfferedCards .card--service--tailoring .card__border {
+  background: linear-gradient(90deg, #FF4B75 0%, #FFADA0 100%); }
+.section--servicesOfferedCards .card--service--tailoring .card__cta {
+  color: #FF4B75; }
 
 .section--downloadBanner {
   background: linear-gradient(133.62deg, #2B91FE 0%, #485FFF 100%);
-  padding: 20px; }
+  position: relative;
+  height: 250px; }
   .section--downloadBanner .section__content {
     text-align: center;
     color: #FFFFFF;
-    font-weight: 300; }
+    font-weight: 300;
+    position: absolute;
+    margin: auto;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    transform: translateX(-50%) translateY(-50%); }
     .section--downloadBanner .section__content h2 {
       font-size: 30px;
-      line-height: 46px;
-      font-weight: 300; }
+      line-height: 46px; }
     .section--downloadBanner .section__content p {
       color: rgba(255, 255, 255, 0.7);
       font-size: 16px;
       line-height: 26px; }
-  .section--downloadBanner h2, .section--downloadBanner p {
-    padding-bottom: 10px; }
+    .section--downloadBanner .section__content .button--appStore img {
+      opacity: 0.25;
+      background-color: #17213A; }
 
 .section--footer {
-  background-color: #17213A;
-  color: #A0AEC0;
-  display: flex;
-  flex-wrap: wrap; }
+  background-color: #17213A; }
+  .section--footer .section__content {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 20px; }
   .section--footer .footer__row__logo {
     width: 150px;
     height: 23px; }
   .section--footer h3 {
-    font-size: 16px; }
-  .section--footer p {
-    font-size: 14px; }
-  .section--footer h2, .section--footer h3 {
+    font-size: 16px;
     color: #FFFFFF;
     padding-bottom: 10px; }
+  .section--footer p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7); }
+  .section--footer .footer__row__socialMediaIcons a, .section--footer .button--appStore {
+    display: inline !important; }
   .section--footer .footer__row {
-    padding-bottom: 20px; }
+    padding-bottom: 20px;
+    padding-left: 20px; }
     .section--footer .footer__row li a {
-      color: #A0AEC0; }
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 21px;
+      display: block; }
+    .section--footer .footer__row .button--appStore img {
+      opacity: 0.25;
+      background-color: #7088C5;
+      color: #FFFFFF; }
 
 .main-footer {
   background-color: #121A2E; }
@@ -349,7 +371,7 @@ h2, h3, h4, p {
       padding-right: 5px; }
     .main-footer .container .navList a {
       color: #FFFFFF;
-      font-weight: 500;
+      font-weight: normal;
       display: inline; }
 
 @media all and (max-width: 600px) {
@@ -378,8 +400,20 @@ h2, h3, h4, p {
       top: 40%;
       width: 30%; }
 
-  .section--mapCoverageArea .section__content {
-    width: 50%; }
+  .section--mapCoverageArea {
+    background-size: 50% 50%; }
+    .section--mapCoverageArea .section__content {
+      width: 50%; }
+
+  .section--stepsToGetStarted {
+    background-image: url("../images/user-photo.png");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 20% 40%;
+    padding: 40px; }
+    .section--stepsToGetStarted .section__content {
+      width: 30%;
+      float: right; }
 
   .section--listOfKeyBenefits .row {
     margin: 0 auto; }
@@ -387,34 +421,45 @@ h2, h3, h4, p {
     width: 30%;
     display: inline-block; }
 
+  .section--finalCTAWithCredit .section__content p {
+    display: inline-block; }
+
   .section--servicesOfferedCards .section__content {
     padding: 40px; }
+    .section--servicesOfferedCards .section__content .cardList {
+      margin: 0 auto; }
     .section--servicesOfferedCards .section__content .card {
       width: 30%;
       display: inline-block;
-      padding: 20px; }
+      margin-right: 30px; }
 
   .section--aboutTheMobileApp {
     background-image: url("../images/devices.png");
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: 20% 50%;
-    height: 769px; }
+    height: 650px;
+    position: relative; }
     .section--aboutTheMobileApp .section__content {
       width: 30%;
       float: right;
-      padding-top: 100px; }
+      position: absolute;
+      transform: translate(0, -50%);
+      top: 50%;
+      right: 0px; }
 
   .section--downloadBanner {
-    height: 300px; }
+    height: 330px; }
 
   .section--footer {
-    height: 400px; }
-    .section--footer .section__content .footer__row {
-      display: inline-block;
-      padding: 0 10px; }
-    .section--footer .section--finalCTAWithCredit p, .section--footer .button--cta {
-      display: inline-block; } }
+    height: 230px; }
+    .section--footer .section__content {
+      padding: 30px;
+      display: flex;
+      flex-direction: row; }
+      .section--footer .section__content .footer__row {
+        display: inline-block;
+        padding: 40px; } }
 @media screen and (max-width: 600px) {
   .main-header__nav :not(:first-child) {
     display: none; }
@@ -431,7 +476,7 @@ h2, h3, h4, p {
     right: 0;
     top: 0; }
 
-  .mainNav--navList.responsive li a {
+  .main-header__nav :not(:first-child).responsive {
     float: none;
     display: block;
     text-align: left; } }
