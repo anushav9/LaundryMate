@@ -8,6 +8,7 @@
      <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css">
 
      <link rel="stylesheet" href="css/style.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
 
@@ -15,14 +16,15 @@
      <header class="main-header">
           <div class="container">
 
-               <div class="main-header__nav" id="parent">
+               <div class="main-header__nav">
 
                     <div class="main-header__logo">
                          <div class="logo"><a href="#">LaundryMate</a></div>
                     </div>
 
-                    <nav class="mainNav">
-                         <ul class="navList mainNav--navList" id="topNav">
+
+                    <nav class="mainNav" id="topNav">
+                         <ul class="navList mainNav--navList">
                               <li class="navList__item">
                                    <a class="navList__link" href="#">Locations</a>
                               </li>
@@ -37,10 +39,9 @@
                               </li>
                          </ul>
                     </nav>
-                    <div class="main-header__navToggle" onclick="myFunction()">
-                         <a href="#"><i class="mdi mdi-menu"></i></a>
+                    <div class="main-header__navToggle">
+                         <a href="#" onclick="myFunction()"><i class="mdi mdi-menu"></i></a>
                     </div>
-
                </div> <!-- End of main-header__nav -->
 
           </div> <!-- End of container-->
@@ -366,12 +367,11 @@
           <script>
                function myFunction(){
                     var x = document.getElementById("topNav");
-                    var y = document.getElementById("parent");
-                    if(x.className =="mainNav--navList"){
+
+                    if(x.className =="mainNav"){
                          x.className += " responsive";
-                         y.className += " responsive";
                     } else {
-                         x.className = "mainNav--navList";
+                         x.className = "mainNav";
                     }
                }
           </script>

@@ -97,38 +97,47 @@ h2, h3, h4, p {
   background: linear-gradient(270deg, #4DD0E1 0%, #2196F3 100%);
   box-shadow: 0 17px 20px 0 rgba(35, 10, 74, 0.15); }
 
-.main-header__logo a {
-  color: black; }
+.main-header__nav {
+  background: #fff;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100; }
+
+.main-header__logo {
+  float: left;
+  width: 200px;
+  height: 40px;
+  display: inline-block; }
 
 .main-header__navToggle {
-  display: none; }
+  display: none;
+  width: 40px;
+  height: 40px; }
 
-.main-header__nav {
-  overflow: hidden; }
+ul {
+  list-style: none; }
 
-.main-header__nav a {
-  float: left;
-  display: block;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px; }
-
-.main-header__nav a:hover {
-  background-color: #ddd;
-  color: black; }
+li {
+  display: inline-block;
+  padding: 10px; }
 
 .section--mainHomepage {
   width: 100%;
-  height: 850px;
+  height: 650px;
   background-color: rgba(7, 13, 28, 0.52);
   background-image: url("../images/user-hero.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   position: relative; }
   .section--mainHomepage .section__content {
     position: absolute;
-    width: 90%;
-    top: 30%; }
+    width: 100%;
+    top: 30%;
+    padding: 10px; }
   .section--mainHomepage h2 {
     padding-bottom: 10px;
     font-size: 36px;
@@ -145,10 +154,9 @@ h2, h3, h4, p {
   height: 500px;
   background-color: #FFFFFF;
   background: url("../images/chicago-map.jpg") right no-repeat;
-  background-size: 70% 50%; }
+  background-size: 70% 70%; }
   .section--mapCoverageArea .section__content {
-    padding: 80px 100px 40px 40px;
-    float: left;
+    padding: 50px 10px;
     width: 100%; }
     .section--mapCoverageArea .section__content h2 {
       font-size: 30px;
@@ -322,9 +330,6 @@ h2, h3, h4, p {
       color: rgba(255, 255, 255, 0.7);
       font-size: 16px;
       line-height: 26px; }
-    .section--downloadBanner .section__content .button--appStore img {
-      opacity: 0.25;
-      background-color: #17213A; }
 
 .section--footer {
   background-color: #17213A; }
@@ -353,10 +358,6 @@ h2, h3, h4, p {
       color: rgba(255, 255, 255, 0.7);
       line-height: 21px;
       display: block; }
-    .section--footer .footer__row .button--appStore img {
-      opacity: 0.25;
-      background-color: #7088C5;
-      color: #FFFFFF; }
 
 .main-footer {
   background-color: #121A2E; }
@@ -374,36 +375,75 @@ h2, h3, h4, p {
       font-weight: normal;
       display: inline; }
 
-@media all and (max-width: 600px) {
-  .main-header__nav {
-    -webkit-flex-flow: column wrap;
-    flex-flow: column wrap;
-    padding: 0; }
-
-  .main-header__nav a {
-    text-align: center;
-    padding: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
-
-  .main-header__nav li:last-of-type a {
-    border-bottom: none; } }
-@media all and (min-width: 750px) {
-  .mainNav {
-    float: right;
-    display: inline-block; }
-
+@media screen and (min-width: 480px) {
   .section--mainHomepage {
     width: 100%;
     height: 700px; }
     .section--mainHomepage .section__content {
       top: 40%;
-      width: 30%; }
+      left: 10%;
+      width: 60%; }
 
   .section--mapCoverageArea {
-    background-size: 50% 50%; }
+    background-size: 50% 50%;
+    position: relative; }
     .section--mapCoverageArea .section__content {
+      top: 10%;
+      left: 10%;
+      width: 60%;
+      float: left;
+      position: absolute;
+      transform: translate(0, -50%);
+      top: 50%; } }
+@media all and (max-width: 600px) {
+  .main-header__nav {
+    position: absolute; }
+    .main-header__nav .main-header__navToggle {
+      display: inline-block;
+      float: right; }
+    .main-header__nav nav ul, .main-header__nav nav:active ul {
+      display: none;
+      position: absolute;
+      padding: 20px;
+      background: #fff;
+      right: 0px;
+      top: 60px;
       width: 50%; }
+    .main-header__nav nav li {
+      text-align: center;
+      width: 100%;
+      padding: 10px 0;
+      margin: 0; }
+    .main-header__nav li:hover {
+      background-color: #17213A; }
+      .main-header__nav li:hover a {
+        color: #FFFFFF; }
+
+  .mainNav.responsive ul {
+    display: block; }
+    .mainNav.responsive ul li {
+      display: block; } }
+@media all and (min-width: 750px) {
+  .section--mainHomepage {
+    width: 100%;
+    height: 700px; }
+    .section--mainHomepage .section__content {
+      top: 40%;
+      left: 10%;
+      width: 60%; }
+
+  .section--mapCoverageArea {
+    background-size: 50% 50%;
+    position: relative;
+    height: 350px; }
+    .section--mapCoverageArea .section__content {
+      top: 10%;
+      left: 10%;
+      width: 60%;
+      float: left;
+      position: absolute;
+      transform: translate(0, -50%);
+      top: 50%; }
 
   .section--stepsToGetStarted {
     background-image: url("../images/user-photo.png");
@@ -456,29 +496,30 @@ h2, h3, h4, p {
     .section--footer .section__content {
       padding: 30px;
       display: flex;
-      flex-direction: row; }
+      flex-direction: row;
+      justify-content: space-around; }
       .section--footer .section__content .footer__row {
-        display: inline-block;
-        padding: 40px; } }
-@media screen and (max-width: 600px) {
-  .main-header__nav :not(:first-child) {
-    display: none; }
+        display: inline-block; }
 
-  .main-header__nav .main-header__navToggle {
+  .main-footer .navList__item {
+    margin-right: 10px; } }
+@media screen and (min-width: 601px) {
+  .mainNav {
     float: right;
-    display: block; } }
-@media screen and (max-width: 600px) {
-  .main-header__nav.responsive {
-    position: relative; }
+    display: inline-block; } }
+@media screen and (min-width: 1100px) {
+  .section--mainHomepage {
+    width: 100%;
+    height: 700px; }
+    .section--mainHomepage .section__content {
+      top: 40%;
+      left: 10%;
+      width: 30%; }
 
-  .main-header__nav.responsive .main-header__navToggle {
-    position: absolute;
-    right: 0;
-    top: 0; }
-
-  .main-header__nav :not(:first-child).responsive {
-    float: none;
-    display: block;
-    text-align: left; } }
+  .section--mapCoverageArea {
+    width: 100%;
+    height: 450px; }
+    .section--mapCoverageArea .section__content {
+      width: 40%; } }
 
 /*# sourceMappingURL=style.css.map */
