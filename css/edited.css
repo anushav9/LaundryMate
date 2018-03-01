@@ -61,23 +61,13 @@ a {
 /* typography.scss */
 h1, h2, h3, h4, h5, h6 {
   padding-bottom: 10px;
-  font-family: Avenir;
-  line-height: 1.3; }
-
-ul {
-  list-style-type: none; }
-
-h2 {
-  font-size: 28px; }
+  font-family: Avenir; }
 
 h3 {
   font-size: 24px; }
 
-h4 {
-  font-size: 20px; }
-
 p {
-  font-size: 14px; }
+  padding-bottom: 10px; }
 
 /* utilities */
 .container {
@@ -91,24 +81,36 @@ p {
 
 /* buttons.scss */
 .button {
-  display: inline-block;
+  display: inine-block;
   line-height: 36px;
   padding: 0 10px;
   border-radius: 4px;
-  text-align: center; }
+  text-align: center;
+  background: lightgray;
+  background-color: black; }
+  .button:hover {
+    background: red;
+    color: #FFF; }
 
 .button--cta {
+  color: #FFFFFF;
   text-transform: uppercase;
+  background: linear-gradient(270deg, #4DD0E1 0%, #2196F3 100%);
   box-shadow: 0 17px 20px 0 rgba(35, 10, 74, 0.15); }
 
-.appStoreButtons__item img {
+.button--appStore img {
   width: 150px;
   height: 45px;
   display: inline-block; }
 
+/* index-chicago.scss */
 .main-header__nav {
+  width: 100%;
+  height: 50px;
   position: sticky;
-  background-color: pink;
+  background: transparent;
+  top: 0;
+  left: 0;
   display: flex;
   z-index: 100;
   box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.12); }
@@ -125,10 +127,12 @@ p {
     .main-header__nav .main-header__navToggle__icon {
       font-size: 28px;
       color: #FFFFFF; }
-  .main-header__nav .navList--mainNav {
+  .main-header__nav .mainNav--navList {
     display: none;
     position: absolute;
     right: 0; }
+    .main-header__nav .mainNav--navList li a {
+      color: #FFFFFF; }
 
 .mainNav.responsive .mainNav--navList {
   display: block;
@@ -140,12 +144,7 @@ p {
     background-color: #17213A; }
 
 .section--mainHomepage {
-  width: 100%;
-  height: 650px;
-  background-color: rgba(7, 13, 28, 0.52);
-  background-image: url("../images/user-hero.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
+  background: rgba(7, 13, 28, 0.52) url("../images/user-hero.jpg") 50% 50% no-repeat;
   background-size: cover;
   position: relative; }
   .section--mainHomepage .section__content {
@@ -233,18 +232,9 @@ p {
       width: 80%; }
       .section--listOfKeyBenefits .section__content .row__item .media__object {
         float: left; }
-        .section--listOfKeyBenefits .section__content .row__item .media__object__icon {
+        .section--listOfKeyBenefits .section__content .row__item .media__object img {
           width: 49px;
           height: 49px; }
-        .section--listOfKeyBenefits .section__content .row__item .media__object__icon--time {
-          background: url("../images/time-icon.png");
-          background-size: cover; }
-        .section--listOfKeyBenefits .section__content .row__item .media__object__icon--repeat {
-          background: url("../images/repeat-icon.png");
-          background-size: cover; }
-        .section--listOfKeyBenefits .section__content .row__item .media__object__icon--heart {
-          background: url("../images/care-icon.png");
-          background-size: cover; }
       .section--listOfKeyBenefits .section__content .row__item .media__content h3 {
         font-size: 20px;
         position: relative;
@@ -267,9 +257,6 @@ p {
   text-align: center; }
   .section--finalCTAWithCredit p {
     padding: 10px; }
-  .section--finalCTAWithCredit .button--cta {
-    color: #FFFFFF;
-    background: linear-gradient(270deg, #4DD0E1 0%, #2196F3 100%); }
 
 .section--aboutTheMobileApp {
   background-color: #FFFFFF; }
@@ -303,9 +290,9 @@ p {
       font-weight: 300;
       line-height: 24px; }
 
-.section--servicesOfferedCards .row .row__item--washing {
+.section--servicesOfferedCards .cardList .card--service--washing {
   margin-top: 40px; }
-.section--servicesOfferedCards .row__item {
+.section--servicesOfferedCards .card {
   margin: 0 auto;
   height: 170px;
   width: 300px;
@@ -314,38 +301,38 @@ p {
   margin-bottom: 40px;
   text-align: center;
   position: relative; }
-  .section--servicesOfferedCards .row__item .row__border {
+  .section--servicesOfferedCards .card .card__border {
     width: 100%;
     height: 5px;
     position: absolute;
     top: 0; }
-  .section--servicesOfferedCards .row__item img {
+  .section--servicesOfferedCards .card img {
     width: 50px;
     height: 50px;
     position: absolute;
     top: -25px;
     right: 40%;
     z-index: 20; }
-  .section--servicesOfferedCards .row__item h3 {
+  .section--servicesOfferedCards .card h3 {
     padding-top: 50px;
     padding-bottom: 20px;
     color: rgba(18, 26, 46, 0.87);
     font-weight: 300;
     line-height: 33px; }
-  .section--servicesOfferedCards .row__item .row__cta {
+  .section--servicesOfferedCards .card .card__cta {
     font-weight: 900;
     font-size: 14px; }
-.section--servicesOfferedCards .row__item--washing .row__border {
+.section--servicesOfferedCards .card--service--washing .card__border {
   background: linear-gradient(90deg, #9850DC 0%, #DB63A6 100%); }
-.section--servicesOfferedCards .row__item--washing .row__cta {
+.section--servicesOfferedCards .card--service--washing .card__cta {
   color: #9850DC; }
-.section--servicesOfferedCards .row__item--drycleaning .row__border {
+.section--servicesOfferedCards .card--service--drycleaning .card__border {
   background: linear-gradient(90deg, #13A0E2 0%, #01D7C9 100%); }
-.section--servicesOfferedCards .row__item--drycleaning .row__cta {
+.section--servicesOfferedCards .card--service--drycleaning .card__cta {
   color: #13A0E2; }
-.section--servicesOfferedCards .row__item--tailoring .row__border {
+.section--servicesOfferedCards .card--service--tailoring .card__border {
   background: linear-gradient(90deg, #FF4B75 0%, #FFADA0 100%); }
-.section--servicesOfferedCards .row__item--tailoring .row__cta {
+.section--servicesOfferedCards .card--service--tailoring .card__cta {
   color: #FF4B75; }
 
 .section--downloadBanner {
@@ -389,7 +376,7 @@ p {
   .section--footer p {
     font-size: 14px;
     color: rgba(255, 255, 255, 0.7); }
-  .section--footer .socialMediaIcons a, .section--footer .appStoreButtons__item {
+  .section--footer .footer__row__socialMediaIcons a, .section--footer .button--appStore {
     display: inline !important; }
   .section--footer .footer__row {
     padding-bottom: 20px;
@@ -437,10 +424,10 @@ p {
 @media screen and (min-width: 601px) {
   .main-header__nav {
     padding: 20px; }
-    .main-header__nav .mainNav .navList--mainNav {
+    .main-header__nav .mainNav .mainNav--navList {
       display: block;
       float: right; }
-      .main-header__nav .mainNav .navList--mainNav li {
+      .main-header__nav .mainNav .mainNav--navList li {
         display: inline-block;
         padding: 10px; }
     .main-header__nav .main-header__navToggle {
@@ -478,24 +465,11 @@ p {
       width: 30%;
       float: right; }
 
-  .section--listOfKeyBenefits .row {
-    margin: 0 auto; }
-  .section--listOfKeyBenefits .section__content .row__item {
-    width: 30%;
-    display: inline-block; }
-
   .section--finalCTAWithCredit .section__content p {
     display: inline-block; }
 
   .section--servicesOfferedCards .section__content {
     padding: 40px; }
-    .section--servicesOfferedCards .section__content .row {
-      margin: 0 auto; }
-    .section--servicesOfferedCards .section__content .row__item {
-      width: 30%;
-      display: inline-block; }
-    .section--servicesOfferedCards .section__content .row__item:not(:last-child) {
-      margin-right: 30px; }
 
   .section--aboutTheMobileApp {
     height: 650px;
@@ -554,4 +528,4 @@ p {
     .section--mapCoverageArea .section__content {
       width: 40%; } }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=edited.css.map */

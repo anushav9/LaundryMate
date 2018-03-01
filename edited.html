@@ -8,7 +8,7 @@
      <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css">
 
      <link rel="stylesheet" href="css/style.css">
-
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
 
@@ -22,9 +22,8 @@
                               <img class="logo" src="images/logo_white.png" alt="LaundryMate">
                          </div>
 
-
                          <nav class="mainNav">
-                              <ul class="navList navList--mainNav">
+                              <ul class="navList mainNav--navList"> <!-- fix -->
                                    <li class="navList__item">
                                         <a class="navList__link" href="#">Locations</a>
                                    </li>
@@ -39,9 +38,8 @@
                                    </li>
                               </ul>
                          </nav>
-
                          <div class="main-header__navToggle">
-                              <a href="#" onclick="myFunction()"><i class="mdi mdi-menu main-header__navToggle__icon"></i></a>
+                              <a href="#" onclick="myFunction()"><i class="mdi mdi-menu"></i></a>
                          </div>
 
                </div> <!-- End of main-header__nav -->
@@ -49,7 +47,7 @@
           </div> <!-- End of container-->
      </header> <!--End of main-header-->
 
-     <section class="section section--large section--mainHomepage">
+     <section class="section section--large section--mainHomepage"> <!-- fix -->
           <div class="container">
                <div class="section__content">
                     <h2>Dry cleaning & laundry to your door</h2>
@@ -78,13 +76,12 @@
      <section class="section section--large section--mapCoverageArea">
           <div class="container">
                <div class="section__content">
-                    <div class="section__header">
-                         <h3>Currently servicing Chicago suburbs</h3>
-                         <h2>We do the work for you</h2>
-                    </div>
+                    <h3>Currently servicing Chicago suburbs</h3>
+                    <h2>We do the work for you</h2>
                     <p>Whether you are at home or out of town, LaundryMate helps you find the best laundry services, while allowing you to make purchases off of your phone.</p>
+
                     <div class="section__footer">
-                         <a href="#">See all locations <i class="mdi mdi-chevron-right"></i></a>
+                         <a href="#">See all locations <i></i></a>
                     </div>
                </div>
           </div>
@@ -128,7 +125,8 @@
                               <div class="row__item row__item--md">
                                    <div class="media">
                                         <div class="media__object">
-                                             <div class="media__object__icon media__object__icon--time">
+                                             <div class="icon icon--md icon--spendingTime">
+                                                  <img src="images/time-icon.png" alt="Saving time">
                                              </div>
                                         </div>
                                         <div class="media__content">
@@ -141,8 +139,7 @@
                               <div class="row__item row__item--md">
                                    <div class="media">
                                         <div class="media__object">
-                                             <div class="media__object__icon media__object__icon--repeat">
-                                             </div>
+                                             <img src="images/repeat-icon.png" alt="repeat orders">
                                         </div>
                                         <div class="media__content">
                                              <h3>Repeat orders</h3>
@@ -154,8 +151,7 @@
                               <div class="row__item row__item--md">
                                    <div class="media">
                                         <div class="media__object">
-                                             <div class="media__object__icon media__object__icon--heart">
-                                             </div>
+                                             <img src="images/care-icon.png" alt="guaranteed care">
                                         </div>
                                         <div class="media__content">
                                              <h3>Guaranteed care</h3>
@@ -171,7 +167,7 @@
      <section class="section section--dark section--finalCTAWithCredit">
           <div class="container">
                <div class="section__content">
-                    <p>Are you convinced yet?<strong> First time users get $10 credit.</strong></p>
+                    <p>Are you convinced yet? <strong>First time users get $10 credit.</strong></p>
                     <a class="button button--cta button--lg" href="#">order online</a>
                </div>
           </div>
@@ -182,10 +178,8 @@
                <img  src="images/devices.png" alt="devices">
                <div class="section__content--container">
                <div class="section__content">
-                    <div class="section__header">
-                         <h3>Simple and easy process</h3>
-                         <h2>Schedule in seconds</h2>
-                    </div>
+                    <h3>Simple and easy process</h3>
+                    <h2>Schedule in seconds</h2>
                     <p>With a few simple clicks you will have your clothes cleaned in no time. LaundryMate offers different features from having your clothes cleaned to tailoring, ironing ans so much more.</p>
                </div>
           </div>
@@ -195,31 +189,31 @@
      <section class="section section--large section--servicesOfferedCards">
           <div class="container">
                <div class="section__content">
-                    <div class="row">
-                         <div class="row__item row__item--md row__item--washing">
-                              <div class="row__border"></div>
+                    <div class="cardList">
+                         <div class="card card--service card--service--washing">
+                              <div class="card__border"></div>
                               <img src="images/laundry-icon.png" alt="washing">
-                              <h3 class="row__title">Need washed clothes?</h3>
-                              <a class="row__cta" href="#">
-                                   Learn more <i class="mdi mdi-chevron-right"></i>
+                              <h3 class="card__title">Need washed clothes?</h3>
+                              <a class="card__cta" href="#">
+                                   Learn more &gt;
                               </a>
                          </div>
 
-                         <div class="row__item row__item--md row__item--drycleaning">
-                              <div class="row__border"></div>
+                         <div class="card card--service--drycleaning">
+                              <div class="card__border"></div>
                               <img src="images/dry-cleaner-icon.png" alt="dry cleaning">
-                              <h3 class="row__title">Need dry cleaning?</h3>
-                              <a class="row__cta" href="#">
-                                   Learn more <i class="mdi mdi-chevron-right"></i>
+                              <h3 class="card__title">Need dry cleaning?</h3>
+                              <a class="card__cta" href="#">
+                                   Learn more &gt;
                               </a>
                          </div>
 
-                         <div class="row__item row__item--md row__item--tailoring">
-                              <div class="row__border"></div>
+                         <div class="card card--service--tailoring">
+                              <div class="card__border"></div>
                               <img src="images/tailor-icon.png" alt="tailoring">
-                              <h3 class="row__title">Need tailoring?</h3>
-                              <a class="row__cta" href="#">
-                                   Learn more <i class="mdi mdi-chevron-right"></i>
+                              <h3 class="card__title">Need tailoring?</h3>
+                              <a class="card__cta" href="#">
+                                   Learn more &gt;
                               </a>
                          </div>
                     </div>
@@ -236,13 +230,13 @@
                                         <div class="navList">
                                              <ul>
                                                   <li class="navList__item">
-                                                       <a class="appStoreButtons__item appStoreButtons__item--apple" href="#">
-                                                            <img src="images/appstore_2x.png" alt="Download on the AppStore">
+                                                       <a class="button--appStore appStoreButtons__apple" href="#">
+                                                            <img src="images/appstore_2x.png" alt="tailoring">
                                                        </a>
                                                   </li>
                                                   <li class="navList__item">
-                                                       <a class="appStoreButtons__item appStoreButtons__item--google" href="#">
-                                                            <img src="images/googleplay_2x.png" alt="Get it on Google Play">
+                                                       <a class="button--appStore appStoreButtons__google" href="#">
+                                                            <img src="images/googleplay_2x.png" alt="tailoring">
                                                        </a>
                                                   </li>
                                              </ul>
@@ -264,19 +258,20 @@
                                                        <p>Laundry and dry-cleaning on demand, delivered right to your door.</p>
                                                   </div>
 
-                                                  <div class="navList socialMediaIcons">
+
+                                                  <div class="navList">
                                                        <ul>
                                                             <li class="navList__item socialMediaIcons__item--facebook">
                                                                  <a class="navList__link" href="https://www.facebook.com" target="_blank">
                                                                       <i class="mdi mdi-facebook"></i>
                                                                  </a>
                                                             </li>
-                                                            <li class="navList__item socialMediaIcons__item--twitter">
+                                                            <li class="navList__item">
                                                                  <a class="navList__link" href="https://www.twitter.com" target="_blank">
                                                                       <i class="mdi mdi-twitter"></i>
                                                                  </a>
                                                             </li>
-                                                            <li class="navList__item socialMediaIcons__item--email">
+                                                            <li class="navList__item">
                                                                  <a class="navList__link" href="https://www.gmail.com" target="_blank">
                                                                       <i class="mdi mdi-email"></i>
                                                                  </a>
@@ -332,13 +327,13 @@
                                                   <div class="navList">
                                                        <ul>
                                                             <li class="navList__item">
-                                                                 <a class="appStoreButtons__item appStoreButtons__item--apple" href="#">
-                                                                      <img src="images/appstore_2x.png" alt="Download on the AppStore">
+                                                                 <a class="button--appStore appStoreButtons__apple" href="#">
+                                                                      <img src="images/appstore_2x.png" alt="tailoring">
                                                                  </a>
                                                             </li>
                                                             <li class="navList__item">
-                                                                 <a class="appStoreButtons__item appStoreButtons__item--google" href="#">
-                                                                      <img src="images/googleplay_2x.png" alt="Get it on Google Play">
+                                                                 <a class="button--appStore appStoreButtons__google" href="#">
+                                                                      <img src="images/googleplay_2x.png" alt="tailoring">
                                                                  </a>
                                                             </li>
                                                        </ul>
@@ -376,7 +371,8 @@
 
           <script>
                function myFunction(){
-                    var x = document.getElementByClassName("mainNav");
+                    var x = document.getElementById("topNav");
+
                     if(x.className =="mainNav"){
                          x.className += " responsive";
                     } else {
