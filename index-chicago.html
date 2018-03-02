@@ -4,6 +4,8 @@
      <meta charset="utf-8">
      <title>LaundryMate</title>
      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
      <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css">
 
@@ -125,41 +127,52 @@
                </div>
                     <div class="section__content">
                          <div class="row">
-                              <div class="row__item row__item--md">
+                              <div class="row__item row__item--md col-10 col-md-4">
                                    <div class="media">
                                         <div class="media__object">
                                              <div class="media__object__icon media__object__icon--time">
                                              </div>
                                         </div>
                                         <div class="media__content">
-                                             <h3>Saving you time</h3>
-                                             <p>Enjoy the convenience of not having to drive or having a conversation over the phone for your laundry to be cleaned.</p>
+                                             <div class="media__content__header">
+                                                  <h3>Saving you time</h3>
+                                             </div>
+                                             <div class="media__content__text">
+                                                  <p>Enjoy the convenience of not having to drive or having a conversation over the phone for your laundry to be cleaned.</p>
+                                             </div>
                                         </div>
                                    </div>
                               </div>
 
-                              <div class="row__item row__item--md">
+                              <div class="row__item row__item--md col-10 col-md-4">
                                    <div class="media">
                                         <div class="media__object">
                                              <div class="media__object__icon media__object__icon--repeat">
                                              </div>
                                         </div>
                                         <div class="media__content">
-                                             <h3>Repeat orders</h3>
+                                             <div class="media__content__header">
+                                                  <h3>Repeat orders</h3>
+                                             </div>
+                                             <div class="media__content__text">
                                              <p>With our easy to use app you can create weekly or daily orders to be cleaned with your favorite laundry facility.</p>
+                                        </div>
                                         </div>
                                    </div>
                               </div>
 
-                              <div class="row__item row__item--md">
+                              <div class="row__item row__item--md col-10 col-md-4">
                                    <div class="media">
                                         <div class="media__object">
-                                             <div class="media__object__icon media__object__icon--heart">
-                                             </div>
+                                             <div class="media__object__icon media__object__icon--heart"></div>
                                         </div>
                                         <div class="media__content">
-                                             <h3>Guaranteed care</h3>
-                                             <p>Each garment is special that's why we offer a variety of services as wash and fold, dry cleaning, hang dry, and tailoring.</p>
+                                             <div class="media__content__header">
+                                                  <h3>Guaranteed care</h3>
+                                             </div>
+                                             <div class="media__content__text">
+                                                  <p>Each garment is special that's why we offer a variety of services as wash and fold, dry cleaning, hang dry, and tailoring.</p>
+                                             </div>
                                         </div>
                                    </div>
                               </div>
@@ -170,9 +183,11 @@
 
      <section class="section section--dark section--finalCTAWithCredit">
           <div class="container">
-               <div class="section__content">
-                    <p>Are you convinced yet?<strong> First time users get $10 credit.</strong></p>
-                    <a class="button button--cta button--lg" href="#">order online</a>
+               <div class="row">
+                    <div class="section__content">
+                         <p>Are you convinced yet?<strong> First time users get $10 credit.</strong></p>
+                         <a class="button button--cta button--lg" href="#">order online</a>
+                    </div>
                </div>
           </div>
      </section> <!-- End of finalCTAWithCredit-->
@@ -196,7 +211,7 @@
           <div class="container">
                <div class="section__content">
                     <div class="row">
-                         <div class="row__item row__item--md row__item--washing">
+                         <div class="row__item row__item--md row__item--washing col-10 col-md-4">
                               <div class="row__border"></div>
                               <img src="images/laundry-icon.png" alt="washing">
                               <h3 class="row__title">Need washed clothes?</h3>
@@ -205,7 +220,7 @@
                               </a>
                          </div>
 
-                         <div class="row__item row__item--md row__item--drycleaning">
+                         <div class="row__item row__item--md row__item--drycleaning col-10 col-md-4">
                               <div class="row__border"></div>
                               <img src="images/dry-cleaner-icon.png" alt="dry cleaning">
                               <h3 class="row__title">Need dry cleaning?</h3>
@@ -214,7 +229,7 @@
                               </a>
                          </div>
 
-                         <div class="row__item row__item--md row__item--tailoring">
+                         <div class="row__item row__item--md row__item--tailoring col-10 col-md-4">
                               <div class="row__border"></div>
                               <img src="images/tailor-icon.png" alt="tailoring">
                               <h3 class="row__title">Need tailoring?</h3>
@@ -229,6 +244,7 @@
 
      <section class="section section--large section--downloadBanner">
                <div class="container">
+                    <div class="row">
                          <div class="section__content">
                                    <h3>Download LaundryMate App</h3>
                                    <p>Our app is available for free</p>
@@ -249,6 +265,7 @@
                                         </div>
                                    </div>
                               </div>
+                         </div>
                     </div>
           </section> <!-- End of section downloadBanner-->
 
@@ -384,5 +401,9 @@
                     }
                }
           </script>
+
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
      </body>
 </html>

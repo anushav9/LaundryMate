@@ -59,25 +59,27 @@ a {
   display: inline-block; }
 
 /* typography.scss */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
   padding-bottom: 10px;
-  font-family: Avenir;
   line-height: 1.3; }
 
 ul {
   list-style-type: none; }
 
 h2 {
-  font-size: 28px; }
+  font-size: 28px;
+  font-weight: 900; }
 
 h3 {
-  font-size: 24px; }
+  font-size: 24px;
+  font-weight: 300; }
 
 h4 {
   font-size: 20px; }
 
 p {
-  font-size: 14px; }
+  font-size: 14px;
+  font-weight: 300; }
 
 /* utilities */
 .container {
@@ -108,7 +110,7 @@ p {
 
 .main-header__nav {
   position: sticky;
-  background-color: pink;
+  background: transparent;
   display: flex;
   z-index: 100;
   box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.12); }
@@ -140,12 +142,8 @@ p {
     background-color: #17213A; }
 
 .section--mainHomepage {
-  width: 100%;
   height: 650px;
-  background-color: rgba(7, 13, 28, 0.52);
-  background-image: url("../images/user-hero.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
+  background: rgba(7, 13, 28, 0.52) url("../images/user-hero.jpg") 50% 50% no-repeat;
   background-size: cover;
   position: relative; }
   .section--mainHomepage .section__content {
@@ -154,119 +152,69 @@ p {
     top: 30%;
     padding: 10px; }
   .section--mainHomepage h2 {
-    padding-bottom: 10px;
-    font-size: 28px;
-    font-weight: 900;
-    line-height: 50px;
     color: #FFFFFF; }
   .section--mainHomepage p {
-    padding-bottom: 10px;
-    font-size: 1rem;
     line-height: 24px;
     color: rgba(255, 255, 255, 0.7); }
 
 .section--mapCoverageArea {
-  height: 500px;
+  height: 350px;
   background-color: #FFFFFF;
   background: url("../images/chicago-map.jpg") right no-repeat;
-  background-size: 70% 70%; }
+  background-size: 70% 40%; }
   .section--mapCoverageArea .section__content {
-    padding: 50px 10px;
-    width: 100%; }
-    .section--mapCoverageArea .section__content h2 {
-      font-size: 28px;
-      font-weight: 900; }
-    .section--mapCoverageArea .section__content h3 {
-      font-size: 24px;
-      font-weight: 300; }
+    padding: 30px 10px; }
     .section--mapCoverageArea .section__content h3, .section--mapCoverageArea .section__content a {
       color: #2196F3; }
-    .section--mapCoverageArea .section__content hr {
-      display: none; }
-    .section--mapCoverageArea .section__content h2, .section--mapCoverageArea .section__content h3, .section--mapCoverageArea .section__content hr {
-      margin-bottom: 10px; }
     .section--mapCoverageArea .section__content p {
-      font-size: 14px;
-      font-weight: 300;
-      line-height: 24px;
-      color: #A0AEC0;
-      border-bottom: 1px solid rgba(107, 124, 147, 0.12); }
-  .section--mapCoverageArea .section__footer {
-    padding-top: 20px; }
-    .section--mapCoverageArea .section__footer a {
-      font-size: 14px;
-      font-weight: 900; }
+      color: #A0AEC0; }
+  .section--mapCoverageArea .section__footer a {
+    font-size: 14px;
+    font-weight: 900; }
 
 .section--stepsToGetStarted .section__header h3 {
-  font-size: 24px;
-  font-weight: 300;
   color: #2196F3; }
-.section--stepsToGetStarted .section__content {
-  width: 80%; }
-  .section--stepsToGetStarted .section__content li h4 {
-    font-size: 20px;
-    font-weight: 900;
-    padding-bottom: 10px;
-    padding-left: 20px; }
-  .section--stepsToGetStarted .section__content li p {
-    color: #A0AEC0;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 24px; }
+.section--stepsToGetStarted .section__content li h4 {
+  font-weight: 900;
+  padding-left: 20px; }
+.section--stepsToGetStarted .section__content li p {
+  color: #A0AEC0;
+  padding-left: 20px; }
 
 .section--listOfKeyBenefits {
   background-color: #17213A; }
   .section--listOfKeyBenefits .section__header h3 {
     color: #FFFFFF;
-    font-size: 30px;
-    font-weight: 300;
     text-align: center;
     padding-top: 20px; }
-  .section--listOfKeyBenefits .section__content {
-    padding: 10px;
-    color: #FFFFFF; }
-    .section--listOfKeyBenefits .section__content .row__item {
-      margin: 0 auto;
-      padding: 30px;
-      width: 80%; }
-      .section--listOfKeyBenefits .section__content .row__item .media__object {
-        float: left; }
-        .section--listOfKeyBenefits .section__content .row__item .media__object__icon {
-          width: 49px;
-          height: 49px; }
-        .section--listOfKeyBenefits .section__content .row__item .media__object__icon--time {
-          background: url("../images/time-icon.png");
-          background-size: cover; }
-        .section--listOfKeyBenefits .section__content .row__item .media__object__icon--repeat {
-          background: url("../images/repeat-icon.png");
-          background-size: cover; }
-        .section--listOfKeyBenefits .section__content .row__item .media__object__icon--heart {
-          background: url("../images/care-icon.png");
-          background-size: cover; }
-      .section--listOfKeyBenefits .section__content .row__item .media__content h3 {
-        font-size: 20px;
-        position: relative;
-        top: 15px;
-        left: 15px;
-        bottom: 15px; }
-      .section--listOfKeyBenefits .section__content .row__item p {
-        font-size: 14px;
-        font-weight: 300;
-        padding-top: 10px;
-        color: #A0AEC0;
-        clear: left; }
+  .section--listOfKeyBenefits .section__content .row__item {
+    margin: 0 auto;
+    padding: 30px;
+    width: 80%; }
+    .section--listOfKeyBenefits .section__content .row__item .media__object__icon {
+      width: 49px;
+      height: 49px; }
+    .section--listOfKeyBenefits .section__content .row__item .media__object__icon--time {
+      background: url("../images/time-icon.png");
+      background-size: cover; }
+    .section--listOfKeyBenefits .section__content .row__item .media__object__icon--repeat {
+      background: url("../images/repeat-icon.png");
+      background-size: cover; }
+    .section--listOfKeyBenefits .section__content .row__item .media__object__icon--heart {
+      background: url("../images/care-icon.png");
+      background-size: cover; }
+    .section--listOfKeyBenefits .section__content .row__item .media__object__icon, .section--listOfKeyBenefits .section__content .row__item .media__content__header, .section--listOfKeyBenefits .section__content .row__item .media__content__text {
+      vertical-align: top; }
+    .section--listOfKeyBenefits .section__content .row__item .media__content__header {
+      color: #FFFFFF; }
+    .section--listOfKeyBenefits .section__content .row__item .media__content__text {
+      color: #A0AEC0; }
 
 .section--finalCTAWithCredit {
   background: #121A2E;
   color: #FFFFFF;
   padding: 20px;
-  font-weight: 300;
-  line-height: 1.5;
   text-align: center; }
-  .section--finalCTAWithCredit p {
-    padding: 10px; }
   .section--finalCTAWithCredit .button--cta {
     color: #FFFFFF;
     background: linear-gradient(270deg, #4DD0E1 0%, #2196F3 100%); }
@@ -277,7 +225,6 @@ p {
     display: none; }
   .section--aboutTheMobileApp .section__content--container {
     background-color: #F6F9FC;
-    width: 100%;
     height: 400px; }
   .section--aboutTheMobileApp .section__content {
     position: relative;
@@ -287,28 +234,17 @@ p {
     transform: translateY(-50%);
     padding: 10px 20px; }
     .section--aboutTheMobileApp .section__content h2 {
-      color: #121A2E;
-      padding-bottom: 10px;
-      font-size: 30px;
-      font-weight: 900; }
+      color: #121A2E; }
     .section--aboutTheMobileApp .section__content h3 {
-      font-size: 24px;
-      color: #2196F3;
-      padding-bottom: 10px;
-      font-weight: 300; }
+      color: #2196F3; }
     .section--aboutTheMobileApp .section__content p {
-      color: #6B7C93;
-      font-family: Avenir;
-      font-size: 14px;
-      font-weight: 300;
-      line-height: 24px; }
+      color: #6B7C93; }
 
 .section--servicesOfferedCards .row .row__item--washing {
   margin-top: 40px; }
 .section--servicesOfferedCards .row__item {
   margin: 0 auto;
   height: 170px;
-  width: 300px;
   background-color: #FFFFFF;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
   margin-bottom: 40px;
@@ -317,8 +253,7 @@ p {
   .section--servicesOfferedCards .row__item .row__border {
     width: 100%;
     height: 5px;
-    position: absolute;
-    top: 0; }
+    position: absolute; }
   .section--servicesOfferedCards .row__item img {
     width: 50px;
     height: 50px;
@@ -329,9 +264,7 @@ p {
   .section--servicesOfferedCards .row__item h3 {
     padding-top: 50px;
     padding-bottom: 20px;
-    color: rgba(18, 26, 46, 0.87);
-    font-weight: 300;
-    line-height: 33px; }
+    color: rgba(18, 26, 46, 0.87); }
   .section--servicesOfferedCards .row__item .row__cta {
     font-weight: 900;
     font-size: 14px; }
@@ -348,34 +281,31 @@ p {
 .section--servicesOfferedCards .row__item--tailoring .row__cta {
   color: #FF4B75; }
 
+@media all and (min-width: 750px) {
+  .section--servicesOfferedCards .section__content {
+    padding: 40px; }
+    .section--servicesOfferedCards .section__content .row {
+      margin: 0 auto; }
+    .section--servicesOfferedCards .section__content .row__item {
+      display: inline-block;
+      margin: 0; } }
 .section--downloadBanner {
   background: linear-gradient(133.62deg, #2B91FE 0%, #485FFF 100%);
-  position: relative;
-  height: 250px; }
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
   .section--downloadBanner .section__content {
     text-align: center;
-    letter-spacing: 1px;
     color: #FFFFFF;
-    font-weight: 300;
-    position: absolute;
-    margin: auto;
-    left: 50%;
-    top: 50%;
-    width: 100%;
-    transform: translateX(-50%) translateY(-50%); }
-    .section--downloadBanner .section__content h2 {
-      font-size: 30px;
-      line-height: 46px; }
+    font-weight: 300; }
     .section--downloadBanner .section__content p {
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 16px;
-      line-height: 26px; }
+      color: rgba(255, 255, 255, 0.7); }
 
 .section--footer {
   background-color: #17213A; }
   .section--footer .section__content {
     display: flex;
-    width: 90%;
     flex-direction: column;
     justify-content: center;
     padding-top: 20px; }
@@ -383,11 +313,8 @@ p {
     width: 150px;
     height: 23px; }
   .section--footer h3 {
-    font-size: 16px;
-    color: #FFFFFF;
-    padding-bottom: 10px; }
+    color: #FFFFFF; }
   .section--footer p {
-    font-size: 14px;
     color: rgba(255, 255, 255, 0.7); }
   .section--footer .socialMediaIcons a, .section--footer .appStoreButtons__item {
     display: inline !important; }
@@ -396,7 +323,7 @@ p {
     padding-left: 20px; }
     .section--footer .footer__row li a {
       color: rgba(255, 255, 255, 0.7);
-      line-height: 21px;
+      line-height: 1.35;
       display: block; }
 
 .main-footer {
@@ -486,16 +413,6 @@ p {
 
   .section--finalCTAWithCredit .section__content p {
     display: inline-block; }
-
-  .section--servicesOfferedCards .section__content {
-    padding: 40px; }
-    .section--servicesOfferedCards .section__content .row {
-      margin: 0 auto; }
-    .section--servicesOfferedCards .section__content .row__item {
-      width: 30%;
-      display: inline-block; }
-    .section--servicesOfferedCards .section__content .row__item:not(:last-child) {
-      margin-right: 30px; }
 
   .section--aboutTheMobileApp {
     height: 650px;
