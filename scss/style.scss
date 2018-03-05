@@ -3,7 +3,7 @@
 @import 'reset',
         'partials/variables',
         'partials/buttons';
-@font-face{
+@font-face {
      font-family: Avenir;
      src:url('Avenir.ttc');
 }
@@ -17,6 +17,7 @@ html {
 a {
   text-decoration: none;
   display:inline-block;
+
 }
 /* typography.scss */
 
@@ -35,8 +36,15 @@ h3 {
      font-size: 24px;
      font-weight: $font-weight-light;
 }
-h4{
+h4 {
      font-size: 20px;
+}
+h5 {
+     font-size: 18px;
+}
+h6 {
+     font-size: 16px;
+     font-weight: $font-weight-semibold;
 }
 p {
      font-size: 14px;
@@ -52,7 +60,7 @@ p {
 
 /* navList */
 
-.navList__item{
+.navList__item {
      display: inline;
 }
 
@@ -66,58 +74,124 @@ p {
      text-align: center;
 
 }
+.button--primary {
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    color: $brand-cta;
+    box-shadow: 0 2px 2px 0 rgba(35,10,74,0.15);
+    text-transform: uppercase;
+    line-height: 42px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
 
 .button--cta {
        text-transform: uppercase;
        box-shadow: 0 17px 20px 0 rgba(35,10,74,0.15);
 }
 
-.appStoreButtons__item img{
+.appStoreButtons__item img {
      width: 150px;
      height: 45px;
      display: inline-block;
 }
 
 // MAIN HEADER
-.main-header__nav {
-     position: sticky;
-     background: transparent;
-     display: flex;
-	z-index: 100;
+.header {
+     background: $primary;
      box-shadow: inset 0 -1px 0 0 rgba(255,255,255,0.12);
+     overflow: hidden;
 
-     .logo{
-         width: 155.7px;
-         height: 22.56px;
-         float: left;
-         display: inline-block;
-      }
+     &.header--onImage {
+          background: none;
+     }
 
-     .main-header__navToggle {
-          display: inline-block;
+     &.header--onNextSection {
+          margin-bottom: -$header-height;
+          position: relative;
+          position: sticky;
+     }
+
+     .container {
+        display: flex;
+        height: $header-height;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header__logo {
+
+        img {
+            height: 30px;
+        }
+    }
+}
+
+     .header__nav{
+
+          .header__navList {
+               display: none;
+
+               @include tablet {
+                      display: flex;
+                      align-items: center;
+                  }
+             }
+             // .navList {
+             //       display: flex;
+             //       align-items: center;
+             //
+             //       .navList__item {
+             //           display: inline-block;
+             //           padding: 10px;
+             //           float: left;
+             //       }
+             //   }
+
+             .navList__link {
+                 color: #FFF;
+                 text-decoration: none;
+             }
+             .navList__item {
+                  padding: 15px;
+
+                  &.navList__item--disabled {
+                     opacity: 0.5;
+                     pointer-events: none;
+                     cursor: default;
+                 }
+
+                 @include desktop {
+                     padding-left: 25px;
+                     padding-right: 25px;
+                 }
+               }
+     }
+
+
+     .header__navToggle {
+          display: none;
           position: absolute;
           float: right;
           right: 0;
           &__icon {
                font-size: 28px;
-               color: $white;
+               color: black;
           }
-     }
-
-     .navList--mainNav{
-		display: none;
-		position: absolute;
-		right: 0;
-          }
-     }
+      }
 
      .mainNav.responsive {
-          .mainNav--navList {
+          .navList--mainNav {
                display: block;
-               top: 10px;
+               top: 20px;
                li {
                     display: block;
                     padding: 10px 0;
+               }
+               li a {
+                    color: $white;
+                    // float: none;
+                    display: block;
                }
                li:hover {
                     background-color: $color-deepSapphireBlue;
@@ -128,29 +202,25 @@ p {
 
 //MAIN HOME PAGE
 .section--mainHomepage {
-  height: 650px;
-  background: rgba(7,13,28,0.52) url('../images/user-hero.jpg') 50% 50% no-repeat;
-  background-size: cover;
-  position: relative;
-     .section__content{
-          position: absolute;
-          width:80%;
-          top:30%;
-          padding: 10px;
+     background-image: url(../images/user-hero.jpg);
+       background-repeat: no-repeat;
+       background-size: cover;
+       background-position: center;
+       height: 700px;
+
+       .section__content {
+        max-width: 350px;
+        padding-top: 230px;
+        font-size: 1.8rem;
+          h2{
+            color: $white;
+          }
+          p{
+            color: $color-footerText;
+          }
      }
-
-  h2{
-
-
-    color: $white;
-  }
-  p{
-
-
-    line-height: 24px;
-    color: rgba(255,255,255,0.7);
-  }
 }
+
 
 //MAPS COVERAGE AREA
 .section--mapCoverageArea{
@@ -158,20 +228,45 @@ p {
      background-color: $white;
      background:url('../images/chicago-map.jpg') right no-repeat;
      background-size: 70% 40%;
+
+     @include tablet {
+          background-size: 50% 80%;
+          height: 400px;
+    }
+
      .section__content{
-            padding:30px 10px;
+            padding:30px;
             h3,a {
               color:$primary;
             }
+            h2{
+                 color: $color-footer;
+            }
             p{
               color:$color-dimmedText;
-              // border-bottom:1px solid rgba(107,124,147,0.12);
+              line-height: 1.5;
             }
+            a{
+                 padding-top: 20px;
+                 text-decoration: none;
+            }
+
+            @include small {
+                 padding-left:40px;
+            }
+            @include tablet {
+               padding-left: 60px;
+               p{
+                    padding-bottom: 20px;
+                    border-bottom:1px solid rgba(107,124,147,0.12);
+               }
+           }
+
       }
       .section__footer{
            a{
                 font-size: 14px;
-                font-weight: 900;
+                font-weight: $font-weight-bold;
            }
       }
 }
@@ -179,50 +274,64 @@ p {
 //STEPSTOGETSTARTED
 
 .section--stepsToGetStarted{
+     padding: 20px;
      .section__header{
           h3{
                color: $primary;
           }
      }
+     .section__image{
+          display: none;
+     }
      .section__content{
             li h4{
                  font-weight: $font-weight-bold;
-                 padding-left:20px;
                }
 
             li p{
               color:$color-dimmedText;
-              padding-left:20px;
             }
      }
-}
 
+     @include small {
+               padding: 40px;
+               .section__image{
+                    display: block;
+                    background: url('../images/user-photo.png') center center no-repeat;
+                    background-size: cover;
+               }
+     }
+}
 //section--listOfKeyBenefits
-.section--listOfKeyBenefits{
+.section--listOfKeyBenefits {
 background-color: $color-deepSapphireBlue;
-     .section__header{
-          h3{
+     .section__header {
+          h3 {
                color: $white;
                text-align: center;
                padding-top: 20px;
           }
      }
-     .section__content{
-
+     .section__content {
+          .row {
+               @include tablet {
+                     margin: 0 auto;
+               }
+          }
           .row__item {
                margin: 0 auto;
                padding: 30px;
-               width:80%;
-
+               width: 80%;
+               @include tablet{
+                    width:30%;
+                    display:inline-block;
+               }
                .media__object {
-                    // float:left;
+
                     &__icon {
                          width:49px;
                          height:49px;
                     }
-                    // .media__object__icon,.media__content__header{
-                    //      display: inline-block;
-                    // }
 
                     &__icon--time {
                          background: url('../images/time-icon.png');
@@ -251,9 +360,10 @@ background-color: $color-deepSapphireBlue;
                }
 
           }
+
+
      }
 }
-
 
 //finalCTAWithCredit
 .section--finalCTAWithCredit{
@@ -261,11 +371,33 @@ background-color: $color-deepSapphireBlue;
      color:$white;
      padding:20px;
      text-align: center;
+     .section__content{
+          @include small{
+               // clear: both;
+
+               p{
+                    float: left;
+
+               }
+               // .clearfix::after {
+               //      content: "";
+               //      clear: both;
+               //      display: table;
+               // }
+
+          }
+     }
+
      .button--cta {
             color: $white;
             background: linear-gradient(270deg, #4DD0E1 0%, #2196F3 100%);
+            @include small {
+                 float: right;
+                 display: inline;
+            }
      }
 }
+
  //ABOUT THE MOBILE APP
 .section--aboutTheMobileApp{
      background-color:$white;
@@ -295,22 +427,64 @@ background-color: $color-deepSapphireBlue;
      }
 }
 
+@media all and (min-width: 750px){
+
+      .section--aboutTheMobileApp{
+           height: 650px;
+           position: relative;
+           img{
+                width:50%;
+                display: block;
+                position: absolute;
+                left: -80px;
+                top:50%;
+                transform: translate(0, -50%);
+                z-index: 110;
+           }
+           .section__content--container{
+                width:60%;
+                height: 400px;
+                background-color:#F6F9FC;
+                position: absolute;
+                right: 0px;
+                top:50%;
+                transform: translate(0, -50%);
+           }
+           .section__content{
+                width: 70%;
+                position: absolute;
+                margin: auto;
+                left: 0; bottom: 0; right: 0;
+                // transform: translate(0, -50%);
+                // top:50%;
+
+           }
+      }
+}
+
+
 //SERVICES OFFERED CARDS
 .section--servicesOfferedCards{
      .row .row__item--washing{
           margin-top: 40px;
      }
+     .row{
+          margin: 0 auto;
+     }
      .row__item{
 
-            margin:0 auto;
-            height:170px;
-            // width: 300px;
-            background-color: $white;
-            box-shadow: 0 4px 10px 0 rgba(0,0,0,0.15);
-            margin-bottom:40px;
-            text-align: center;
-            position: relative;
 
+
+            .row__content{
+                 margin:0 auto;
+               height:170px;
+               // width: 300px;
+               background-color: $white;
+               box-shadow: 0 4px 10px 0 rgba(0,0,0,0.15);
+               margin-bottom:40px;
+               text-align: center;
+               position: relative;
+            }
             .row__border{
                  width:100%;
                  height: 5px;
@@ -389,42 +563,60 @@ background-color: $color-deepSapphireBlue;
          }
      }
 }
+@media all and (min-width: 750px){
+     .section--downloadBanner{
+          // height:330px;
+     }
+}
 
 //FOOTER
 .section--footer{
      background-color: $color-deepSapphireBlue;
      .section__content{
-          display:flex;
+          display: flex;
           flex-direction: column;
           justify-content: center;
           padding-top: 20px;
-     }
-     .footer__row__logo{
-          width: 150px;
-          height:23px;
-     }
-     h3{
-          color:$white;
-     }
-     p{
-          color:$color-footerText;
+          h6{
+               color: $white;
+          }
+          p, li a {
+               color: $color-footerText;
+          }
      }
 
-  .socialMediaIcons a,.appStoreButtons__item{
-      display: inline !important;
- }
-  .footer__row{
-    padding-bottom:20px;
-    padding-left: 20px;
-
-     li a{
-          color:$color-footerText;
-          line-height: 1.35;
-          display: block;
-     }
-  }
+       .socialMediaIcons a, .appStoreButtons__item {
+           display: inline !important;
+      }
+       .footer__row {
+         padding-bottom: 20px;
+         padding-left: 20px;
+         &__logo {
+              width: 150px;
+              height: 23px;
+         }
+          li a {
+               font-size: 14px;
+               line-height: 1.35;
+               display: block;
+          }
+       }
 }
+@media all and (min-width: 750px){
+     .section--footer {
+         height: 230px;
+         .section__content {
+               display: flex;
+               flex-direction: row;
+               justify-content: space-around;
+               .footer__row {
+                 display: inline-block;
 
+               }
+         }
+     }
+
+}
 //MAIN FOOTER
 .main-footer {
      background-color: $color-footer;
@@ -446,183 +638,10 @@ background-color: $color-deepSapphireBlue;
             }
       }
 }
-
-//MEDIA QUERIES
-@media screen and (min-width: 480px) {
-     .section--mainHomepage{
-          width:100%;
-          height: 700px;
-          .section__content{
-               top:40%;
-               left: 10%;
-               width:60%;
-          }
-     }
-     .section--mapCoverageArea{
-          background-size: 50% 50%;
-          position: relative;
-          .section__content{
-               position: absolute;
-               left: 10%;
-               width:60%;
-               float: left;
-               transform: translate(0, -50%);
-               top:50%;
-          }
-     }
-}
-@media screen and (min-width: 601px) {
-     .main-header__nav{
-          padding: 20px;
-          .mainNav{
-
-               .navList--mainNav{
-                    display: block;
-                    float: right;
-                    li{
-
-                         display: inline-block;
-                         padding: 10px;
-                    }
-               }
-          }
-          .main-header__navToggle{
-               display: none;
-          }
-     }
-}
 @media all and (min-width: 750px){
-
-     .section--mainHomepage{
-          width:100%;
-          height: 700px;
-          .section__content{
-               h2{
-                    font-size: 36px;
-               }
-               top:40%;
-               left: 10%;
-               width:60%;
-          }
-     }
-     .section--mapCoverageArea{
-          background-size: 50% 80%;
-          position: relative;
-          height: 350px;
-          .section__content{
-               position: absolute;
-               left: 10%;
-               width:60%;
-               float: left;
-               transform: translate(0, -50%);
-               top:50%;
-          }
-     }
-
-     .section--stepsToGetStarted{
-          background-image: url('../images/user-photo.png');
-          background-size: 50%;
-          background-repeat: no-repeat;
-          background-position: 20% 40%;
-          padding: 40px;
-          .section__content{
-               width: 30%;
-               float: right;
-          }
-     }
-
-    .section--listOfKeyBenefits {
-         .row{
-              margin: 0 auto;
-         }
-         .section__content .row__item{
-
-           width:30%;
-           display:inline-block;
+     .main-footer{
+         .navList__item{
+              margin-right: 10px;
          }
      }
-     .section--finalCTAWithCredit{
-          .section__content p{
-               display: inline-block;
-          }
-     }
-
-      .section--aboutTheMobileApp{
-           height: 650px;
-           position: relative;
-           img{
-                width:50%;
-                display: block;
-                position: absolute;
-                left: -80px;
-                top:50%;
-                transform: translate(0, -50%);
-                z-index: 110;
-           }
-           .section__content--container{
-                width:60%;
-                height: 400px;
-                background-color:#F6F9FC;
-                position: absolute;
-                right: 0px;
-                top:50%;
-                transform: translate(0, -50%);
-           }
-           .section__content{
-                width: 70%;
-                position: absolute;
-                margin: auto;
-                left: 0; bottom: 0; right: 0;
-                // transform: translate(0, -50%);
-                // top:50%;
-
-           }
-      }
-
-           .section--downloadBanner{
-                height:330px;
-           }
-
-         .section--footer{
-              height:230px;
-
-              .section__content{
-                   padding: 30px;
-                   display: flex;
-                   flex-direction: row;
-                   justify-content: space-around;
-
-                   .footer__row{
-                     display:inline-block;
-
-                   }
-             }
-         }
-
-         .main-footer{
-              .navList__item{
-                   margin-right: 10px;
-              }
-         }
-}
-
-
-@media screen and (min-width: 1100px) {
-     .section--mainHomepage{
-          width:100%;
-          height: 700px;
-          .section__content{
-               top:40%;
-               left: 10%;
-               width:30%;
-          }
-     }
-     .section--mapCoverageArea{
-          width:100%;
-          height: 450px;
-          .section__content{
-               width:40%;
-          }
-     }
-
 }

@@ -25,3 +25,29 @@ $font-weight-light: 300;
 $font-weight: normal;
 $font-weight-semibold: 600;
 $font-weight-bold: 900;
+
+$header-height: 80px;
+
+$breakpoint-small: 576px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+
+@mixin tablet {
+  @media (min-width: #{$breakpoint-tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media (min-width: #{$breakpoint-small}) {
+    @content;
+  }
+}
+$brand-cta: #2B91FE;
