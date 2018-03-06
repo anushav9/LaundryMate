@@ -1,8 +1,17 @@
-$primary: #2196F3; //blue
+
 $white: #FFFFFF;   //white
-$color-text: #6B7C93;
+$body-text: #6B7C93;
+
 $color-dimmedText: #A0AEC0; //grey
-$color-footerText:rgba(255,255,255,0.7);
+$color-footerText: rgba(255,255,255,0.7);
+
+$background-primary: #FFF;
+$background-secondary: #f8f8f8;
+
+
+$brand-primary: #2196F3; //blue
+$brand-secondary: #2196F3; //blue
+$brand-cta: #2B91FE;
 
 $color-washing: #9850DC;
 $color-drycleaning: #13A0E2;
@@ -13,9 +22,9 @@ $color-footer: #121A2E;
 $color-aliceBlue: #F6F9FC;
 $color-mainHomePage: rgba(7,13,28,0.52); //background for all mainHomePage
 
-$color-gradient-washing:linear-gradient(90deg, #9850DC 0%, #DB63A6 100%);
-$color-gradient-drycleaning:linear-gradient(90deg, #13A0E2 0%, #01D7C9 100%);
-$color-gradient-tailoring:linear-gradient(90deg, #FF4B75 0%, #FFADA0 100%);
+$color-gradient-washing: linear-gradient(90deg, #9850DC 0%, #DB63A6 100%);
+$color-gradient-drycleaning: linear-gradient(90deg, #13A0E2 0%, #01D7C9 100%);
+$color-gradient-tailoring: linear-gradient(90deg, #FF4B75 0%, #FFADA0 100%);
 $color-gradient-primary: linear-gradient(133.62deg, #2B91FE 0%, #485FFF 100%);
 
 
@@ -31,10 +40,17 @@ $header-height: 80px;
 $breakpoint-small: 576px;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
+$breakpoint-hd-desktop: 1280px;
 
 
 @mixin tablet {
   @media (min-width: #{$breakpoint-tablet}) {
+    @content;
+  }
+}
+
+@mixin hd-desktop {
+  @media (min-width: #{$breakpoint-hd-desktop}) {
     @content;
   }
 }
@@ -45,9 +61,8 @@ $breakpoint-desktop: 1024px;
   }
 }
 
-@mixin small {
+@mixin screen-sm {
   @media (min-width: #{$breakpoint-small}) {
     @content;
   }
 }
-$brand-cta: #2B91FE;

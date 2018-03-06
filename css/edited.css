@@ -1,531 +1,96 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
+/*
+Error: Undefined variable: "$primary".
+        on line 201 of scss/edited.scss
+
+196:             h3{
+197:                  font-size: 24px;
+198:                  font-weight: $font-weight-light;
+199:             }
+200:             h3,a{
+201:               color:$primary;
+202:             }
+203:             hr{
+204:                  display: none;
+205:             }
+206:             h2,h3,hr{
+
+Backtrace:
+scss/edited.scss:201
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/script/tree/node.rb:50:in `perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/stack.rb:135:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/stack.rb:135:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/stack.rb:135:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/stack.rb:135:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:52:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:320:in `block in watch'
+/Library/Ruby/Gems/2.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
+/Library/Ruby/Gems/2.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
+/Library/Ruby/Gems/2.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
+/Library/Ruby/Gems/2.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
+/Library/Ruby/Gems/2.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
+/Library/Ruby/Gems/2.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
+/Library/Ruby/Gems/2.0.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; }
-
-body {
-  line-height: 1; }
-
-ol, ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-@font-face {
-  font-family: Avenir;
-  src: url("Avenir.ttc"); }
-* {
-  box-sizing: border-box; }
-
-html {
-  font-family: Avenir; }
-
-a {
-  text-decoration: none;
-  display: inline-block; }
-
-/* typography.scss */
-h1, h2, h3, h4, h5, h6 {
-  padding-bottom: 10px;
-  font-family: Avenir; }
-
-h3 {
-  font-size: 24px; }
-
-p {
-  padding-bottom: 10px; }
-
-/* utilities */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  overflow: hidden; }
-
-/* navList */
-.navList__item {
-  display: inline; }
-
-/* buttons.scss */
-.button {
-  display: inine-block;
-  line-height: 36px;
-  padding: 0 10px;
-  border-radius: 4px;
-  text-align: center;
-  background: lightgray;
-  background-color: black; }
-  .button:hover {
-    background: red;
-    color: #FFF; }
-
-.button--cta {
-  color: #FFFFFF;
-  text-transform: uppercase;
-  background: linear-gradient(270deg, #4DD0E1 0%, #2196F3 100%);
-  box-shadow: 0 17px 20px 0 rgba(35, 10, 74, 0.15); }
-
-.button--appStore img {
-  width: 150px;
-  height: 45px;
-  display: inline-block; }
-
-/* index-chicago.scss */
-.main-header__nav {
-  width: 100%;
-  height: 50px;
-  position: sticky;
-  background: transparent;
-  top: 0;
-  left: 0;
-  display: flex;
-  z-index: 100;
-  box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.12); }
-  .main-header__nav .logo {
-    width: 155.7px;
-    height: 22.56px;
-    float: left;
-    display: inline-block; }
-  .main-header__nav .main-header__navToggle {
-    display: inline-block;
-    position: absolute;
-    float: right;
-    right: 0; }
-    .main-header__nav .main-header__navToggle__icon {
-      font-size: 28px;
-      color: #FFFFFF; }
-  .main-header__nav .mainNav--navList {
-    display: none;
-    position: absolute;
-    right: 0; }
-    .main-header__nav .mainNav--navList li a {
-      color: #FFFFFF; }
-
-.mainNav.responsive .mainNav--navList {
-  display: block;
-  top: 10px; }
-  .mainNav.responsive .mainNav--navList li {
-    display: block;
-    padding: 10px 0; }
-  .mainNav.responsive .mainNav--navList li:hover {
-    background-color: #17213A; }
-
-.section--mainHomepage {
-  background: rgba(7, 13, 28, 0.52) url("../images/user-hero.jpg") 50% 50% no-repeat;
-  background-size: cover;
-  position: relative; }
-  .section--mainHomepage .section__content {
-    position: absolute;
-    width: 80%;
-    top: 30%;
-    padding: 10px; }
-  .section--mainHomepage h2 {
-    padding-bottom: 10px;
-    font-size: 28px;
-    font-weight: 900;
-    line-height: 50px;
-    color: #FFFFFF; }
-  .section--mainHomepage p {
-    padding-bottom: 10px;
-    font-size: 1rem;
-    line-height: 24px;
-    color: rgba(255, 255, 255, 0.7); }
-
-.section--mapCoverageArea {
-  height: 500px;
-  background-color: #FFFFFF;
-  background: url("../images/chicago-map.jpg") right no-repeat;
-  background-size: 70% 70%; }
-  .section--mapCoverageArea .section__content {
-    padding: 50px 10px;
-    width: 100%; }
-    .section--mapCoverageArea .section__content h2 {
-      font-size: 28px;
-      font-weight: 900; }
-    .section--mapCoverageArea .section__content h3 {
-      font-size: 24px;
-      font-weight: 300; }
-    .section--mapCoverageArea .section__content h3, .section--mapCoverageArea .section__content a {
-      color: #2196F3; }
-    .section--mapCoverageArea .section__content hr {
-      display: none; }
-    .section--mapCoverageArea .section__content h2, .section--mapCoverageArea .section__content h3, .section--mapCoverageArea .section__content hr {
-      margin-bottom: 10px; }
-    .section--mapCoverageArea .section__content p {
-      font-size: 14px;
-      font-weight: 300;
-      line-height: 24px;
-      color: #A0AEC0;
-      border-bottom: 1px solid rgba(107, 124, 147, 0.12); }
-  .section--mapCoverageArea .section__footer {
-    padding-top: 20px; }
-    .section--mapCoverageArea .section__footer a {
-      font-size: 14px;
-      font-weight: 900; }
-
-.section--stepsToGetStarted .section__header h3 {
-  font-size: 24px;
-  font-weight: 300;
-  color: #2196F3; }
-.section--stepsToGetStarted .section__content {
-  width: 80%; }
-  .section--stepsToGetStarted .section__content li h4 {
-    font-size: 20px;
-    font-weight: 900;
-    padding-bottom: 10px;
-    padding-left: 20px; }
-  .section--stepsToGetStarted .section__content li p {
-    color: #A0AEC0;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 24px; }
-
-.section--listOfKeyBenefits {
-  background-color: #17213A; }
-  .section--listOfKeyBenefits .section__header h3 {
-    color: #FFFFFF;
-    font-size: 30px;
-    font-weight: 300;
-    text-align: center;
-    padding-top: 20px; }
-  .section--listOfKeyBenefits .section__content {
-    padding: 10px;
-    color: #FFFFFF; }
-    .section--listOfKeyBenefits .section__content .row__item {
-      margin: 0 auto;
-      padding: 30px;
-      width: 80%; }
-      .section--listOfKeyBenefits .section__content .row__item .media__object {
-        float: left; }
-        .section--listOfKeyBenefits .section__content .row__item .media__object img {
-          width: 49px;
-          height: 49px; }
-      .section--listOfKeyBenefits .section__content .row__item .media__content h3 {
-        font-size: 20px;
-        position: relative;
-        top: 15px;
-        left: 15px;
-        bottom: 15px; }
-      .section--listOfKeyBenefits .section__content .row__item p {
-        font-size: 14px;
-        font-weight: 300;
-        padding-top: 10px;
-        color: #A0AEC0;
-        clear: left; }
-
-.section--finalCTAWithCredit {
-  background: #121A2E;
-  color: #FFFFFF;
-  padding: 20px;
-  font-weight: 300;
-  line-height: 1.5;
-  text-align: center; }
-  .section--finalCTAWithCredit p {
-    padding: 10px; }
-
-.section--aboutTheMobileApp {
-  background-color: #FFFFFF; }
-  .section--aboutTheMobileApp img {
-    display: none; }
-  .section--aboutTheMobileApp .section__content--container {
-    background-color: #F6F9FC;
-    width: 100%;
-    height: 400px; }
-  .section--aboutTheMobileApp .section__content {
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    padding: 10px 20px; }
-    .section--aboutTheMobileApp .section__content h2 {
-      color: #121A2E;
-      padding-bottom: 10px;
-      font-size: 30px;
-      font-weight: 900; }
-    .section--aboutTheMobileApp .section__content h3 {
-      font-size: 24px;
-      color: #2196F3;
-      padding-bottom: 10px;
-      font-weight: 300; }
-    .section--aboutTheMobileApp .section__content p {
-      color: #6B7C93;
-      font-family: Avenir;
-      font-size: 14px;
-      font-weight: 300;
-      line-height: 24px; }
-
-.section--servicesOfferedCards .cardList .card--service--washing {
-  margin-top: 40px; }
-.section--servicesOfferedCards .card {
-  margin: 0 auto;
-  height: 170px;
-  width: 300px;
-  background-color: #FFFFFF;
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
-  margin-bottom: 40px;
-  text-align: center;
-  position: relative; }
-  .section--servicesOfferedCards .card .card__border {
-    width: 100%;
-    height: 5px;
-    position: absolute;
-    top: 0; }
-  .section--servicesOfferedCards .card img {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: -25px;
-    right: 40%;
-    z-index: 20; }
-  .section--servicesOfferedCards .card h3 {
-    padding-top: 50px;
-    padding-bottom: 20px;
-    color: rgba(18, 26, 46, 0.87);
-    font-weight: 300;
-    line-height: 33px; }
-  .section--servicesOfferedCards .card .card__cta {
-    font-weight: 900;
-    font-size: 14px; }
-.section--servicesOfferedCards .card--service--washing .card__border {
-  background: linear-gradient(90deg, #9850DC 0%, #DB63A6 100%); }
-.section--servicesOfferedCards .card--service--washing .card__cta {
-  color: #9850DC; }
-.section--servicesOfferedCards .card--service--drycleaning .card__border {
-  background: linear-gradient(90deg, #13A0E2 0%, #01D7C9 100%); }
-.section--servicesOfferedCards .card--service--drycleaning .card__cta {
-  color: #13A0E2; }
-.section--servicesOfferedCards .card--service--tailoring .card__border {
-  background: linear-gradient(90deg, #FF4B75 0%, #FFADA0 100%); }
-.section--servicesOfferedCards .card--service--tailoring .card__cta {
-  color: #FF4B75; }
-
-.section--downloadBanner {
-  background: linear-gradient(133.62deg, #2B91FE 0%, #485FFF 100%);
-  position: relative;
-  height: 250px; }
-  .section--downloadBanner .section__content {
-    text-align: center;
-    letter-spacing: 1px;
-    color: #FFFFFF;
-    font-weight: 300;
-    position: absolute;
-    margin: auto;
-    left: 50%;
-    top: 50%;
-    width: 100%;
-    transform: translateX(-50%) translateY(-50%); }
-    .section--downloadBanner .section__content h2 {
-      font-size: 30px;
-      line-height: 46px; }
-    .section--downloadBanner .section__content p {
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 16px;
-      line-height: 26px; }
-
-.section--footer {
-  background-color: #17213A; }
-  .section--footer .section__content {
-    display: flex;
-    width: 90%;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 20px; }
-  .section--footer .footer__row__logo {
-    width: 150px;
-    height: 23px; }
-  .section--footer h3 {
-    font-size: 16px;
-    color: #FFFFFF;
-    padding-bottom: 10px; }
-  .section--footer p {
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.7); }
-  .section--footer .footer__row__socialMediaIcons a, .section--footer .button--appStore {
-    display: inline !important; }
-  .section--footer .footer__row {
-    padding-bottom: 20px;
-    padding-left: 20px; }
-    .section--footer .footer__row li a {
-      color: rgba(255, 255, 255, 0.7);
-      line-height: 21px;
-      display: block; }
-
-.main-footer {
-  background-color: #121A2E; }
-  .main-footer .container {
-    display: flex;
-    color: #A0AEC0;
-    font-size: 12px;
-    height: 50px;
-    justify-content: space-around;
-    padding: 20px; }
-    .main-footer .container span {
-      padding-right: 5px; }
-    .main-footer .container .navList a {
-      color: #FFFFFF;
-      font-weight: normal;
-      display: inline; }
-
-@media screen and (min-width: 480px) {
-  .section--mainHomepage {
-    width: 100%;
-    height: 700px; }
-    .section--mainHomepage .section__content {
-      top: 40%;
-      left: 10%;
-      width: 60%; }
-
-  .section--mapCoverageArea {
-    background-size: 50% 50%;
-    position: relative; }
-    .section--mapCoverageArea .section__content {
-      position: absolute;
-      left: 10%;
-      width: 60%;
-      float: left;
-      transform: translate(0, -50%);
-      top: 50%; } }
-@media screen and (min-width: 601px) {
-  .main-header__nav {
-    padding: 20px; }
-    .main-header__nav .mainNav .mainNav--navList {
-      display: block;
-      float: right; }
-      .main-header__nav .mainNav .mainNav--navList li {
-        display: inline-block;
-        padding: 10px; }
-    .main-header__nav .main-header__navToggle {
-      display: none; } }
-@media all and (min-width: 750px) {
-  .section--mainHomepage {
-    width: 100%;
-    height: 700px; }
-    .section--mainHomepage .section__content {
-      top: 40%;
-      left: 10%;
-      width: 60%; }
-      .section--mainHomepage .section__content h2 {
-        font-size: 36px; }
-
-  .section--mapCoverageArea {
-    background-size: 50% 80%;
-    position: relative;
-    height: 350px; }
-    .section--mapCoverageArea .section__content {
-      position: absolute;
-      left: 10%;
-      width: 60%;
-      float: left;
-      transform: translate(0, -50%);
-      top: 50%; }
-
-  .section--stepsToGetStarted {
-    background-image: url("../images/user-photo.png");
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: 20% 40%;
-    padding: 40px; }
-    .section--stepsToGetStarted .section__content {
-      width: 30%;
-      float: right; }
-
-  .section--finalCTAWithCredit .section__content p {
-    display: inline-block; }
-
-  .section--servicesOfferedCards .section__content {
-    padding: 40px; }
-
-  .section--aboutTheMobileApp {
-    height: 650px;
-    position: relative; }
-    .section--aboutTheMobileApp img {
-      width: 50%;
-      display: block;
-      position: absolute;
-      left: -80px;
-      top: 50%;
-      transform: translate(0, -50%);
-      z-index: 110; }
-    .section--aboutTheMobileApp .section__content--container {
-      width: 60%;
-      height: 400px;
-      background-color: #F6F9FC;
-      position: absolute;
-      right: 0px;
-      top: 50%;
-      transform: translate(0, -50%); }
-    .section--aboutTheMobileApp .section__content {
-      width: 70%;
-      position: absolute;
-      margin: auto;
-      left: 0;
-      bottom: 0;
-      right: 0; }
-
-  .section--downloadBanner {
-    height: 330px; }
-
-  .section--footer {
-    height: 230px; }
-    .section--footer .section__content {
-      padding: 30px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around; }
-      .section--footer .section__content .footer__row {
-        display: inline-block; }
-
-  .main-footer .navList__item {
-    margin-right: 10px; } }
-@media screen and (min-width: 1100px) {
-  .section--mainHomepage {
-    width: 100%;
-    height: 700px; }
-    .section--mainHomepage .section__content {
-      top: 40%;
-      left: 10%;
-      width: 30%; }
-
-  .section--mapCoverageArea {
-    width: 100%;
-    height: 450px; }
-    .section--mapCoverageArea .section__content {
-      width: 40%; } }
-
-/*# sourceMappingURL=edited.css.map */
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$primary\".\A         on line 201 of scss/edited.scss\A \A 196:             h3{\A 197:                  font-size: 24px;\A 198:                  font-weight: $font-weight-light;\A 199:             }\A 200:             h3,a{\A 201:               color:$primary;\A 202:             }\A 203:             hr{\A 204:                  display: none;\A 205:             }\A 206:             h2,h3,hr{"; }

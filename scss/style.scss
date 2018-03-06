@@ -1,647 +1,684 @@
 //Partial imports
 
-@import 'reset',
-        'partials/variables',
-        'partials/buttons';
+@import   'reset',
+          'partials/variables',
+          'partials/buttons';
+
 @font-face {
      font-family: Avenir;
      src:url('Avenir.ttc');
 }
+@font-face {
+     font-family: system;
+     font-style: normal;
+     font-weight: 300;
+     src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+
+
 * {
-  box-sizing: border-box;
+     box-sizing: border-box;
 }
 
 html {
-     font-family: Avenir;
+     font-size: 0.625em; //10px
 }
-a {
-  text-decoration: none;
-  display:inline-block;
+body {
+     font-size: 1.4em;
+     line-height: 1.45;
+     font-family: system;
+}
 
-}
+img {max-width: 100%;}
+
 /* typography.scss */
 
-h1,h2,h3,h4,h5,h6,p {
-     padding-bottom: 10px;
-     line-height: 1.3;
+/* augmented fourth with 10px base font-size */
+h1, h2, h3, h4, h5, h6 {
+     font-family: Avenir;
+     margin: 1.414rem 0 0.5rem;
+     font-weight: inherit;
+     line-height: 1.2;
 }
-ul {
-  list-style-type: none;
-}
-h2 {
-     font-size: 28px;
+
+h1 {
+     margin-top: 0;
+     font-size: 3.998rem;
      font-weight: $font-weight-bold;
 }
+
+h2 {
+     font-size: 2.827rem;
+     font-weight: $font-weight-bold;
+}
+
 h3 {
-     font-size: 24px;
+     font-size: 1.999rem;
      font-weight: $font-weight-light;
+     color: $brand-primary;
 }
 h4 {
-     font-size: 20px;
+     font-size: 1.414rem;
+     font-weight: bold;
 }
+
 h5 {
-     font-size: 18px;
+     font-size: 1rem;
+     font-weight: bold;
 }
+
 h6 {
-     font-size: 16px;
-     font-weight: $font-weight-semibold;
+     font-size: 1rem;
+     text-transform: uppercase;
 }
+
 p {
-     font-size: 14px;
-     font-weight: $font-weight-light;
+     margin-bottom: 1.3rem;
+}
+
+ul {
+     list-style-type: none;
+}
+
+a {
+     text-decoration: none;
+     color: $brand-primary;
+}
+
+a:hover {
+     text-decoration: underline;
 }
 
 /* utilities */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  overflow: hidden;
+
+.media {
+     display: flex;
+     align-items: flex-start;
+}
+
+.media__object {
+     margin-right: 1em;
+}
+
+.media__content {
+     flex: 1;
+}
+
+/* icons */
+.icon {
+     width: 50px;
+     height: 50px;
+     display: inline-block;
+
+     background: 50% 50% no-repeat;
+     background-size: contain;
+
+     &.icon--time {
+          background-image: url('../images/time-icon.png');
+     }
+     &.icon--repeat {
+          background-image: url('../images/repeat-icon.png');
+     }
+     &.icon--heart {
+          background-image: url('../images/care-icon.png');
+     }
+     &.icon--service--washing {
+          background-image: url('../images/laundry-icon.png');
+     }
+     &.icon--service--dryCleaning {
+          background-image: url('../images/dry-cleaner-icon.png');
+     }
+     &.icon--service--tailoring {
+          background-image: url('../images/tailor-icon.png');
+     }
 }
 
 /* navList */
 
 .navList__item {
-     display: inline;
+     .navList--horiz & {
+          display: inline-block;
+     }
+     .navList__link {
+          display: block;
+          padding: 5px;
+     }
 }
 
 /* buttons.scss */
 
 .button {
      display: inline-block;
-     line-height: 36px;
+     line-height: 3.6rem;
      padding: 0 10px;
      border-radius: 4px;
      text-align: center;
+     font-weight: bold;
 
+     &:hover {
+          color: #FFF;
+          background: $brand-cta;
+          text-decoration: none;
+     }
 }
 .button--primary {
-    border-radius: 4px;
-    background-color: #FFFFFF;
-    color: $brand-cta;
-    box-shadow: 0 2px 2px 0 rgba(35,10,74,0.15);
-    text-transform: uppercase;
-    line-height: 42px;
-    padding-left: 20px;
-    padding-right: 20px;
+     border-radius: 4px;
+     background-color: #FFFFFF;
+     color: $brand-cta;
+     box-shadow: 0 2px 2px 0 rgba(35,10,74,0.15);
+     text-transform: uppercase;
+}
+
+.button--large {
+     line-height: 42px;
+     padding-left: 20px;
+     padding-right: 20px;
 }
 
 .button--cta {
-       text-transform: uppercase;
-       box-shadow: 0 17px 20px 0 rgba(35,10,74,0.15);
+     text-transform: uppercase;
+     box-shadow: 0 17px 20px 0 rgba(35,10,74,0.15);
+     background: linear-gradient(270deg, #4DD0E1 0%, #2196F3 100%);
+     color: #FFF;
+
 }
 
 .appStoreButtons__item img {
      width: 150px;
      height: 45px;
+     max-width: none;
      display: inline-block;
 }
 
+// Sections
+
+.section {
+     position: relative;
+     padding: 15px 0;
+
+     p {
+          color: $color-dimmedText;
+     }
+
+     @include desktop {
+          padding: 20px 0;
+     }
+
+     &.section--hasHeaderOnTop {
+          padding-top: $header-height + 25px;
+          @include tablet {
+               padding-top: $header-height + 50px;
+          }
+          @include desktop {
+               padding-top: $header-height + 100px;
+          }
+     }
+
+     .section__header {
+
+     }
+     .section__content {
+
+     }
+     .section__footer {
+
+     }
+
+     .section__mask {
+          background: rgba(0,0,0,.2);
+          position: absolute;
+          top: 0; bottom: 0; left: 0; right: 0;
+     }
+}
+
+.section--large {
+     padding-top: 20px;
+     padding-bottom: 20px;
+     @include tablet {
+          padding-top: 30px;
+          padding-bottom: 30px;
+     }
+     @include desktop {
+          padding-top: 40px;
+          padding-bottom: 40px;
+     }
+}
+
+.section--huge {
+     padding-top: 25px;
+     padding-bottom: 25px;
+     @include tablet {
+          padding-top: 50px;
+          padding-bottom: 50px;
+     }
+     @include desktop {
+          padding-top: 100px;
+          padding-bottom: 100px;
+     }
+
+     font-size: 1.6rem;
+}
+
+.section--contrast {
+     background-color: $color-deepSapphireBlue;
+     color: $color-dimmedText;
+
+     p {
+          color: $color-dimmedText;
+     }
+
+     h1,h2,h3,h4,h5,h6 {
+          color: $white;
+     }
+
+     .section__footer {
+          color: $color-footerText;
+     }
+}
+
+/* card */
+.card {
+
+     background-color: $background-primary;
+     box-shadow: 0 4px 10px 0 rgba(0,0,0,0.15);
+     text-align: center;
+     position: relative;
+
+     display: flex;
+     height: 100%;
+
+     .card__header {}
+     .card__content {
+          padding: 15px;
+          flex-grow: 1;
+          align-content: center;
+     }
+
+     .card__footer {
+          font-weight: $font-weight-bold;
+          font-size: 14px;
+          padding: 15px;
+          border-top: 1px solid rgba(0,0,0,.1);
+          flex-grow: 0;
+     }
+}
+
+.card--service {
+
+     .card__header {
+          position: relative;
+          text-align: center;
+
+          margin-bottom: 10px;
+          margin-top: 50px;
+
+          &:before {
+               content: '';
+               width: 100%;
+               height: 5px;
+               position: absolute;
+               left: 0; right: 0;
+               bottom: 0;
+               background: $brand-primary;
+          }
+
+          .card__media {
+               width: 100%;
+               position: absolute;
+               top: -25px;
+          }
+     }
+
+     &.card--washing {
+          .card__title, a {
+               color: $color-washing;
+          }
+          .card__header {
+               &:before {
+                    background: $color-gradient-washing;
+               }
+          }
+     }
+     &.card--drycleaning {
+          .card__title, a {
+               color: $color-drycleaning;
+          }
+          .card__header {
+               &:before {
+                    background: $color-gradient-drycleaning;
+               }
+          }
+     }
+     &.card--tailoring {
+          .card__title, a {
+               color: $color-tailoring;
+          }
+          .card__header {
+               &:before {
+                    background: $color-gradient-tailoring;
+               }
+          }
+     }
+
+
+
+} //end of card
+
 // MAIN HEADER
 .header {
-     background: $primary;
-     box-shadow: inset 0 -1px 0 0 rgba(255,255,255,0.12);
+     background: $brand-primary;
      overflow: hidden;
 
      &.header--onImage {
           background: none;
+          box-shadow: inset 0 -1px 0 0 rgba(255,255,255,0.12);
      }
 
      &.header--onNextSection {
           margin-bottom: -$header-height;
           position: relative;
-          position: sticky;
+          z-index: 2;
+
      }
 
      .container {
-        display: flex;
-        height: $header-height;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .header__logo {
-
-        img {
-            height: 30px;
-        }
-    }
-}
-
-     .header__nav{
-
-          .header__navList {
-               display: none;
-
-               @include tablet {
-                      display: flex;
-                      align-items: center;
-                  }
-             }
-             // .navList {
-             //       display: flex;
-             //       align-items: center;
-             //
-             //       .navList__item {
-             //           display: inline-block;
-             //           padding: 10px;
-             //           float: left;
-             //       }
-             //   }
-
-             .navList__link {
-                 color: #FFF;
-                 text-decoration: none;
-             }
-             .navList__item {
-                  padding: 15px;
-
-                  &.navList__item--disabled {
-                     opacity: 0.5;
-                     pointer-events: none;
-                     cursor: default;
-                 }
-
-                 @include desktop {
-                     padding-left: 25px;
-                     padding-right: 25px;
-                 }
-               }
+          display: flex;
+          height: $header-height;
+          justify-content: space-between;
+          align-items: center;
      }
 
+     .header__logo {
+          img {
+               height: 30px;
+          }
+     }
+}
 
-     .header__navToggle {
+.header__nav {
+
+     .header__navList {
           display: none;
-          position: absolute;
-          float: right;
-          right: 0;
-          &__icon {
-               font-size: 28px;
-               color: black;
-          }
-      }
 
-     .mainNav.responsive {
-          .navList--mainNav {
-               display: block;
-               top: 20px;
-               li {
-                    display: block;
-                    padding: 10px 0;
-               }
-               li a {
-                    color: $white;
-                    // float: none;
-                    display: block;
-               }
-               li:hover {
-                    background-color: $color-deepSapphireBlue;
-               }
+          @include tablet {
+               display: flex;
+               align-items: center;
           }
-      }
+     }
+
+     .navList__link {
+          color: #FFF;
+          text-decoration: none;
+          padding: 15px;
+          &:hover {
+               text-decoration: underline;
+          }
+     }
+     .navList__item {
+          &.navList__item--disabled {
+               opacity: 0.5;
+               pointer-events: none;
+               cursor: default;
+          }
+
+     }
+}
+
+
+.header__navToggle {
+     float: right;
+     right: 0;
+     .header__navToggle__icon {
+          font-size: 28px;
+          color: $white;
+     }
+
+     @include tablet {
+          display: none;
+     }
+}
 
 
 //MAIN HOME PAGE
-.section--mainHomepage {
-     background-image: url(../images/user-hero.jpg);
-       background-repeat: no-repeat;
-       background-size: cover;
-       background-position: center;
-       height: 700px;
+.section--mainHomepageHero {
+     background: #494e56 url(../images/user-hero.jpg) 50% 50% no-repeat;
+     background-size: cover;
 
-       .section__content {
-        max-width: 350px;
-        padding-top: 230px;
-        font-size: 1.8rem;
-          h2{
-            color: $white;
-          }
-          p{
-            color: $color-footerText;
+     text-align: center;
+
+     @include desktop {
+          padding-top: 200px;
+          padding-bottom: 200px;
+     }
+
+     @include screen-sm {
+          text-align: left;
+     }
+
+     .section__mask {
+          background: rgba(55, 85, 98, 0.37);
+          @include tablet {
+               display: none;
           }
      }
+
 }
 
 
 //MAPS COVERAGE AREA
-.section--mapCoverageArea{
-     height: 350px;
-     background-color: $white;
-     background:url('../images/chicago-map.jpg') right no-repeat;
-     background-size: 70% 40%;
+.section--mapCoverageArea {
+     background-color: $background-primary;
 
-     @include tablet {
-          background-size: 50% 80%;
-          height: 400px;
-    }
+     .mapCoverageArea__image {
+          text-align: center;
 
-     .section__content{
-            padding:30px;
-            h3,a {
-              color:$primary;
-            }
-            h2{
-                 color: $color-footer;
-            }
-            p{
-              color:$color-dimmedText;
-              line-height: 1.5;
-            }
-            a{
-                 padding-top: 20px;
-                 text-decoration: none;
-            }
+          @include desktop {
+               margin: -40px 0 0 0;
+          }
+          img {
+               max-height: 240px;
+          }
+     }
 
-            @include small {
-                 padding-left:40px;
-            }
-            @include tablet {
-               padding-left: 60px;
-               p{
+     .section__content {
+          a {
+               padding-top: 20px;
+               text-decoration: none;
+          }
+
+          @include tablet {
+               p {
                     padding-bottom: 20px;
-                    border-bottom:1px solid rgba(107,124,147,0.12);
+                    border-bottom: 1px solid rgba(107,124,147,0.12);
                }
-           }
+          }
 
-      }
-      .section__footer{
-           a{
-                font-size: 14px;
-                font-weight: $font-weight-bold;
-           }
-      }
+     }
+     .section__footer {
+          a {
+               font-weight: $font-weight-bold;
+          }
+     }
 }
 
 //STEPSTOGETSTARTED
 
-.section--stepsToGetStarted{
-     padding: 20px;
-     .section__header{
-          h3{
-               color: $primary;
-          }
-     }
-     .section__image{
+.section--stepsToGetStarted {
+
+     .stepsToGetStarted__image {
           display: none;
-     }
-     .section__content{
-            li h4{
-                 font-weight: $font-weight-bold;
-               }
 
-            li p{
-              color:$color-dimmedText;
-            }
-     }
-
-     @include small {
-               padding: 40px;
-               .section__image{
-                    display: block;
-                    background: url('../images/user-photo.png') center center no-repeat;
-                    background-size: cover;
-               }
+          @include screen-sm {
+               display: block;
+          }
      }
 }
 //section--listOfKeyBenefits
 .section--listOfKeyBenefits {
-background-color: $color-deepSapphireBlue;
+
      .section__header {
-          h3 {
-               color: $white;
-               text-align: center;
-               padding-top: 20px;
-          }
+          text-align: center;
      }
      .section__content {
-          .row {
-               @include tablet {
-                     margin: 0 auto;
+          .media {
+               margin: 15px;
+               @include desktop {
+                    margin: 30px;
                }
           }
-          .row__item {
-               margin: 0 auto;
-               padding: 30px;
-               width: 80%;
-               @include tablet{
-                    width:30%;
-                    display:inline-block;
-               }
-               .media__object {
-
-                    &__icon {
-                         width:49px;
-                         height:49px;
-                    }
-
-                    &__icon--time {
-                         background: url('../images/time-icon.png');
-                         background-size: cover;
-                    }
-                    &__icon--repeat {
-                         background: url('../images/repeat-icon.png');
-                         background-size: cover;
-                    }
-                    &__icon--heart {
-                         background: url('../images/care-icon.png');
-                         background-size: cover;
-                    }
-
-               }
-               .media__object__icon,.media__content__header,.media__content__text{
-                    vertical-align: top;
-               }
-               .media__content {
-                    &__header {
-                         color:$white;
-                    }
-                    &__text{
-                         color: $color-dimmedText;
-                    }
-               }
-
-          }
-
-
      }
 }
 
 //finalCTAWithCredit
-.section--finalCTAWithCredit{
-     background: $color-footer;
-     color:$white;
-     padding:20px;
+.section--finalCTAWithCredit {
+     background-color: #121A2E;
      text-align: center;
-     .section__content{
-          @include small{
-               // clear: both;
 
-               p{
-                    float: left;
+     .section__content {
+          display: flex;
+          align-items: center;
+          flex: 1 1 100%;
+          justify-content: center;
+          flex-wrap: wrap;
 
-               }
-               // .clearfix::after {
-               //      content: "";
-               //      clear: both;
-               //      display: table;
-               // }
-
+          span {
+               display: inline-block;
+               margin: 10px;
           }
      }
 
-     .button--cta {
-            color: $white;
-            background: linear-gradient(270deg, #4DD0E1 0%, #2196F3 100%);
-            @include small {
-                 float: right;
-                 display: inline;
-            }
-     }
 }
 
- //ABOUT THE MOBILE APP
-.section--aboutTheMobileApp{
-     background-color:$white;
-     img{
-          display: none;
-     }
-     .section__content--container{
-          background-color: #F6F9FC;
-          height: 400px;
-     }
-     .section__content{
-            position: relative;
-            top: 50%;
-            -webkit-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
-            padding: 10px 20px;
-           h2{
-             color:$color-footer;
-           }
-           h3{
-               color:$primary;
-           }
-           p{
-           	color: $color-text;
-           }
-     }
-}
+//ABOUT THE MOBILE APP
+.section--aboutTheMobileApp {
+     background-color: $background-primary;
 
-@media all and (min-width: 750px){
+     .section__content {
+          background-color: $color-aliceBlue;
+          padding: 30px;
+          @include tablet {
+               padding-top: 50px;
+               padding-bottom: 50px;
+          }
+          @include tablet {
+               padding-top: 80px;
+               padding-bottom: 80px;
+          }
+          display: flex;
+          height: 100%;
+          flex-direction: column;
+          justify-content: center;
 
-      .section--aboutTheMobileApp{
-           height: 650px;
-           position: relative;
-           img{
-                width:50%;
-                display: block;
-                position: absolute;
-                left: -80px;
-                top:50%;
-                transform: translate(0, -50%);
-                z-index: 110;
-           }
-           .section__content--container{
-                width:60%;
-                height: 400px;
-                background-color:#F6F9FC;
-                position: absolute;
-                right: 0px;
-                top:50%;
-                transform: translate(0, -50%);
-           }
-           .section__content{
-                width: 70%;
-                position: absolute;
-                margin: auto;
-                left: 0; bottom: 0; right: 0;
-                // transform: translate(0, -50%);
-                // top:50%;
+     }
 
-           }
-      }
+     @include tablet {
+          .row {
+               position: relative;
+          }
+
+          .aboutTheMobileApp__image {
+               position: absolute;
+               bottom: 0;
+
+               top: 80px;
+
+               @include desktop {
+                    left: 0;
+                    top: -10px;
+               }
+
+          }
+     }
 }
 
 
 //SERVICES OFFERED CARDS
-.section--servicesOfferedCards{
-     .row .row__item--washing{
-          margin-top: 40px;
+.section--servicesOfferedCards {
+     .row > * {
+          margin: 10px 0;
      }
-     .row{
-          margin: 0 auto;
-     }
-     .row__item{
-
-
-
-            .row__content{
-                 margin:0 auto;
-               height:170px;
-               // width: 300px;
-               background-color: $white;
-               box-shadow: 0 4px 10px 0 rgba(0,0,0,0.15);
-               margin-bottom:40px;
-               text-align: center;
-               position: relative;
-            }
-            .row__border{
-                 width:100%;
-                 height: 5px;
-                 position: absolute;
-                 // top:0;
-            }
-            img{
-                 width: 50px;
-                 height: 50px;
-                 position: absolute;
-                 top:-25px;
-                 right: 40%;
-                 z-index: 20;
-            }
-            h3{
-            padding-top:50px;
-            padding-bottom: 20px;
-            color:rgba(18,26,46,0.87);
-          }
-          .row__cta{
-               font-weight: $font-weight-bold;
-               font-size: 14px;
-          }
-       }
-
-       .row__item--washing {
-            .row__border{
-                 background: $color-gradient-washing;
-          }
-          .row__cta{
-               color: $color-washing;
-          }
-       }
-       .row__item--drycleaning{
-          .row__border{
-               background: $color-gradient-drycleaning;
-          }
-          .row__cta{
-               color: $color-drycleaning;
-          }
-       }
-       .row__item--tailoring{
-            .row__border{
-                background: $color-gradient-tailoring;
-           }
-          .row__cta{
-               color: $color-tailoring;
-          }
-       }
-  }
-@media all and (min-width: 750px){
-  .section--servicesOfferedCards .section__content {
-      padding:40px;
-      .row{
-           margin: 0 auto;
-      }
-      .row__item{
-        display:inline-block;
-        margin: 0;
-      }
-   }
 }
+
 //DOWNLOAD BANNER
-.section--downloadBanner{
-    background: $color-gradient-primary;
-     height: 250px;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-    .section__content{
-         text-align: center;
-         color:$white;
-         font-weight: $font-weight-light;
-         p{
-              color: $color-footerText;
-         }
-     }
-}
-@media all and (min-width: 750px){
-     .section--downloadBanner{
-          // height:330px;
+.section--downloadBanner {
+     background: $color-gradient-primary;
+     text-align: center;
+
+     .section__content {
+          color: $white;
+          font-weight: $font-weight-light;
+          p {
+               color: rgba(255,255,255,.6);
+          }
      }
 }
 
 //FOOTER
-.section--footer{
+.section--footer {
      background-color: $color-deepSapphireBlue;
-     .section__content{
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          padding-top: 20px;
-          h6{
-               color: $white;
-          }
-          p, li a {
-               color: $color-footerText;
+
+     .footer__logo {
+          width: 150px;
+          height: 23px;
+     }
+     .socialMediaIcons {
+          .navList__item {
+               font-size: 20px;
+               padding: 5px;
           }
      }
-
-       .socialMediaIcons a, .appStoreButtons__item {
-           display: inline !important;
-      }
-       .footer__row {
-         padding-bottom: 20px;
-         padding-left: 20px;
-         &__logo {
-              width: 150px;
-              height: 23px;
-         }
-          li a {
-               font-size: 14px;
-               line-height: 1.35;
-               display: block;
-          }
-       }
-}
-@media all and (min-width: 750px){
-     .section--footer {
-         height: 230px;
-         .section__content {
-               display: flex;
-               flex-direction: row;
-               justify-content: space-around;
-               .footer__row {
-                 display: inline-block;
-
+     .section__content {
+          .footer__item {
+               p {
+                    color: $color-footerText;
                }
-         }
+               h4 {
+                    color: $color-dimmedText;
+               }
+               a {
+                    color: $white;
+                    text-decoration: underline;
+                    &:hover {
+                         color: $brand-primary;
+                    }
+               }
+               .navList {
+                    font-size: 14px;
+                    line-height: 1.35;
+                    .navList__link {
+                         padding-left: 0;
+                         padding-right: 0;
+                    }
+               }
+          }
      }
-
 }
+
 //MAIN FOOTER
 .main-footer {
      background-color: $color-footer;
 
-     .container{
-       display: flex;
-       color: $color-dimmedText;
-       font-size: 12px;
-       height: 50px;
-       justify-content: space-around;
-       padding:20px;
-            span{
-              padding-right: 5px;
-            }
-            .navList a{
-              color:$white;
-              font-weight: $font-weight;
-              display:inline;
-            }
-      }
-}
-@media all and (min-width: 750px){
-     .main-footer{
-         .navList__item{
-              margin-right: 10px;
-         }
+     .container {
+          color: $color-dimmedText;
+          padding-top: 30px;
+          padding-bottom: 30px;
+          text-align: center;
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          @include tablet {
+               flex-direction: row;
+          }
+
+          justify-content: space-between;
+
+
+          .navList a {
+               color: $white;
+               font-weight: $font-weight;
+
+          }
      }
 }
