@@ -1,13 +1,22 @@
 //Partial imports
 
 @import   'reset',
-          'partials/variables',
-          'partials/buttons';
+          'partials/_variables',
+          'userlocation',
+          'brand-landing',
+          'typography',
+          'buttons',
+          'icons',
+          'section',
+          'card',
+          'utilities',
+          'contact-form';
 
 @font-face {
      font-family: Avenir;
      src:url('Avenir.ttc');
 }
+
 @font-face {
      font-family: system;
      font-style: normal;
@@ -33,105 +42,10 @@ img {max-width: 100%;}
 
 /* typography.scss */
 
-/* augmented fourth with 10px base font-size */
-h1, h2, h3, h4, h5, h6 {
-     font-family: Avenir;
-     margin: 1.414rem 0 0.5rem;
-     font-weight: inherit;
-     line-height: 1.2;
-}
-
-h1 {
-     margin-top: 0;
-     font-size: 3.998rem;
-     font-weight: $font-weight-bold;
-}
-
-h2 {
-     font-size: 2.827rem;
-     font-weight: $font-weight-bold;
-}
-
-h3 {
-     font-size: 1.999rem;
-     font-weight: $font-weight-light;
-     color: $brand-primary;
-}
-h4 {
-     font-size: 1.414rem;
-     font-weight: bold;
-}
-
-h5 {
-     font-size: 1rem;
-     font-weight: bold;
-}
-
-h6 {
-     font-size: 1rem;
-     text-transform: uppercase;
-}
-
-p {
-     margin-bottom: 1.3rem;
-}
-
-ul {
-     list-style-type: none;
-}
-
-a {
-     text-decoration: none;
-     color: $brand-primary;
-}
-
-a:hover {
-     text-decoration: underline;
-}
-
 /* utilities */
 
-.media {
-     display: flex;
-     align-items: flex-start;
-}
-
-.media__object {
-     margin-right: 1em;
-}
-
-.media__content {
-     flex: 1;
-}
 
 /* icons */
-.icon {
-     width: 50px;
-     height: 50px;
-     display: inline-block;
-
-     background: 50% 50% no-repeat;
-     background-size: contain;
-
-     &.icon--time {
-          background-image: url('../images/time-icon.png');
-     }
-     &.icon--repeat {
-          background-image: url('../images/repeat-icon.png');
-     }
-     &.icon--heart {
-          background-image: url('../images/care-icon.png');
-     }
-     &.icon--service--washing {
-          background-image: url('../images/laundry-icon.png');
-     }
-     &.icon--service--dryCleaning {
-          background-image: url('../images/dry-cleaner-icon.png');
-     }
-     &.icon--service--tailoring {
-          background-image: url('../images/tailor-icon.png');
-     }
-}
 
 /* navList */
 
@@ -147,222 +61,11 @@ a:hover {
 
 /* buttons.scss */
 
-.button {
-     display: inline-block;
-     line-height: 3.6rem;
-     padding: 0 10px;
-     border-radius: 4px;
-     text-align: center;
-     font-weight: bold;
-
-     &:hover {
-          color: #FFF;
-          background: $brand-cta;
-          text-decoration: none;
-     }
-}
-.button--primary {
-     border-radius: 4px;
-     background-color: #FFFFFF;
-     color: $brand-cta;
-     box-shadow: 0 2px 2px 0 rgba(35,10,74,0.15);
-     text-transform: uppercase;
-}
-
-.button--large {
-     line-height: 42px;
-     padding-left: 20px;
-     padding-right: 20px;
-}
-
-.button--cta {
-     text-transform: uppercase;
-     box-shadow: 0 17px 20px 0 rgba(35,10,74,0.15);
-     background: linear-gradient(270deg, #4DD0E1 0%, #2196F3 100%);
-     color: #FFF;
-
-}
-
-.appStoreButtons__item img {
-     width: 150px;
-     height: 45px;
-     max-width: none;
-     display: inline-block;
-}
 
 // Sections
 
-.section {
-     position: relative;
-     padding: 15px 0;
-
-     p {
-          color: $color-dimmedText;
-     }
-
-     @include desktop {
-          padding: 20px 0;
-     }
-
-     &.section--hasHeaderOnTop {
-          padding-top: $header-height + 25px;
-          @include tablet {
-               padding-top: $header-height + 50px;
-          }
-          @include desktop {
-               padding-top: $header-height + 100px;
-          }
-     }
-
-     .section__header {
-
-     }
-     .section__content {
-
-     }
-     .section__footer {
-
-     }
-
-     .section__mask {
-          background: rgba(0,0,0,.2);
-          position: absolute;
-          top: 0; bottom: 0; left: 0; right: 0;
-     }
-}
-
-.section--large {
-     padding-top: 20px;
-     padding-bottom: 20px;
-     @include tablet {
-          padding-top: 30px;
-          padding-bottom: 30px;
-     }
-     @include desktop {
-          padding-top: 40px;
-          padding-bottom: 40px;
-     }
-}
-
-.section--huge {
-     padding-top: 25px;
-     padding-bottom: 25px;
-     @include tablet {
-          padding-top: 50px;
-          padding-bottom: 50px;
-     }
-     @include desktop {
-          padding-top: 100px;
-          padding-bottom: 100px;
-     }
-
-     font-size: 1.6rem;
-}
-
-.section--contrast {
-     background-color: $color-deepSapphireBlue;
-     color: $color-dimmedText;
-
-     p {
-          color: $color-dimmedText;
-     }
-
-     h1,h2,h3,h4,h5,h6 {
-          color: $white;
-     }
-
-     .section__footer {
-          color: $color-footerText;
-     }
-}
 
 /* card */
-.card {
-
-     background-color: $background-primary;
-     box-shadow: 0 4px 10px 0 rgba(0,0,0,0.15);
-     text-align: center;
-     position: relative;
-
-     display: flex;
-     height: 100%;
-
-     .card__header {}
-     .card__content {
-          padding: 15px;
-          flex-grow: 1;
-          align-content: center;
-     }
-
-     .card__footer {
-          font-weight: $font-weight-bold;
-          font-size: 14px;
-          padding: 15px;
-          border-top: 1px solid rgba(0,0,0,.1);
-          flex-grow: 0;
-     }
-}
-
-.card--service {
-
-     .card__header {
-          position: relative;
-          text-align: center;
-
-          margin-bottom: 10px;
-          margin-top: 50px;
-
-          &:before {
-               content: '';
-               width: 100%;
-               height: 5px;
-               position: absolute;
-               left: 0; right: 0;
-               bottom: 0;
-               background: $brand-primary;
-          }
-
-          .card__media {
-               width: 100%;
-               position: absolute;
-               top: -25px;
-          }
-     }
-
-     &.card--washing {
-          .card__title, a {
-               color: $color-washing;
-          }
-          .card__header {
-               &:before {
-                    background: $color-gradient-washing;
-               }
-          }
-     }
-     &.card--drycleaning {
-          .card__title, a {
-               color: $color-drycleaning;
-          }
-          .card__header {
-               &:before {
-                    background: $color-gradient-drycleaning;
-               }
-          }
-     }
-     &.card--tailoring {
-          .card__title, a {
-               color: $color-tailoring;
-          }
-          .card__header {
-               &:before {
-                    background: $color-gradient-tailoring;
-               }
-          }
-     }
-
-
-
-} //end of card
 
 // MAIN HEADER
 .header {
@@ -439,171 +142,25 @@ a:hover {
 }
 
 
-//MAIN HOME PAGE
-.section--mainHomepageHero {
-     background: #494e56 url(../images/user-hero.jpg) 50% 50% no-repeat;
-     background-size: cover;
-
-     text-align: center;
-
-     @include desktop {
-          padding-top: 200px;
-          padding-bottom: 200px;
-     }
-
-     @include screen-sm {
-          text-align: left;
-     }
-
-     .section__mask {
-          background: rgba(55, 85, 98, 0.37);
-          @include tablet {
-               display: none;
-          }
-     }
-
-}
-
-
-//MAPS COVERAGE AREA
-.section--mapCoverageArea {
-     background-color: $background-primary;
-
-     .mapCoverageArea__image {
-          text-align: center;
-
-          @include desktop {
-               margin: -40px 0 0 0;
-          }
-          img {
-               max-height: 240px;
-          }
-     }
-
-     .section__content {
-          a {
-               padding-top: 20px;
-               text-decoration: none;
-          }
-
-          @include tablet {
-               p {
-                    padding-bottom: 20px;
-                    border-bottom: 1px solid rgba(107,124,147,0.12);
-               }
-          }
-
-     }
-     .section__footer {
-          a {
-               font-weight: $font-weight-bold;
-          }
-     }
-}
-
-//STEPSTOGETSTARTED
-
-.section--stepsToGetStarted {
-
-     .stepsToGetStarted__image {
-          display: none;
-
-          @include screen-sm {
-               display: block;
-          }
-     }
-}
-//section--listOfKeyBenefits
-.section--listOfKeyBenefits {
-
-     .section__header {
-          text-align: center;
-     }
-     .section__content {
-          .media {
-               margin: 15px;
-               @include desktop {
-                    margin: 30px;
-               }
-          }
-     }
-}
-
-//finalCTAWithCredit
-.section--finalCTAWithCredit {
-     background-color: #121A2E;
-     text-align: center;
-
-     .section__content {
-          display: flex;
-          align-items: center;
-          flex: 1 1 100%;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          span {
-               display: inline-block;
-               margin: 10px;
-          }
-     }
-
-}
-
-//ABOUT THE MOBILE APP
-.section--aboutTheMobileApp {
-     background-color: $background-primary;
-
-     .section__content {
-          background-color: $color-aliceBlue;
-          padding: 30px;
-          @include tablet {
-               padding-top: 50px;
-               padding-bottom: 50px;
-          }
-          @include tablet {
-               padding-top: 80px;
-               padding-bottom: 80px;
-          }
-          display: flex;
-          height: 100%;
-          flex-direction: column;
-          justify-content: center;
-
-     }
-
-     @include tablet {
-          .row {
-               position: relative;
-          }
-
-          .aboutTheMobileApp__image {
-               position: absolute;
-               bottom: 0;
-
-               top: 80px;
-
-               @include desktop {
-                    left: 0;
-                    top: -10px;
-               }
-
-          }
-     }
-}
-
-
-//SERVICES OFFERED CARDS
-.section--servicesOfferedCards {
-     .row > * {
-          margin: 10px 0;
-     }
-}
 
 //DOWNLOAD BANNER
 .section--downloadBanner {
      background: $color-gradient-primary;
      text-align: center;
 
+     .section__content {
+          color: $white;
+          font-weight: $font-weight-light;
+          p {
+               color: rgba(255,255,255,.6);
+          }
+     }
+}
+
+//PARTNERSHIP BANNER
+.section--partnershipBanner {
+     background: #494e56 url(../images/footer-cta.jpg) 50% 50% no-repeat;
+     background-size: cover;
      .section__content {
           color: $white;
           font-weight: $font-weight-light;
@@ -630,7 +187,7 @@ a:hover {
      .section__content {
           .footer__item {
                p {
-                    color: $color-footerText;
+                    color: $body-text;
                }
                h4 {
                     color: $color-dimmedText;

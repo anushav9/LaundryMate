@@ -1,0 +1,41 @@
+.button {
+     display: inline-block;
+     line-height: 3.6rem;
+     padding: 0 10px;
+     border-radius: 4px;
+     text-align: center;
+     font-weight: bold;
+
+     &:hover {
+          color: #FFF;
+          background: $brand-cta;
+          text-decoration: none;
+     }
+}
+.button--primary {
+     border-radius: 4px;
+     background-color: #FFFFFF;
+     color: $brand-cta;
+     box-shadow: 0 2px 2px 0 rgba(35,10,74,0.15);
+     text-transform: uppercase;
+}
+
+.button--large {
+     line-height: 42px;
+     padding-left: 20px;
+     padding-right: 20px;
+}
+
+.button--cta {
+     text-transform: uppercase;
+     box-shadow: 0 17px 20px 0 rgba(35,10,74,0.15);
+     color: #FFF;
+
+}
+
+.appStoreButtons__item img {
+     width: 150px;
+     height: 45px;
+     max-width: none;
+     display: inline-block;
+}

@@ -1,0 +1,463 @@
+<!doctype html>
+<html>
+<head>
+     <meta charset="utf-8">
+     <title>LaundryMate</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css">
+
+     <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+     <header class="header header--onNextSection header--onImage">
+          <div class="container">
+
+               <div class="header__logo">
+                    <img class="logo" src="images/logo_white.png" alt="LaundryMate">
+               </div>
+               <div class="header__nav">
+
+                    <div class="header__navList">
+                         <ul class="navList navList--horiz">
+                              <li class="navList__item">
+                                   <a class="navList__link" href="#">Locations</a>
+                              </li>
+                              <li class="navList__item navList__item--disabled">
+                                   <a class="navList__link" href="#">Order</a>
+                              </li>
+                              <li class="navList__item">
+                                   <a class="navList__link" href="#">Partner Login</a>
+                              </li>
+                              <li class="navList__item">
+                                   <a class="button button--primary" href="#">Download</a>
+                              </li>
+                         </ul>
+                    </div>
+
+                    <div class="header__navToggle">
+                         <a href="#" onclick="toggleMenu()"><i class="mdi mdi-menu header__navToggle__icon"></i></a>
+                    </div>
+
+               </div> <!-- End of main-header__nav -->
+
+          </div> <!-- End of container-->
+     </header> <!--End of main-header-->
+
+     <section class="section section--huge section--hasHeaderOnTop section--contrast section--mainHomepageHero">
+          <div class="section__mask"></div>
+          <div class="container">
+               <div class="row">
+               <div class="section__content">
+
+
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+
+                         <h1 class="section__title">Dry cleaning & laundry to your door</h1>
+                         <p>Instead of sitting through traffic and spending too much time on the phone to have your laundry cleaned, create orders from the convenience of your home.</p>
+
+                         <div class="appStoreButtons">
+                              <div class="navList navList--horiz">
+                                   <ul>
+                                        <li class="navList__item">
+                                             <a class="appStoreButtons__item appStoreButtons__item--apple" href="#">
+                                                  <img src="images/appstore_2x.png" alt="Download on the AppStore">
+                                             </a>
+                                        </li>
+                                        <li class="navList__item">
+                                             <a class="appStoreButtons__item appStoreButtons__item--google" href="#">
+                                                  <img src="images/googleplay_2x.png" alt="Get it on Google Play">
+                                             </a>
+                                        </li>
+                                   </ul>
+                              </div>
+                         </div>
+
+                    </div>
+
+
+               </div> <!--End of section__content -->
+          </div>
+     </div>    <!--End of container -->
+     </section> <!--End of mainHomePage -->
+
+     <section class="section">
+     <section class="section section--mapCoverageArea">
+          <div class="container">
+
+
+                    <div class="row">
+                         <div class="col-sm-12 col-md-6 col-lg-7">
+
+                              <div class="section__header">
+                                   <h3>Currently servicing Chicago suburbs</h3>
+                                   <h2>We do the work for you</h2>
+                              </div>
+                              <div class="section__content">
+                                   <p>Whether you are at home or out of town, LaundryMate helps you find the best laundry services, while allowing you to make purchases off of your phone.</p>
+                              </div>
+                              <div class="section__footer">
+                                   <a href="#">See all locations <i class="mdi mdi-chevron-right"></i></a>
+                              </div>
+
+                         </div>
+                         <div class="col-sm-12 col-md-6 col-lg-5">
+                              <div class="mapCoverageArea__image"><img src="images/chicago-map.jpg"></div>
+                         </div>
+
+                    </div>
+               </div>
+
+          </div>
+     </section> <!--End of section mapCoverageArea -->
+
+
+     <section class="section section--stepsToGetStarted">
+          <div class="container">
+               <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                         <div class="stepsToGetStarted__image"><img src="images/user-photo.png"></div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-8">
+
+                         <div class="section__header">
+                              <h3>Quick steps to get started</h3>
+                         </div>
+                         <div class="section__content">
+                              <div class="stepsList">
+                                   <ul>
+                                        <li class="stepsList__item">
+                                             <h4><span class="stepsList__item__icon"></span>Schedule a pickup</h4>
+                                             <p>Schedule to have your items picked up and if needed, we can do same-day service</p>
+                                        </li>
+                                        <li class="stepsList__item">
+                                             <h4><span class="stepsList__item__icon"></span>Track your order</h4>
+                                             <p>Recieve push notifications every step of the way to know when to expect your items returned.</p>
+                                        </li>
+                                        <li class="stepsList__item">
+                                             <h4><span class="stepsList__item__icon"></span>Fast delivery</h4>
+                                             <p>A professional will arrive at your door at the specified time with your freshly cleaned items.</p>
+                                        </li>
+                                   </ul>
+                              </div>    <!--End of stepsList -->
+                         </div>
+
+                    </div>
+               </div>
+          </div>              <!--End of container -->
+     </section>               <!--End of section stepsToGetStarted -->
+     </section>
+
+     <section class="section section--large section--contrast section--listOfKeyBenefits">
+          <div class="container">
+               <div class="section__header">
+                    <h2 class="section__title">Reap the benefits of LaundryMate</h2>
+               </div>
+               <div class="section__content">
+                    <div class="row">
+
+                         <div class="col-md-4">
+
+                              <div class="media">
+                                   <div class="media__object">
+                                        <div class="icon icon--time"></div>
+                                   </div>
+                                   <div class="media__content">
+                                        <div class="media__content__header">
+                                             <h3>Saving you time</h3>
+                                        </div>
+                                        <div class="media__content__text">
+                                             <p>Enjoy the convenience of not having to drive or having a conversation over the phone for your laundry to be cleaned.</p>
+                                        </div>
+                                   </div>
+                              </div>
+
+                         </div>
+
+                         <div class="col-md-4">
+                              <div class="media">
+                                   <div class="media__object">
+                                        <div class="icon icon--repeat"></div>
+                                   </div>
+                                   <div class="media__content">
+                                        <div class="media__content__header">
+                                             <h3>Repeat orders</h3>
+                                        </div>
+                                        <div class="media__content__text">
+                                             <p>With our easy to use app you can create weekly or daily orders to be cleaned with your favorite laundry facility.</p>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="col-md-4">
+                              <div class="media">
+                                   <div class="media__object">
+                                        <div class="icon icon--heart"></div>
+                                   </div>
+                                   <div class="media__content">
+                                        <div class="media__content__header">
+                                             <h3>Guaranteed care</h3>
+                                        </div>
+                                        <div class="media__content__text">
+                                             <p>Each garment is special that's why we offer a variety of services as wash and fold, dry cleaning, hang dry, and tailoring.</p>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                   </div> <!--End of row -->
+               </div> <!--End of section__content -->
+          </div>   <!--End of container -->
+     </section> <!--End of section listOfKeyBenefits -->
+
+     <section class="section section--contrast section--finalCTAWithCredit">
+          <div class="container">
+               <div class="row justify-content-center">
+                    <div class="section__content">
+                         <span>Are you convinced yet?<strong> First time users get $10 credit.</strong></span>
+                         <a class="button button--cta button--lg" href="#">order online</a>
+                    </div>
+               </div>
+          </div>
+     </section> <!-- End of finalCTAWithCredit-->
+
+     <section class="section section--large section--aboutTheMobileApp">
+          <div class="container">
+               <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                         <div class="aboutTheMobileApp__image">
+                              <img  src="images/devices.png" alt="Mobile app screenshots">
+                         </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                         <div class="section__content">
+                              <div class="section__header">
+                                   <h3>Simple and easy process</h3>
+                                   <h2>Schedule in seconds</h2>
+                              </div>
+                              <p>With a few simple clicks you will have your clothes cleaned in no time. LaundryMate offers different features from having your clothes cleaned to tailoring, ironing ans so much more.</p>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section> <!-- End of section aboutTheMobileApp -->
+
+     <section class="section section--large section--servicesOfferedCards">
+          <div class="container">
+               <div class="section__content">
+                    <div class="row">
+
+                         <div class="col-md-4">
+
+                              <div class="card card--service card--washing">
+                                   <div class="card__header">
+                                        <div class="card__media">
+                                             <div class="icon icon--service--washing"></div>
+                                        </div>
+                                   </div>
+                                   <div class="card__content">
+                                        <h3 class="card__title">Need washed clothes?</h3>
+                                   </div>
+                                   <div class="card__footer">
+                                        <a href="#">Learn more <i class="mdi mdi-chevron-right"></i></a>
+                                   </div>
+                              </div>
+
+                         </div>
+
+                         <div class="col-md-4">
+                              <div class="card card--service card--drycleaning">
+                                   <div class="card__header">
+                                        <div class="card__media">
+                                             <div class="icon icon--service--dryCleaning"></div>
+                                        </div>
+                                   </div>
+                                   <div class="card__content">
+                                        <h3 class="card__title">Need dry cleaning?</h3>
+                                   </div>
+                                   <div class="card__footer">
+                                        <a href="#">Learn more <i class="mdi mdi-chevron-right"></i></a>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="col-md-4">
+                              <div class="card card--service card--tailoring">
+                                   <div class="card__header">
+                                        <div class="card__media">
+                                             <div class="icon icon--service--tailoring"></div>
+                                        </div>
+                                   </div>
+                                   <div class="card__content">
+                                        <h3 class="card__title">Need tailoring?</h3>
+                                   </div>
+                                   <div class="card__footer">
+                                        <a href="#">Learn more <i class="mdi mdi-chevron-right"></i></a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div> <!-- End of container-->
+     </section> <!-- End of servicesOfferedCards-->
+
+     <section class="section section--large section--downloadBanner">
+               <div class="container">
+                    <div class="row">
+                         <div class="section__content mx-auto">
+                                   <h2>Download LaundryMate App</h2>
+                                   <p>Our app is available for free</p>
+                                   <div class="appStoreButtons">
+                                        <div class="navList navList--horiz">
+                                             <ul>
+                                                  <li class="navList__item">
+                                                       <a class="appStoreButtons__item appStoreButtons__item--apple" href="#">
+                                                            <img src="images/appstore_2x.png" alt="Download on the AppStore">
+                                                       </a>
+                                                  </li>
+                                                  <li class="navList__item">
+                                                       <a class="appStoreButtons__item appStoreButtons__item--google" href="#">
+                                                            <img src="images/googleplay_2x.png" alt="Get it on Google Play">
+                                                       </a>
+                                                  </li>
+                                             </ul>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+          </section> <!-- End of section downloadBanner-->
+
+          <section class="section section--contrast section--large section--footer">
+          <div class="container">
+               <div class="section__content">
+                    <div class="row">
+
+                         <div class="footer__item col-sm-6 col-md-3">
+
+
+                                   <div class="footer__item__content">
+                                        <img class="footer__logo" src="images/logo_white.png" alt="LaundryMate">
+
+                                        <p>Laundry and dry-cleaning on demand, delivered right to your door.</p>
+
+                                        <div class="socialMediaIcons">
+                                             <div class="navList navList--horiz">
+                                                  <ul>
+                                                       <li class="navList__item socialMediaIcons__item--facebook">
+                                                            <a class="navList__link" href="https://www.facebook.com" target="_blank">
+                                                                 <i class="mdi mdi-facebook"></i>
+                                                            </a>
+                                                       </li>
+                                                       <li class="navList__item socialMediaIcons__item--twitter">
+                                                            <a class="navList__link" href="https://www.twitter.com" target="_blank">
+                                                                 <i class="mdi mdi-twitter"></i>
+                                                            </a>
+                                                       </li>
+                                                       <li class="navList__item socialMediaIcons__item--email">
+                                                            <a class="navList__link" href="https://www.gmail.com" target="_blank">
+                                                                 <i class="mdi mdi-email"></i>
+                                                            </a>
+                                                       </li>
+                                                  </ul>
+                                             </div>
+                                        </div>
+                                    </div>
+                          </div> <!--End of footerNav__row-->
+
+                          <div class="footer__item col-sm-6 col-md-3">
+                              <h4 class="footer__item__title">LaundryMate</h4>
+                              <div class="footer__item__content">
+                                   <div class="navList">
+                                        <ul>
+                                             <li class="navList__item">
+                                                  <a class="navList__link" href="#">Laundromat</a>
+                                             </li>
+                                             <li class="navList__item">
+                                                  <a class="navList__link" href="#">Dry Cleaner</a>
+                                             </li>
+                                             <li class="navList__item">
+                                                  <a class="navList__link" href="#">Tailor</a>
+                                             </li>
+                                             <li class="navList__item">
+                                                  <a class="navList__link" href="#">Locations</a>
+                                             </li>
+                                        </ul>
+                                   </div>
+                              </div>
+                         </div> <!--End of footerNav__row-->
+
+                         <div class="footer__item col-sm-6 col-md-3">
+                              <h4 class="footer__item__title">Partners</h4>
+                              <div class="footer__item__content">
+                                   <div class="navList">
+                                        <ul>
+                                             <li class="navList__item">
+                                                  <a class="navList__link" href="#">Partner Login</a>
+                                             </li>
+                                             <li class="navList__item">
+                                                  <a class="navList__link" href="#">Become a Partner</a>
+                                             </li>
+                                        </ul>
+                                   </div>
+                              </div>
+                         </div> <!--End of footerNav__row-->
+
+                         <div class="footer__item col-sm-6 col-md-3">
+                              <h4 class="footer__item__title">Get the App</h4>
+                              <div class="footer__item__content">
+                                   <div class="appStoreButtons">
+
+                                        <div class="navList navList--horiz">
+                                             <ul>
+                                                  <li class="navList__item">
+                                                       <a class="appStoreButtons__item appStoreButtons__item--apple" href="#">
+                                                            <img src="images/appstore_2x.png" alt="Download on the AppStore">
+                                                       </a>
+                                                  </li>
+                                                  <li class="navList__item">
+                                                       <a class="appStoreButtons__item appStoreButtons__item--google" href="#">
+                                                            <img src="images/googleplay_2x.png" alt="Get it on Google Play">
+                                                       </a>
+                                                  </li>
+                                             </ul>
+                                        </div> <!--End of navList-->
+
+                                   </div> <!--End of appStoreButtons-->
+                              </div>
+                         </div> <!--End of footer__item-->
+
+                    </div> <!--End of footer__content-->
+               </div> <!--End of container-->
+          </section> <!-- End of footer-->
+
+
+          <footer class="main-footer">
+               <div class="container">
+                    <div class="main-footer__copyright">
+                         <span>Copyright &copy; 2017 LaundryMate</span>
+                    </div>
+                    <div class="navList navList--horiz">
+                         <ul>
+                              <li class="navList__item">
+                                   <a class="navList__link" href="#">Terms of Use</a>
+                              </li>
+                              <li class="navList__item">
+                                   <a class="navList__link" href="#">Privacy Policy</a>
+                              </li>
+                         </ul>
+                    </div>  <!--End of navList-->
+               </div>
+          </footer> <!--End of main footer-->
+
+
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+     </body>
+</html>

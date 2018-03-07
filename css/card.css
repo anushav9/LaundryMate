@@ -1,46 +1,21 @@
 /*
-Error: Undefined variable: "$primary".
-        on line 201 of scss/edited.scss
+Error: Undefined variable: "$background-primary".
+        on line 3 of scss/card.scss
 
-196:             h3{
-197:                  font-size: 24px;
-198:                  font-weight: $font-weight-light;
-199:             }
-200:             h3,a{
-201:               color:$primary;
-202:             }
-203:             hr{
-204:                  display: none;
-205:             }
-206:             h2,h3,hr{
+1: .card {
+2: 
+3:      background-color: $background-primary;
+4:      box-shadow: 0 4px 10px 0 rgba(0,0,0,0.15);
+5:      text-align: center;
+6:      position: relative;
+7: 
+8:      display: flex;
 
 Backtrace:
-scss/edited.scss:201
+scss/card.scss:3
 /Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/script/tree/node.rb:50:in `perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/stack.rb:135:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/stack.rb:135:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:36:in `visit'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/stack.rb:79:in `block in with_base'
@@ -93,4 +68,4 @@ scss/edited.scss:201
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$primary\".\A         on line 201 of scss/edited.scss\A \A 196:             h3{\A 197:                  font-size: 24px;\A 198:                  font-weight: $font-weight-light;\A 199:             }\A 200:             h3,a{\A 201:               color:$primary;\A 202:             }\A 203:             hr{\A 204:                  display: none;\A 205:             }\A 206:             h2,h3,hr{"; }
+  content: "Error: Undefined variable: \"$background-primary\".\A         on line 3 of scss/card.scss\A \A 1: .card {\A 2: \A 3:      background-color: $background-primary;\A 4:      box-shadow: 0 4px 10px 0 rgba(0,0,0,0.15);\A 5:      text-align: center;\A 6:      position: relative;\A 7: \A 8:      display: flex;"; }

@@ -45,304 +45,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-@font-face {
-  font-family: Avenir;
-  src: url("Avenir.ttc"); }
-@font-face {
-  font-family: system;
-  font-style: normal;
-  font-weight: 300;
-  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma"); }
-* {
-  box-sizing: border-box; }
-
-html {
-  font-size: 0.625em; }
-
-body {
-  font-size: 1.4em;
-  line-height: 1.45;
-  font-family: system; }
-
-img {
-  max-width: 100%; }
-
-/* typography.scss */
-/* augmented fourth with 10px base font-size */
-h1, h2, h3, h4, h5, h6 {
-  font-family: Avenir;
-  margin: 1.414rem 0 0.5rem;
-  font-weight: inherit;
-  line-height: 1.2; }
-
-h1 {
-  margin-top: 0;
-  font-size: 3.998rem;
-  font-weight: 900; }
-
-h2 {
-  font-size: 2.827rem;
-  font-weight: 900; }
-
-h3 {
-  font-size: 1.999rem;
-  font-weight: 300;
-  color: #2196F3; }
-
-h4 {
-  font-size: 1.414rem;
-  font-weight: bold; }
-
-h5 {
-  font-size: 1rem;
-  font-weight: bold; }
-
-h6 {
-  font-size: 1rem;
-  text-transform: uppercase; }
-
-p {
-  margin-bottom: 1.3rem; }
-
-ul {
-  list-style-type: none; }
-
-a {
-  text-decoration: none;
-  color: #2196F3; }
-
-a:hover {
-  text-decoration: underline; }
-
-/* utilities */
-.media {
-  display: flex;
-  align-items: flex-start; }
-
-.media__object {
-  margin-right: 1em; }
-
-.media__content {
-  flex: 1; }
-
-/* icons */
-.icon {
-  width: 50px;
-  height: 50px;
-  display: inline-block;
-  background: 50% 50% no-repeat;
-  background-size: contain; }
-  .icon.icon--time {
-    background-image: url("../images/time-icon.png"); }
-  .icon.icon--repeat {
-    background-image: url("../images/repeat-icon.png"); }
-  .icon.icon--heart {
-    background-image: url("../images/care-icon.png"); }
-  .icon.icon--service--washing {
-    background-image: url("../images/laundry-icon.png"); }
-  .icon.icon--service--dryCleaning {
-    background-image: url("../images/dry-cleaner-icon.png"); }
-  .icon.icon--service--tailoring {
-    background-image: url("../images/tailor-icon.png"); }
-
-/* navList */
-.navList--horiz .navList__item {
-  display: inline-block; }
-.navList__item .navList__link {
-  display: block;
-  padding: 5px; }
-
-/* buttons.scss */
-.button {
-  display: inline-block;
-  line-height: 3.6rem;
-  padding: 0 10px;
-  border-radius: 4px;
-  text-align: center;
-  font-weight: bold; }
-  .button:hover {
-    color: #FFF;
-    background: #2B91FE;
-    text-decoration: none; }
-
-.button--primary {
-  border-radius: 4px;
-  background-color: #FFFFFF;
-  color: #2B91FE;
-  box-shadow: 0 2px 2px 0 rgba(35, 10, 74, 0.15);
-  text-transform: uppercase; }
-
-.button--large {
-  line-height: 42px;
-  padding-left: 20px;
-  padding-right: 20px; }
-
-.button--cta {
-  text-transform: uppercase;
-  box-shadow: 0 17px 20px 0 rgba(35, 10, 74, 0.15);
-  background: linear-gradient(270deg, #4DD0E1 0%, #2196F3 100%);
-  color: #FFF; }
-
-.appStoreButtons__item img {
-  width: 150px;
-  height: 45px;
-  max-width: none;
-  display: inline-block; }
-
-.section {
-  position: relative;
-  padding: 15px 0; }
-  .section p {
-    color: #A0AEC0; }
-  @media (min-width: 1024px) {
-    .section {
-      padding: 20px 0; } }
-  .section.section--hasHeaderOnTop {
-    padding-top: 105px; }
-    @media (min-width: 768px) {
-      .section.section--hasHeaderOnTop {
-        padding-top: 130px; } }
-    @media (min-width: 1024px) {
-      .section.section--hasHeaderOnTop {
-        padding-top: 180px; } }
-  .section .section__mask {
-    background: rgba(0, 0, 0, 0.2);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0; }
-
-.section--large {
-  padding-top: 20px;
-  padding-bottom: 20px; }
-  @media (min-width: 768px) {
-    .section--large {
-      padding-top: 30px;
-      padding-bottom: 30px; } }
-  @media (min-width: 1024px) {
-    .section--large {
-      padding-top: 40px;
-      padding-bottom: 40px; } }
-
-.section--huge {
-  padding-top: 25px;
-  padding-bottom: 25px;
-  font-size: 1.6rem; }
-  @media (min-width: 768px) {
-    .section--huge {
-      padding-top: 50px;
-      padding-bottom: 50px; } }
-  @media (min-width: 1024px) {
-    .section--huge {
-      padding-top: 100px;
-      padding-bottom: 100px; } }
-
-.section--contrast {
-  background-color: #17213A;
-  color: #A0AEC0; }
-  .section--contrast p {
-    color: #A0AEC0; }
-  .section--contrast h1, .section--contrast h2, .section--contrast h3, .section--contrast h4, .section--contrast h5, .section--contrast h6 {
-    color: #FFFFFF; }
-  .section--contrast .section__footer {
-    color: rgba(255, 255, 255, 0.7); }
-
-/* card */
-.card {
-  background-color: #FFF;
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
-  text-align: center;
-  position: relative;
-  display: flex;
-  height: 100%; }
-  .card .card__content {
-    padding: 15px;
-    flex-grow: 1;
-    align-content: center; }
-  .card .card__footer {
-    font-weight: 900;
-    font-size: 14px;
-    padding: 15px;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    flex-grow: 0; }
-
-.card--service .card__header {
-  position: relative;
-  text-align: center;
-  margin-bottom: 10px;
-  margin-top: 50px; }
-  .card--service .card__header:before {
-    content: '';
-    width: 100%;
-    height: 5px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #2196F3; }
-  .card--service .card__header .card__media {
-    width: 100%;
-    position: absolute;
-    top: -25px; }
-.card--service.card--washing .card__title, .card--service.card--washing a {
-  color: #9850DC; }
-.card--service.card--washing .card__header:before {
-  background: linear-gradient(90deg, #9850DC 0%, #DB63A6 100%); }
-.card--service.card--drycleaning .card__title, .card--service.card--drycleaning a {
-  color: #13A0E2; }
-.card--service.card--drycleaning .card__header:before {
-  background: linear-gradient(90deg, #13A0E2 0%, #01D7C9 100%); }
-.card--service.card--tailoring .card__title, .card--service.card--tailoring a {
-  color: #FF4B75; }
-.card--service.card--tailoring .card__header:before {
-  background: linear-gradient(90deg, #FF4B75 0%, #FFADA0 100%); }
-
-.header {
-  background: #2196F3;
-  overflow: hidden; }
-  .header.header--onImage {
-    background: none;
-    box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.12); }
-  .header.header--onNextSection {
-    margin-bottom: -80px;
-    position: relative;
-    z-index: 2; }
-  .header .container {
-    display: flex;
-    height: 80px;
-    justify-content: space-between;
-    align-items: center; }
-  .header .header__logo img {
-    height: 30px; }
-
-.header__nav .header__navList {
-  display: none; }
-  @media (min-width: 768px) {
-    .header__nav .header__navList {
-      display: flex;
-      align-items: center; } }
-.header__nav .navList__link {
-  color: #FFF;
-  text-decoration: none;
-  padding: 15px; }
-  .header__nav .navList__link:hover {
-    text-decoration: underline; }
-.header__nav .navList__item.navList__item--disabled {
-  opacity: 0.5;
-  pointer-events: none;
-  cursor: default; }
-
-.header__navToggle {
-  float: right;
-  right: 0; }
-  .header__navToggle .header__navToggle__icon {
-    font-size: 28px;
-    color: #FFFFFF; }
-  @media (min-width: 768px) {
-    .header__navToggle {
-      display: none; } }
-
 .section--mainHomepageHero {
   background: #494e56 url(../images/user-hero.jpg) 50% 50% no-repeat;
   background-size: cover;
@@ -405,6 +107,8 @@ a:hover {
     .section--finalCTAWithCredit .section__content span {
       display: inline-block;
       margin: 10px; }
+    .section--finalCTAWithCredit .section__content .button--cta {
+      background: linear-gradient(270deg, #4DD0E1 0%, #2196F3 100%); }
 
 .section--aboutTheMobileApp {
   background-color: #FFF; }
@@ -438,6 +142,418 @@ a:hover {
 .section--servicesOfferedCards .row > * {
   margin: 10px 0; }
 
+.section--laundromatHomepageHero {
+  background: #494e56 url(../images/laundromat-hero.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  text-align: center; }
+  @media (min-width: 1024px) {
+    .section--laundromatHomepageHero {
+      padding-top: 200px;
+      padding-bottom: 200px; } }
+  @media (min-width: 576px) {
+    .section--laundromatHomepageHero {
+      text-align: left; } }
+  .section--laundromatHomepageHero .section__mask {
+    background: rgba(55, 85, 98, 0.37); }
+    @media (min-width: 768px) {
+      .section--laundromatHomepageHero .section__mask {
+        display: none; } }
+  .section--laundromatHomepageHero .button--cta {
+    background: linear-gradient(90deg, #9850DC 0%, #DB63A6 100%); }
+
+.section--partnerBenefitsOfLm .section__header {
+  text-align: center; }
+  .section--partnerBenefitsOfLm .section__header h2 {
+    font-weight: 300; }
+.section--partnerBenefitsOfLm .section__content h3 {
+  font-weight: 900;
+  color: #111; }
+.section--partnerBenefitsOfLm .section__content .media {
+  margin: 15px; }
+  @media (min-width: 1024px) {
+    .section--partnerBenefitsOfLm .section__content .media {
+      margin: 30px; } }
+
+.section--finalCTAToContact .button--cta {
+  background: #2196F3; }
+
+.section--dashboardForBusiness .section__header {
+  text-align: center; }
+.section--dashboardForBusiness .section__content .media {
+  margin: 15px; }
+  @media (min-width: 1024px) {
+    .section--dashboardForBusiness .section__content .media {
+      margin: 30px; } }
+.section--dashboardForBusiness .section__content .dashboardForBusiness__image {
+  text-align: center; }
+  @media (min-width: 1024px) {
+    .section--dashboardForBusiness .section__content .dashboardForBusiness__image {
+      margin: 40px 0 0 0; } }
+
+.section--aboutTheDriverApp {
+  background: url(../images/driver-map.png) 50% 50% no-repeat;
+  background-size: cover; }
+
+.media__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; }
+  @media (min-width: 576px) {
+    .media__list {
+      flex-direction: column; } }
+
+/* augmented fourth with 10px base font-size */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Avenir;
+  margin: 1.414rem 0 0.5rem;
+  font-weight: inherit;
+  line-height: 1.2; }
+
+h1 {
+  margin-top: 0;
+  font-size: 3.998rem;
+  font-weight: 900; }
+
+h2 {
+  font-size: 2.827rem;
+  font-weight: 900; }
+
+h3 {
+  font-size: 1.999rem;
+  font-weight: 300;
+  color: #2196F3; }
+
+h4 {
+  font-size: 1.414rem;
+  font-weight: bold; }
+
+h5 {
+  font-size: 1rem;
+  font-weight: bold; }
+
+h6 {
+  font-size: 1rem;
+  text-transform: uppercase; }
+
+p {
+  margin-bottom: 1.3rem; }
+
+ul {
+  list-style-type: none; }
+
+a {
+  text-decoration: none;
+  color: #2196F3; }
+
+a:hover {
+  text-decoration: underline; }
+
+.button {
+  display: inline-block;
+  line-height: 3.6rem;
+  padding: 0 10px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold; }
+  .button:hover {
+    color: #FFF;
+    background: #2B91FE;
+    text-decoration: none; }
+
+.button--primary {
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  color: #2B91FE;
+  box-shadow: 0 2px 2px 0 rgba(35, 10, 74, 0.15);
+  text-transform: uppercase; }
+
+.button--large {
+  line-height: 42px;
+  padding-left: 20px;
+  padding-right: 20px; }
+
+.button--cta {
+  text-transform: uppercase;
+  box-shadow: 0 17px 20px 0 rgba(35, 10, 74, 0.15);
+  color: #FFF; }
+
+.appStoreButtons__item img {
+  width: 150px;
+  height: 45px;
+  max-width: none;
+  display: inline-block; }
+
+.icon {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background: 50% 50% no-repeat;
+  background-size: contain; }
+  .icon.icon--time {
+    background-image: url("../images/time-icon.png"); }
+  .icon.icon--repeat {
+    background-image: url("../images/repeat-icon.png"); }
+  .icon.icon--heart {
+    background-image: url("../images/care-icon.png"); }
+  .icon.icon--service--washing {
+    background-image: url("../images/laundry-icon.png"); }
+  .icon.icon--service--dryCleaning {
+    background-image: url("../images/dry-cleaner-icon.png"); }
+  .icon.icon--service--tailoring {
+    background-image: url("../images/tailor-icon.png"); }
+  .icon.icon--order {
+    background-image: url("../images/manage-order-icon.png"); }
+  .icon.icon--send {
+    background-image: url("../images/manage-drivers-icon.png"); }
+  .icon.icon--notification {
+    background-image: url("../images/notification-icon.png"); }
+
+.icon--number {
+  background: linear-gradient(133.62deg, #2B91FE 0%, #485FFF 100%);
+  border-radius: 50%;
+  color: #ffffff;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.8em;
+  line-height: 1.8em;
+  text-align: center;
+  width: 50px; }
+
+.section {
+  position: relative;
+  padding: 15px 0; }
+  .section p {
+    color: #A0AEC0; }
+  @media (min-width: 1024px) {
+    .section {
+      padding: 20px 0; } }
+  .section.section--hasHeaderOnTop {
+    padding-top: 105px; }
+    @media (min-width: 768px) {
+      .section.section--hasHeaderOnTop {
+        padding-top: 130px; } }
+    @media (min-width: 1024px) {
+      .section.section--hasHeaderOnTop {
+        padding-top: 180px; } }
+  .section .section__mask {
+    background: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; }
+
+.section--large {
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  @media (min-width: 768px) {
+    .section--large {
+      padding-top: 30px;
+      padding-bottom: 30px; } }
+  @media (min-width: 1024px) {
+    .section--large {
+      padding-top: 40px;
+      padding-bottom: 40px; } }
+
+.section--huge {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: 1.6rem; }
+  @media (min-width: 768px) {
+    .section--huge {
+      padding-top: 50px;
+      padding-bottom: 50px; } }
+  @media (min-width: 1024px) {
+    .section--huge {
+      padding-top: 100px;
+      padding-bottom: 100px; } }
+
+.section--contrast {
+  background-color: #17213A;
+  color: #A0AEC0; }
+  .section--contrast p {
+    color: #A0AEC0; }
+  .section--contrast h1, .section--contrast h2, .section--contrast h3, .section--contrast h4, .section--contrast h5, .section--contrast h6 {
+    color: #FFFFFF; }
+  .section--contrast .section__footer {
+    color: rgba(255, 255, 255, 0.7); }
+
+.section--light {
+  background-color: #F6F9FC;
+  color: #6B7C93; }
+
+.card {
+  background-color: #FFF;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+  text-align: center;
+  position: relative;
+  display: flex;
+  height: 100%; }
+  .card .card__content {
+    padding: 15px;
+    flex-grow: 1;
+    align-content: center; }
+  .card .card__footer {
+    font-weight: 900;
+    font-size: 14px;
+    padding: 15px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    flex-grow: 0; }
+
+.card--service .card__header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 50px; }
+  .card--service .card__header:before {
+    content: '';
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #2196F3; }
+  .card--service .card__header .card__media {
+    width: 100%;
+    position: absolute;
+    top: -25px; }
+.card--service.card--washing .card__title, .card--service.card--washing a {
+  color: #9850DC; }
+.card--service.card--washing .card__header:before {
+  background: linear-gradient(90deg, #9850DC 0%, #DB63A6 100%); }
+.card--service.card--drycleaning .card__title, .card--service.card--drycleaning a {
+  color: #13A0E2; }
+.card--service.card--drycleaning .card__header:before {
+  background: linear-gradient(90deg, #13A0E2 0%, #01D7C9 100%); }
+.card--service.card--tailoring .card__title, .card--service.card--tailoring a {
+  color: #FF4B75; }
+.card--service.card--tailoring .card__header:before {
+  background: linear-gradient(90deg, #FF4B75 0%, #FFADA0 100%); }
+
+.media {
+  display: flex;
+  align-items: flex-start; }
+
+.media__object {
+  margin-right: 1em; }
+
+.media__content {
+  flex: 1; }
+
+form {
+  width: 640px;
+  margin: 0 auto;
+  padding: 80px 0; }
+
+.form-group__header {
+  border-bottom: 1px solid rgba(107, 124, 147, 0.12);
+  padding: 10px 0; }
+
+.input-group {
+  margin: 10px 0;
+  padding: 10px 0; }
+  .input-group .form-control {
+    padding: 1.5rem 1rem;
+    border: 1px solid #E8F0F5;
+    border-radius: 4px;
+    background-color: #F6F9FC; }
+
+.form-check {
+  margin: 10px 0; }
+
+.form__footer {
+  margin: 30px 0;
+  color: #6B7C93;
+  text-align: center; }
+  .form__footer .button-submit {
+    margin: 20px 0;
+    height: 45px;
+    width: 115px;
+    border-radius: 4px;
+    background-color: #2196F3;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.15); }
+
+@font-face {
+  font-family: Avenir;
+  src: url("Avenir.ttc"); }
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma"); }
+* {
+  box-sizing: border-box; }
+
+html {
+  font-size: 0.625em; }
+
+body {
+  font-size: 1.4em;
+  line-height: 1.45;
+  font-family: system; }
+
+img {
+  max-width: 100%; }
+
+/* typography.scss */
+/* utilities */
+/* icons */
+/* navList */
+.navList--horiz .navList__item {
+  display: inline-block; }
+.navList__item .navList__link {
+  display: block;
+  padding: 5px; }
+
+/* buttons.scss */
+/* card */
+.header {
+  background: #2196F3;
+  overflow: hidden; }
+  .header.header--onImage {
+    background: none;
+    box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.12); }
+  .header.header--onNextSection {
+    margin-bottom: -80px;
+    position: relative;
+    z-index: 2; }
+  .header .container {
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center; }
+  .header .header__logo img {
+    height: 30px; }
+
+.header__nav .header__navList {
+  display: none; }
+  @media (min-width: 768px) {
+    .header__nav .header__navList {
+      display: flex;
+      align-items: center; } }
+.header__nav .navList__link {
+  color: #FFF;
+  text-decoration: none;
+  padding: 15px; }
+  .header__nav .navList__link:hover {
+    text-decoration: underline; }
+.header__nav .navList__item.navList__item--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: default; }
+
+.header__navToggle {
+  float: right;
+  right: 0; }
+  .header__navToggle .header__navToggle__icon {
+    font-size: 28px;
+    color: #FFFFFF; }
+  @media (min-width: 768px) {
+    .header__navToggle {
+      display: none; } }
+
 .section--downloadBanner {
   background: linear-gradient(133.62deg, #2B91FE 0%, #485FFF 100%);
   text-align: center; }
@@ -445,6 +561,15 @@ a:hover {
     color: #FFFFFF;
     font-weight: 300; }
     .section--downloadBanner .section__content p {
+      color: rgba(255, 255, 255, 0.6); }
+
+.section--partnershipBanner {
+  background: #494e56 url(../images/footer-cta.jpg) 50% 50% no-repeat;
+  background-size: cover; }
+  .section--partnershipBanner .section__content {
+    color: #FFFFFF;
+    font-weight: 300; }
+    .section--partnershipBanner .section__content p {
       color: rgba(255, 255, 255, 0.6); }
 
 .section--footer {

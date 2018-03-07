@@ -1,0 +1,57 @@
+/* augmented fourth with 10px base font-size */
+h1, h2, h3, h4, h5, h6 {
+     font-family: Avenir;
+     margin: 1.414rem 0 0.5rem;
+     font-weight: inherit;
+     line-height: 1.2;
+}
+
+h1 {
+     margin-top: 0;
+     font-size: 3.998rem;
+     font-weight: $font-weight-bold;
+}
+
+h2 {
+     font-size: 2.827rem;
+     font-weight: $font-weight-bold;
+}
+
+h3 {
+     font-size: 1.999rem;
+     font-weight: $font-weight-light;
+     color: $brand-primary;
+
+}
+
+h4 {
+     font-size: 1.414rem;
+     font-weight: bold;
+}
+
+h5 {
+     font-size: 1rem;
+     font-weight: bold;
+}
+
+h6 {
+     font-size: 1rem;
+     text-transform: uppercase;
+}
+
+p {
+     margin-bottom: 1.3rem;
+}
+
+ul {
+     list-style-type: none;
+}
+
+a {
+     text-decoration: none;
+     color: $brand-primary;
+}
+
+a:hover {
+     text-decoration: underline;
+}

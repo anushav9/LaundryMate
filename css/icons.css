@@ -1,0 +1,37 @@
+.icon {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background: 50% 50% no-repeat;
+  background-size: contain; }
+  .icon.icon--time {
+    background-image: url("../images/time-icon.png"); }
+  .icon.icon--repeat {
+    background-image: url("../images/repeat-icon.png"); }
+  .icon.icon--heart {
+    background-image: url("../images/care-icon.png"); }
+  .icon.icon--service--washing {
+    background-image: url("../images/laundry-icon.png"); }
+  .icon.icon--service--dryCleaning {
+    background-image: url("../images/dry-cleaner-icon.png"); }
+  .icon.icon--service--tailoring {
+    background-image: url("../images/tailor-icon.png"); }
+  .icon.icon--order {
+    background-image: url("../images/manage-order-icon.png"); }
+  .icon.icon--send {
+    background-image: url("../images/manage-drivers-icon.png"); }
+  .icon.icon--notification {
+    background-image: url("../images/notification-icon.png"); }
+
+.icon--number {
+  background: linear-gradient(133.62deg, #2B91FE 0%, #485FFF 100%);
+  border-radius: 50%;
+  color: #ffffff;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.8em;
+  line-height: 1.8em;
+  text-align: center;
+  width: 50px; }
+
+/*# sourceMappingURL=icons.css.map */

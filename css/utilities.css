@@ -1,0 +1,11 @@
+.media {
+  display: flex;
+  align-items: flex-start; }
+
+.media__object {
+  margin-right: 1em; }
+
+.media__content {
+  flex: 1; }
+
+/*# sourceMappingURL=utilities.css.map */
