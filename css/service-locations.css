@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$body-text-secondary".
-        on line 25 of scss/service-locations.scss
+        on line 24 of scss/service-locations.scss
 
+19:      }
 20: 
 21:      .input-group {
 22:           margin: 10px 0;
-23:           // padding: 10px 0;
-24:           .form-control {
-25:                color: $body-text-secondary;
-26:                padding: 1.5rem 1rem;
-27:                border: 1px solid #E8F0F5;
-28:                border-radius: 4px;
-29:                background-color: $color-aliceBlue;
-30:           }
+23:           .form-control {
+24:                color: $body-text-secondary;
+25:                padding: 1.5rem 1rem;
+26:                border: 1px solid #E8F0F5;
+27:                border-radius: 4px;
+28:                background-color: $color-aliceBlue;
+29:           }
 
 Backtrace:
-scss/service-locations.scss:25
+scss/service-locations.scss:24
 /Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/script/tree/node.rb:50:in `perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
@@ -93,4 +93,4 @@ scss/service-locations.scss:25
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$body-text-secondary\".\A         on line 25 of scss/service-locations.scss\A \A 20: \A 21:      .input-group {\A 22:           margin: 10px 0;\A 23:           // padding: 10px 0;\A 24:           .form-control {\A 25:                color: $body-text-secondary;\A 26:                padding: 1.5rem 1rem;\A 27:                border: 1px solid #E8F0F5;\A 28:                border-radius: 4px;\A 29:                background-color: $color-aliceBlue;\A 30:           }"; }
+  content: "Error: Undefined variable: \"$body-text-secondary\".\A         on line 24 of scss/service-locations.scss\A \A 19:      }\A 20: \A 21:      .input-group {\A 22:           margin: 10px 0;\A 23:           .form-control {\A 24:                color: $body-text-secondary;\A 25:                padding: 1.5rem 1rem;\A 26:                border: 1px solid #E8F0F5;\A 27:                border-radius: 4px;\A 28:                background-color: $color-aliceBlue;\A 29:           }"; }

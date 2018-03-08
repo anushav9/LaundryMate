@@ -194,13 +194,6 @@ table {
   background: url(../images/driver-map.png) 50% 50% no-repeat;
   background-size: cover; }
 
-.media__list {
-  align-items: center;
-  justify-content: space-between; }
-  @media (min-width: 576px) {
-    .media__list {
-      flex-direction: column; } }
-
 /* augmented fourth with 10px base font-size */
 h1, h2, h3, h4, h5, h6 {
   font-family: Avenir;
@@ -283,11 +276,12 @@ a:hover {
   display: inline-block; }
 
 .button-submit {
-  margin-top: 30px;
   height: 45px;
   width: 115px;
   border-radius: 4px;
-  background-color: #2196F3; }
+  background-color: #2196F3;
+  margin: 10px auto;
+  display: block; }
 
 .icon {
   width: 50px;
@@ -316,6 +310,7 @@ a:hover {
 
 .icon--number {
   background: linear-gradient(133.62deg, #2B91FE 0%, #485FFF 100%);
+  background: red;
   border-radius: 50%;
   color: #ffffff;
   display: inline-block;
@@ -391,7 +386,8 @@ a:hover {
 
 .section--light {
   background-color: #F6F9FC;
-  color: #6B7C93; }
+  color: #6B7C93;
+  text-align: center; }
 
 .card {
   background-color: #FFF;
