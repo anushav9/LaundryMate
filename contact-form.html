@@ -49,7 +49,7 @@
           </div> <!-- End of container-->
      </header> <!--End of main-header-->
 
-     <section class="section section--large section--hasHeaderOnTop section--downloadBanner">
+     <section class="section section--large section--hasHeaderOnTop section--banner section--brand-primary">
           <div class="container">
                <div class="section__content">
                     <div>
@@ -59,193 +59,197 @@
           </div>    <!--End of container -->
      </section>
 
-     <form>
+     <form class="contact-form">
           <div class="container">
-          <div class="form-group">
-               <div class="form-group__header">
-                    <h3>Primary Contact Details</h3>
-               </div>
-               <div class="form-group__content">
-                    <div class="form-row">
-                         <div class="col-md-6 input-group input-group-lg">
-                              <input type="text" class="form-control input-lg" placeholder="First name">
+               <div class="form-group">
+                    <div class="form-group__header section__headerWithBorder">
+                         <h3>Primary Contact Details</h3>
+                    </div>
+                    <div class="form-group__content">
+                         <div class="form-row">
+                              <div class="col-md-6 input-group input-group-lg">
+                                   <input type="text" class="form-control input-lg" placeholder="First Name">
+                              </div>
+                              <div class="col-md-6 input-group input-group-lg">
+                                   <input type="text" class="form-control input-lg" placeholder="Last Name">
+                              </div>
                          </div>
-                         <div class="col-md-6 input-group input-group-lg">
-                              <input type="text" class="form-control input-lg" placeholder="Last name">
+                         <div class="form-row">
+                              <div class="col-md-6 input-group input-group-lg">
+                                   <input type="email" class="form-control input-lg" placeholder="Email Address">
+                              </div>
+                              <div class="col-md-6 input-group input-group-lg">
+                                   <input type="number" class="form-control input-lg" placeholder="Phone Number">
+                              </div>
                          </div>
                     </div>
-                    <div class="form-row">
-                         <div class="col-md-6 input-group input-group-lg">
-                              <input type="email" class="form-control input-lg" placeholder="Email Address">
-                         </div>
-                         <div class="col-md-6 input-group input-group-lg">
-                              <input type="number" class="form-control input-lg" placeholder="Phone Number">
-                         </div>
-                    </div>
-               </div>
-          </div>
+               </div> <!-- End of form-group-->
 
-          <div class="form-group">
-               <div class="form-group__header">
-                    <h3>Business Details</h3>
-               </div>
-               <div class="form-group__content">
-                    <div class="form-row">
-                         <div class="input-group input-group-lg col-md-6">
-                              <input type="text" class="form-control" placeholder="Company Name">
-                         </div>
-                         <div class="input-group input-group-lg col-md-6">
-                              <input type="text" class="form-control" placeholder="Company Website or Yelp Page">
-                         </div>
+               <div class="form-group">
+                    <div class="form-group__header section__headerWithBorder">
+                         <h3>Business Details</h3>
                     </div>
 
-                    <div class="form-row">
-                         <div class=" input-group input-group-lg col-md-4">
-                              <input type="text" class="form-control" placeholder="City">
+                    <div class="form-group__content">
+
+                         <div class="form-row">
+                              <div class="input-group input-group-lg col-md-6">
+                                   <input type="text" class="form-control" placeholder="Company Name">
+                              </div>
+                              <div class="input-group input-group-lg col-md-6">
+                                   <input type="text" class="form-control" placeholder="Company Website or Yelp Page">
+                              </div>
                          </div>
-                         <div class="input-group input-group-lg col-md-4">
-                              <select id="inputState" class="form-control">
+
+                         <div class="form-row">
+                              <div class=" input-group input-group-lg col-md-4">
+                                   <input type="text" class="form-control" placeholder="City">
+                              </div>
+                              <div class="input-group input-group-lg col-md-4">
+                                   <select class="form-control" id="inputState">
                                    <option selected>State</option>
                                    <option>...</option>
-                              </select>
-                         </div>
-                         <div class="input-group input-group-lg col-md-4">
-                              <input type="number" class="form-control" placeholder="Zip Code">
-                         </div>
-                    </div>
-                    <h4>What services do you provide?</h4>
-                    <div class="form-row">
-                         <div class="col-md-4">
-                              <div class="form-check form-check-inline">
-                                   <input class="form-check-input" type="checkbox" id="washing" value="option1">
-                                   <label class="form-check-label" for="washing">Wash &amp; Fold</label>
+                                   </select>
+                              </div>
+                              <div class="input-group input-group-lg col-md-4">
+                                   <input type="number" class="form-control" placeholder="Zip Code">
                               </div>
                          </div>
 
-                         <div class="col-md-4">
-                              <div class="form-check form-check-inline">
-                                   <input class="form-check-input" type="checkbox" id="dryclean" value="option2">
-                                   <label class="form-check-label" for="dryclean">Dry Cleaning</label>
+                         <h4>What services do you provide?</h4>
+                         <div class="form-row">
+                              <div class="col-md-4">
+                                   <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="washing" value="option1">
+                                        <label class="form-check-label" for="washing">Wash &amp; Fold</label>
+                                   </div>
+                              </div>
+
+                              <div class="col-md-4">
+                                   <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="drycleaning" value="option2">
+                                        <label class="form-check-label" for="drycleaning">Dry Cleaning</label>
+                                   </div>
+                              </div>
+
+                              <div class="col-md-4">
+                                   <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="tailoring" value="option3">
+                                        <label class="form-check-label" for="tailoring">Tailoring</label>
+                                   </div>
                               </div>
                          </div>
-                         <div class="col-md-4">
-                              <div class="form-check form-check-inline">
-                                   <input class="form-check-input" type="checkbox" id="tailoring" value="option3">
-                                   <label class="form-check-label" for="tailoring">Tailoring</label>
-                              </div>
-                         </div>
+
                     </div>
+               </div> <!-- End of form-group-->
+
+
+               <div class="form__footer">
+                    <span>A team member will be in contact with you in 2-3 business days. Thank you for your patience.</span>
+                    <button type="submit" class="btn btn-primary btn-lg button--cta button-submit">Submit</button>
                </div>
-          </div>
 
-
-          <div class="form__footer">
-               <span>A team member will be in contact with you in 2-3 business days. Thank you for your patience.</span>
-                     <button type="submit" class="btn btn-primary btn-lg button-submit">Submit</button>
-          </div>
-     </div>
-</form>
+          </div> <!-- End of container-->
+     </form>
      <section class="section section--contrast section--large section--footer">
-     <div class="container">
-          <div class="section__content">
-               <div class="row">
+          <div class="container">
+               <div class="section__content">
+                    <div class="row">
 
-                    <div class="footer__item col-sm-6 col-md-3">
+                         <div class="footer__item col-sm-6 col-md-3">
+                                   <div class="footer__item__content">
+                                        <img class="footer__logo" src="images/logo_white.png" alt="LaundryMate">
 
+                                        <p>Laundry and dry-cleaning on demand, delivered right to your door.</p>
 
+                                        <div class="socialMediaIcons">
+                                             <div class="navList navList--horiz">
+                                                  <ul>
+                                                       <li class="navList__item socialMediaIcons__item--facebook">
+                                                            <a class="navList__link" href="https://www.facebook.com" target="_blank">
+                                                                 <i class="mdi mdi-facebook"></i>
+                                                            </a>
+                                                       </li>
+                                                       <li class="navList__item socialMediaIcons__item--twitter">
+                                                            <a class="navList__link" href="https://www.twitter.com" target="_blank">
+                                                                 <i class="mdi mdi-twitter"></i>
+                                                            </a>
+                                                       </li>
+                                                       <li class="navList__item socialMediaIcons__item--email">
+                                                            <a class="navList__link" href="https://www.gmail.com" target="_blank">
+                                                                 <i class="mdi mdi-email"></i>
+                                                            </a>
+                                                       </li>
+                                                  </ul>
+                                             </div>
+                                        </div>
+                                    </div>
+                          </div> <!--End of footerNav__row-->
+
+                          <div class="footer__item col-sm-6 col-md-3">
+                              <h4 class="footer__item__title">LaundryMate</h4>
                               <div class="footer__item__content">
-                                   <img class="footer__logo" src="images/logo_white.png" alt="LaundryMate">
+                                   <div class="navList">
+                                        <ul>
+                                             <li class="navList__item">
+                                                  <a class="navList__link" href="#">Laundromat</a>
+                                             </li>
+                                             <li class="navList__item">
+                                                  <a class="navList__link" href="#">Dry Cleaner</a>
+                                             </li>
+                                             <li class="navList__item">
+                                                  <a class="navList__link" href="#">Tailor</a>
+                                             </li>
+                                             <li class="navList__item">
+                                                  <a class="navList__link" href="#">Locations</a>
+                                             </li>
+                                        </ul>
+                                   </div>
+                              </div>
+                         </div> <!--End of footerNav__row-->
 
-                                   <p>Laundry and dry-cleaning on demand, delivered right to your door.</p>
+                         <div class="footer__item col-sm-6 col-md-3">
+                              <h4 class="footer__item__title">Partners</h4>
+                              <div class="footer__item__content">
+                                   <div class="navList">
+                                        <ul>
+                                             <li class="navList__item">
+                                                  <a class="navList__link" href="#">Partner Login</a>
+                                             </li>
+                                             <li class="navList__item">
+                                                  <a class="navList__link" href="#">Become a Partner</a>
+                                             </li>
+                                        </ul>
+                                   </div>
+                              </div>
+                         </div> <!--End of footerNav__row-->
 
-                                   <div class="socialMediaIcons">
+                         <div class="footer__item col-sm-6 col-md-3">
+                              <h4 class="footer__item__title">Get the App</h4>
+                              <div class="footer__item__content">
+                                   <div class="appStoreButtons">
+
                                         <div class="navList navList--horiz">
                                              <ul>
-                                                  <li class="navList__item socialMediaIcons__item--facebook">
-                                                       <a class="navList__link" href="https://www.facebook.com" target="_blank">
-                                                            <i class="mdi mdi-facebook"></i>
+                                                  <li class="navList__item">
+                                                       <a class="appStoreButtons__item appStoreButtons__item--apple" href="#">
+                                                            <img src="images/appstore_2x.png" alt="Download on the AppStore">
                                                        </a>
                                                   </li>
-                                                  <li class="navList__item socialMediaIcons__item--twitter">
-                                                       <a class="navList__link" href="https://www.twitter.com" target="_blank">
-                                                            <i class="mdi mdi-twitter"></i>
-                                                       </a>
-                                                  </li>
-                                                  <li class="navList__item socialMediaIcons__item--email">
-                                                       <a class="navList__link" href="https://www.gmail.com" target="_blank">
-                                                            <i class="mdi mdi-email"></i>
+                                                  <li class="navList__item">
+                                                       <a class="appStoreButtons__item appStoreButtons__item--google" href="#">
+                                                            <img src="images/googleplay_2x.png" alt="Get it on Google Play">
                                                        </a>
                                                   </li>
                                              </ul>
-                                        </div>
-                                   </div>
-                               </div>
-                     </div> <!--End of footerNav__row-->
+                                        </div> <!--End of navList-->
 
-                     <div class="footer__item col-sm-6 col-md-3">
-                         <h4 class="footer__item__title">LaundryMate</h4>
-                         <div class="footer__item__content">
-                              <div class="navList">
-                                   <ul>
-                                        <li class="navList__item">
-                                             <a class="navList__link" href="#">Laundromat</a>
-                                        </li>
-                                        <li class="navList__item">
-                                             <a class="navList__link" href="#">Dry Cleaner</a>
-                                        </li>
-                                        <li class="navList__item">
-                                             <a class="navList__link" href="#">Tailor</a>
-                                        </li>
-                                        <li class="navList__item">
-                                             <a class="navList__link" href="#">Locations</a>
-                                        </li>
-                                   </ul>
+                                   </div> <!--End of appStoreButtons-->
                               </div>
-                         </div>
-                    </div> <!--End of footerNav__row-->
+                         </div> <!--End of footer__item-->
 
-                    <div class="footer__item col-sm-6 col-md-3">
-                         <h4 class="footer__item__title">Partners</h4>
-                         <div class="footer__item__content">
-                              <div class="navList">
-                                   <ul>
-                                        <li class="navList__item">
-                                             <a class="navList__link" href="#">Partner Login</a>
-                                        </li>
-                                        <li class="navList__item">
-                                             <a class="navList__link" href="#">Become a Partner</a>
-                                        </li>
-                                   </ul>
-                              </div>
-                         </div>
-                    </div> <!--End of footerNav__row-->
-
-                    <div class="footer__item col-sm-6 col-md-3">
-                         <h4 class="footer__item__title">Get the App</h4>
-                         <div class="footer__item__content">
-                              <div class="appStoreButtons">
-
-                                   <div class="navList navList--horiz">
-                                        <ul>
-                                             <li class="navList__item">
-                                                  <a class="appStoreButtons__item appStoreButtons__item--apple" href="#">
-                                                       <img src="images/appstore_2x.png" alt="Download on the AppStore">
-                                                  </a>
-                                             </li>
-                                             <li class="navList__item">
-                                                  <a class="appStoreButtons__item appStoreButtons__item--google" href="#">
-                                                       <img src="images/googleplay_2x.png" alt="Get it on Google Play">
-                                                  </a>
-                                             </li>
-                                        </ul>
-                                   </div> <!--End of navList-->
-
-                              </div> <!--End of appStoreButtons-->
-                         </div>
-                    </div> <!--End of footer__item-->
-
-               </div> <!--End of footer__content-->
-          </div> <!--End of container-->
+                    </div> <!--End of footer__content-->
+               </div> <!--End of container-->
      </section> <!-- End of footer-->
 
 

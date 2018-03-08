@@ -10,7 +10,8 @@
           'section',
           'card',
           'utilities',
-          'contact-form';
+          'contact-form',
+          'service-locations';
 
 @font-face {
      font-family: Avenir;
@@ -40,15 +41,7 @@ body {
 
 img {max-width: 100%;}
 
-/* typography.scss */
-
-/* utilities */
-
-
-/* icons */
-
-/* navList */
-
+//NAVLIST
 .navList__item {
      .navList--horiz & {
           display: inline-block;
@@ -59,13 +52,6 @@ img {max-width: 100%;}
      }
 }
 
-/* buttons.scss */
-
-
-// Sections
-
-
-/* card */
 
 // MAIN HEADER
 .header {
@@ -110,7 +96,7 @@ img {max-width: 100%;}
      }
 
      .navList__link {
-          color: #FFF;
+          color: $white;
           text-decoration: none;
           padding: 15px;
           &:hover {
@@ -141,12 +127,8 @@ img {max-width: 100%;}
      }
 }
 
-
-
-//DOWNLOAD BANNER
-.section--downloadBanner {
-     background: $color-gradient-primary;
-     text-align: center;
+//BANNER
+.section--banner {
 
      .section__content {
           color: $white;
@@ -157,17 +139,16 @@ img {max-width: 100%;}
      }
 }
 
+//BRAND PRIMARY SECTION
+.section--brand-primary {
+     background: $color-gradient-primary;
+     text-align: center;
+}
+
 //PARTNERSHIP BANNER
 .section--partnershipBanner {
      background: #494e56 url(../images/footer-cta.jpg) 50% 50% no-repeat;
      background-size: cover;
-     .section__content {
-          color: $white;
-          font-weight: $font-weight-light;
-          p {
-               color: rgba(255,255,255,.6);
-          }
-     }
 }
 
 //FOOTER

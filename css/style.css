@@ -161,17 +161,17 @@ table {
   .section--laundromatHomepageHero .button--cta {
     background: linear-gradient(90deg, #9850DC 0%, #DB63A6 100%); }
 
-.section--partnerBenefitsOfLm .section__header {
+.section--partnerBenefitsOfLM .section__header {
   text-align: center; }
-  .section--partnerBenefitsOfLm .section__header h2 {
+  .section--partnerBenefitsOfLM .section__header h2 {
     font-weight: 300; }
-.section--partnerBenefitsOfLm .section__content h3 {
+.section--partnerBenefitsOfLM .section__content h3 {
   font-weight: 900;
   color: #111; }
-.section--partnerBenefitsOfLm .section__content .media {
+.section--partnerBenefitsOfLM .section__content .media {
   margin: 15px; }
   @media (min-width: 1024px) {
-    .section--partnerBenefitsOfLm .section__content .media {
+    .section--partnerBenefitsOfLM .section__content .media {
       margin: 30px; } }
 
 .section--finalCTAToContact .button--cta {
@@ -195,8 +195,6 @@ table {
   background-size: cover; }
 
 .media__list {
-  display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between; }
   @media (min-width: 576px) {
@@ -284,6 +282,13 @@ a:hover {
   max-width: none;
   display: inline-block; }
 
+.button-submit {
+  margin-top: 30px;
+  height: 45px;
+  width: 115px;
+  border-radius: 4px;
+  background-color: #2196F3; }
+
 .icon {
   width: 50px;
   height: 50px;
@@ -343,6 +348,11 @@ a:hover {
     bottom: 0;
     left: 0;
     right: 0; }
+
+.section__headerWithBorder {
+  border-bottom: 1px solid rgba(107, 124, 147, 0.12);
+  padding: 10px 0;
+  margin-bottom: 10px; }
 
 .section--large {
   padding-top: 20px;
@@ -442,19 +452,17 @@ a:hover {
 .media__content {
   flex: 1; }
 
-form {
-  width: 640px;
+.contact-form {
   margin: 0 auto;
   padding: 80px 0; }
-
-.form-group__header {
-  border-bottom: 1px solid rgba(107, 124, 147, 0.12);
-  padding: 10px 0; }
+  @media (min-width: 768px) {
+    .contact-form {
+      width: 640px; } }
 
 .input-group {
-  margin: 10px 0;
-  padding: 10px 0; }
+  margin: 10px 0; }
   .input-group .form-control {
+    color: #6B7C93;
     padding: 1.5rem 1rem;
     border: 1px solid #E8F0F5;
     border-radius: 4px;
@@ -462,18 +470,38 @@ form {
 
 .form-check {
   margin: 10px 0; }
+  .form-check-input {
+    width: 24px;
+    height: 24px; }
+  .form-check-label {
+    padding: 0 10px; }
 
 .form__footer {
   margin: 30px 0;
   color: #6B7C93;
   text-align: center; }
-  .form__footer .button-submit {
-    margin: 20px 0;
+
+.section--serviceLocations .serviceLocations__county {
+  margin: 30px; }
+.section--serviceLocations .navList__item {
+  color: rgba(18, 26, 46, 0.87);
+  font-size: 18px;
+  font-weight: 300; }
+
+.section--getNotified {
+  background: url(../images/locations-map.png) 50% 50% no-repeat;
+  background-size: cover; }
+  .section--getNotified .button--cta {
     height: 45px;
-    width: 115px;
-    border-radius: 4px;
-    background-color: #2196F3;
-    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.15); }
+    background: linear-gradient(270deg, #4DD0E1 0%, #2196F3 100%); }
+  .section--getNotified .input-group {
+    margin: 10px 0; }
+    .section--getNotified .input-group .form-control {
+      color: #6B7C93;
+      padding: 1.5rem 1rem;
+      border: 1px solid #E8F0F5;
+      border-radius: 4px;
+      background-color: #F6F9FC; }
 
 @font-face {
   font-family: Avenir;
@@ -497,18 +525,12 @@ body {
 img {
   max-width: 100%; }
 
-/* typography.scss */
-/* utilities */
-/* icons */
-/* navList */
 .navList--horiz .navList__item {
   display: inline-block; }
 .navList__item .navList__link {
   display: block;
   padding: 5px; }
 
-/* buttons.scss */
-/* card */
 .header {
   background: #2196F3;
   overflow: hidden; }
@@ -534,7 +556,7 @@ img {
       display: flex;
       align-items: center; } }
 .header__nav .navList__link {
-  color: #FFF;
+  color: #FFFFFF;
   text-decoration: none;
   padding: 15px; }
   .header__nav .navList__link:hover {
@@ -554,23 +576,19 @@ img {
     .header__navToggle {
       display: none; } }
 
-.section--downloadBanner {
+.section--banner .section__content {
+  color: #FFFFFF;
+  font-weight: 300; }
+  .section--banner .section__content p {
+    color: rgba(255, 255, 255, 0.6); }
+
+.section--brand-primary {
   background: linear-gradient(133.62deg, #2B91FE 0%, #485FFF 100%);
   text-align: center; }
-  .section--downloadBanner .section__content {
-    color: #FFFFFF;
-    font-weight: 300; }
-    .section--downloadBanner .section__content p {
-      color: rgba(255, 255, 255, 0.6); }
 
 .section--partnershipBanner {
   background: #494e56 url(../images/footer-cta.jpg) 50% 50% no-repeat;
   background-size: cover; }
-  .section--partnershipBanner .section__content {
-    color: #FFFFFF;
-    font-weight: 300; }
-    .section--partnershipBanner .section__content p {
-      color: rgba(255, 255, 255, 0.6); }
 
 .section--footer {
   background-color: #17213A; }

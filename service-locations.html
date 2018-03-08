@@ -1,0 +1,357 @@
+<!doctype html>
+<html>
+<head>
+     <meta charset="utf-8">
+     <title>LaundryMate</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css">
+
+     <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+     <header class="header header--onNextSection header--onImage">
+          <div class="container">
+
+               <div class="header__logo">
+                    <img class="logo" src="images/logo_white.png" alt="LaundryMate">
+               </div>
+               <div class="header__nav">
+
+                    <div class="header__navList">
+                         <ul class="navList navList--horiz">
+                              <li class="navList__item">
+                                   <a class="navList__link" href="#">Locations</a>
+                              </li>
+                              <li class="navList__item navList__item--disabled">
+                                   <a class="navList__link" href="#">Order</a>
+                              </li>
+                              <li class="navList__item">
+                                   <a class="navList__link" href="#">Partner Login</a>
+                              </li>
+                              <li class="navList__item">
+                                   <a class="button button--primary" href="#">Download</a>
+                              </li>
+                         </ul>
+                    </div>
+
+                    <div class="header__navToggle">
+                         <a href="#" onclick="toggleMenu()"><i class="mdi mdi-menu header__navToggle__icon"></i></a>
+                    </div>
+
+               </div> <!-- End of main-header__nav -->
+
+          </div> <!-- End of container-->
+     </header> <!--End of main-header-->
+
+     <section class="section section--large section--hasHeaderOnTop section--banner section--brand-primary">
+          <div class="container">
+               <div class="section__content">
+                    <div>
+                         <h1 class="section__title">Services Near You</h1>
+                    </div>
+               </div> <!--End of section__content -->
+          </div>    <!--End of container -->
+     </section>
+
+     <section class="section section--large section--serviceLocations">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-sm-6 col-md-4">
+                         <div class="serviceLocations__county">
+                              <div class="section__header section__headerWithBorder">
+                                   <h3>Dekalb County</h3>
+                              </div>
+                              <div class="section__content">
+                                   <div class="navList">
+                                        <ul>
+                                             <li class="navList__item">Clinton</li>
+                                             <li class="navList__item">Dekalb</li>
+                                             <li class="navList__item">Genoa</li>
+                                             <li class="navList__item">Sycamore</li>
+                                        </ul>
+                                   </div>
+
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4">
+                         <div class="serviceLocations__county">
+                              <div class="section__header section__headerWithBorder">
+                                   <h3>DuPage County</h3>
+                              </div>
+                              <div class="section__content">
+                                   <div class="navList">
+                                        <div class="row">
+                                             <ul class="col-sm-6">
+                                                  <li class="navList__item">Aurora</li>
+                                                  <li class="navList__item">Naperville</li>
+                                                  <li class="navList__item">St. Charles</li>
+                                                  <li class="navList__item">West Chicago</li>
+                                             </ul>
+                                             <ul class="col-sm-6">
+                                                  <li class="navList__item">Wheaton</li>
+                                             </ul>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4">
+                         <div class="serviceLocations__county">
+                              <div class="section__header section__headerWithBorder">
+                                   <h3>Kane County</h3>
+                              </div>
+                              <div class="section__content">
+                                   <div class="navList">
+                                        <div class="row">
+                                             <ul class="col-sm-6">
+                                                  <li class="navList__item">Aurora</li>
+                                                  <li class="navList__item">Elgin</li>
+                                                  <li class="navList__item">Geneva</li>
+                                                  <li class="navList__item">St. Charles</li>
+                                             </ul>
+                                             <ul class="col-sm-6">
+                                                  <li class="navList__item">East Dundee</li>
+                                                  <li class="navList__item">West Dundee</li>
+                                             </ul>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4">
+                         <div class="serviceLocations__county">
+                              <div class="section__header section__headerWithBorder">
+                                   <h3>McHenry County</h3>
+                              </div>
+                              <div class="section__content">
+                                   <div class="navList">
+                                        <div class="row">
+                                             <ul class="col-sm-6">
+                                                  <li class="navList__item">Crystal Lake</li>
+                                                  <li class="navList__item">Harvard</li>
+                                                  <li class="navList__item">Marengo</li>
+                                                  <li class="navList__item">McHenry</li>
+                                             </ul>
+                                             <ul class="col-sm-6">
+                                                  <li class="navList__item">Woodstock</li>
+                                                  <li class="navList__item">Huntley</li>
+                                                  <li class="navList__item">Algonquin</li>
+                                             </ul>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4">
+                         <div class="serviceLocations__county">
+                              <div class="section__header section__headerWithBorder">
+                                   <h3>Winnebago County</h3>
+                              </div>
+                              <div class="section__content">
+                                   <div class="navList">
+                                        <div class="row">
+                                             <ul class="col-sm-6">
+                                                  <li class="navList__item">Loves Park</li>
+                                                  <li class="navList__item">Rockford</li>
+                                                  <li class="navList__item">South Beloit</li>
+                                             </ul>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4">
+                         <div class="serviceLocations__county">
+                              <div class="section__header section__headerWithBorder">
+                                   <h3>Boone County</h3>
+                              </div>
+                              <div class="section__content">
+                                   <div class="navList">
+                                        <div class="row">
+                                             <ul class="col-sm-6">
+                                                  <li class="navList__item">Belvidere</li>
+                                                  <li class="navList__item">Poplar Grove</li>
+                                             </ul>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+     <section class="section section--huge section--getNotified">
+          <div class="container">
+               <div class="row">
+                    <div class="col-md-4">
+                         <div class="section__header">
+                              <h3>Didn't see your town?</h3>
+                              <h2>Find out when we've reached your area</h2>
+                         </div>
+                    </div>
+                    <div class="col-md-8">
+                         <form>
+                              <div class="form-group">
+                                   <div class="row">
+                                        <div class="col-6 col-md-6 input-group input-group-lg">
+                                             <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email address">
+                                        </div>
+                                        <div class="col-4 col-md-3 input-group input-group-lg">
+                                             <input type="number" class="form-control" placeholder="Zip Code">
+                                        </div>
+                                        <a class="button button--cta button--large" href="#">get notified</a>
+                                   </div>
+                              </div>
+                         </form>
+
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <section class="section section--contrast section--large section--footer">
+     <div class="container">
+          <div class="section__content">
+               <div class="row">
+
+                    <div class="footer__item col-sm-6 col-md-3">
+
+
+                              <div class="footer__item__content">
+                                   <img class="footer__logo" src="images/logo_white.png" alt="LaundryMate">
+
+                                   <p>Laundry and dry-cleaning on demand, delivered right to your door.</p>
+
+                                   <div class="socialMediaIcons">
+                                        <div class="navList navList--horiz">
+                                             <ul>
+                                                  <li class="navList__item socialMediaIcons__item--facebook">
+                                                       <a class="navList__link" href="https://www.facebook.com" target="_blank">
+                                                            <i class="mdi mdi-facebook"></i>
+                                                       </a>
+                                                  </li>
+                                                  <li class="navList__item socialMediaIcons__item--twitter">
+                                                       <a class="navList__link" href="https://www.twitter.com" target="_blank">
+                                                            <i class="mdi mdi-twitter"></i>
+                                                       </a>
+                                                  </li>
+                                                  <li class="navList__item socialMediaIcons__item--email">
+                                                       <a class="navList__link" href="https://www.gmail.com" target="_blank">
+                                                            <i class="mdi mdi-email"></i>
+                                                       </a>
+                                                  </li>
+                                             </ul>
+                                        </div>
+                                   </div>
+                               </div>
+                     </div> <!--End of footerNav__row-->
+
+                     <div class="footer__item col-sm-6 col-md-3">
+                         <h4 class="footer__item__title">LaundryMate</h4>
+                         <div class="footer__item__content">
+                              <div class="navList">
+                                   <ul>
+                                        <li class="navList__item">
+                                             <a class="navList__link" href="#">Laundromat</a>
+                                        </li>
+                                        <li class="navList__item">
+                                             <a class="navList__link" href="#">Dry Cleaner</a>
+                                        </li>
+                                        <li class="navList__item">
+                                             <a class="navList__link" href="#">Tailor</a>
+                                        </li>
+                                        <li class="navList__item">
+                                             <a class="navList__link" href="#">Locations</a>
+                                        </li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </div> <!--End of footerNav__row-->
+
+                    <div class="footer__item col-sm-6 col-md-3">
+                         <h4 class="footer__item__title">Partners</h4>
+                         <div class="footer__item__content">
+                              <div class="navList">
+                                   <ul>
+                                        <li class="navList__item">
+                                             <a class="navList__link" href="#">Partner Login</a>
+                                        </li>
+                                        <li class="navList__item">
+                                             <a class="navList__link" href="#">Become a Partner</a>
+                                        </li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </div> <!--End of footerNav__row-->
+
+                    <div class="footer__item col-sm-6 col-md-3">
+                         <h4 class="footer__item__title">Get the App</h4>
+                         <div class="footer__item__content">
+                              <div class="appStoreButtons">
+
+                                   <div class="navList navList--horiz">
+                                        <ul>
+                                             <li class="navList__item">
+                                                  <a class="appStoreButtons__item appStoreButtons__item--apple" href="#">
+                                                       <img src="images/appstore_2x.png" alt="Download on the AppStore">
+                                                  </a>
+                                             </li>
+                                             <li class="navList__item">
+                                                  <a class="appStoreButtons__item appStoreButtons__item--google" href="#">
+                                                       <img src="images/googleplay_2x.png" alt="Get it on Google Play">
+                                                  </a>
+                                             </li>
+                                        </ul>
+                                   </div> <!--End of navList-->
+
+                              </div> <!--End of appStoreButtons-->
+                         </div>
+                    </div> <!--End of footer__item-->
+
+               </div> <!--End of footer__content-->
+          </div> <!--End of container-->
+     </section> <!-- End of footer-->
+
+
+     <footer class="main-footer">
+          <div class="container">
+               <div class="main-footer__copyright">
+                    <span>Copyright &copy; 2017 LaundryMate</span>
+               </div>
+               <div class="navList navList--horiz">
+                    <ul>
+                         <li class="navList__item">
+                              <a class="navList__link" href="#">Terms of Use</a>
+                         </li>
+                         <li class="navList__item">
+                              <a class="navList__link" href="#">Privacy Policy</a>
+                         </li>
+                    </ul>
+               </div>  <!--End of navList-->
+          </div>
+     </footer> <!--End of main footer-->
+
+
+
+
+
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+     </body>
+     </html>

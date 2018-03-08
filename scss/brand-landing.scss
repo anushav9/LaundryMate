@@ -21,14 +21,14 @@
           }
      }
 
-     .button--cta{
+     .button--cta {
           background: linear-gradient(90deg, #9850DC 0%, #DB63A6 100%);
      }
 
 }
 
-////section--partnerBenefitsOfLm
-.section--partnerBenefitsOfLm {
+////section--partnerBenefitsOfLM
+.section--partnerBenefitsOfLM {
 
      .section__header {
           text-align: center;
@@ -53,8 +53,8 @@
 
 
 //finalCTAToContact
-.section--finalCTAToContact{
-     .button--cta{
+.section--finalCTAToContact {
+     .button--cta {
           background: #2196F3;
      }
 }
@@ -75,7 +75,6 @@
 
           .dashboardForBusiness__image {
                text-align: center;
-
                @include desktop {
                     margin: 40px 0 0 0;
                }
@@ -84,14 +83,13 @@
 }
 
 //section--aboutTheDriverApp
-.section--aboutTheDriverApp{
+.section--aboutTheDriverApp {
      background: url(../images/driver-map.png) 50% 50% no-repeat;
      background-size: cover;
-
 }
 
-.media__list{
-     display: flex;flex-direction: row;
+.media__list {
+     // display: flex;flex-direction: row;
      align-items: center;
 
      @include screen-sm {

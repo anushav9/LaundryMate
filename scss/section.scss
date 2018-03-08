@@ -23,6 +23,8 @@
      .section__header {
 
      }
+
+
      .section__content {
 
      }
@@ -35,6 +37,11 @@
           position: absolute;
           top: 0; bottom: 0; left: 0; right: 0;
      }
+}
+.section__headerWithBorder{
+     border-bottom: 1px solid rgba(107,124,147,0.12);
+     padding: 10px 0;
+     margin-bottom: 10px;
 }
 
 .section--large {
@@ -85,6 +92,4 @@
 .section--light {
           background-color: $color-aliceBlue;
           color: $body-text-secondary;
-
-
 }
